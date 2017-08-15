@@ -1,0 +1,72 @@
+
+
+  <div  class="sidebar-mini fixed" >
+   
+    <div class="wrapper" >
+   
+  <div ng-include="'shared/header.html'"></div>
+ <div ng-include="'shared/sidebar.html'" data-ng-controller="menuController" data-ng-init="setMenu()"></div> 
+
+<div class="content-wrapper">
+        <!-- Container-fluid starts -->
+        <div class="container-fluid">
+            <!-- Main content starts -->
+            <div class="treeview">
+                <!-- Row Starts -->
+                <div class="row">
+                    <div class="col-sm-12 p-0">
+                        <div class="main-header">
+                            <h4>Tree View</h4>
+                            <ol class="breadcrumb breadcrumb-title breadcrumb-arrow">
+                                <li class="breadcrumb-item"><a href="index.html"><i class="icofont icofont-home"></i></a>
+                                </li>
+                                <li class="breadcrumb-item"><a href="#!">UI Elements</a>
+                                </li>
+                                <li class="breadcrumb-item"><a href="treeview.html">Tree View</a>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-6 col-xs-12">
+                        <!--post blog single start-->
+                        <div class="card">
+                            <div class="card-header"><h5 class="card-header-text">BASIC TREE</h5></div>
+                            <div class="card-block">
+                            <tree nodes='treeNodes' >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xs-12">
+                        <div class="card">
+                            <div class="card-header"><h5 class="card-header-text">No icons Tree</h5></div>
+                            <div class="card-block">
+                               <tree nodes='treeNodes'  options='options'>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-xs-12">
+                        <!--post blog single start-->
+                        <div class="card">
+                            <div class="card-header"><h5 class="card-header-text">Disabled Nodes</h5></div>
+                            <div class="card-block">
+                                <tree nodes='treeNodesDisable' >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Container-fluid ends -->
+    </div>
+</div>
+
+
+
+
+</div>

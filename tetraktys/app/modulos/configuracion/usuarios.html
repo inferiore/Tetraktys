@@ -1,0 +1,404 @@
+<!-- Listar Usuarios -->
+<div class="row animated fadeIn">
+    <!-- DEALS ANALYTICS AREA start -->
+    <div class="col-sm-12 default-grid-item ">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-header-text">
+                    <i class="icon-user"></i> &nbsp;
+                    Usuarios
+                </h4>
+                <!-- <p>Basic example classes</p> -->                
+                <button type="button" class="btn btn-primary pull-right" data-toggle="modal" data-target="#modal-crear" data-angular-ripple data-ng-click="crear()">
+                    <i class="icofont icofont-plus-circle"></i>
+                    <span class="m-l-10">Agregar</span>
+                </button>
+            </div>
+            <div class="card-block">
+                <div class="form-group row">
+                    <!-- Filtro de los usuarios -->
+                    <div class="col-md-6 block-center filtro">
+                        <div class="input-group">
+                            <span class="input-group-btn">
+                                <button type="submit" class="btn"  id="btn-filtro" data-ng-click="show = !show">
+                                    <span class="fa fa-caret-down"></span>
+                                </button>
+                            </span>
+                            <input id="buscar" type="text" class="form-control" placeholder="ruta.accion" data-ng-model="filtros.UNombres" ng-keydown="$event.keyCode === 13 ? listar('filtro'):false">
+                            <span class="input-group-btn">
+                                <button type="submit" class="btn btn-primary addon-btn waves-effect waves-light" data-ng-click="listar('filtro')">
+                                    Buscar
+                                </button>
+                            </span>
+                        </div>
+                       
+                        
+                        <div id="area-filtro"  class="animated flipInX z-depth-bottom-4" data-ng-show="show">
+                            <div class="col-md-12">
+                                <h5>Filtrar:</h5>
+                                <hr>
+                                <div class="form-group col-lg-6">
+                                    <label for="correo">Correo</label>
+                                    <input type="text" class="form-control" data-ng-model="filtros.UsCorreo">
+                                </div>
+                                <div class="form-group col-lg-6">
+                                    <label for="codigo">Codigo</label>
+                                    <input type="codigo" class="form-control" data-ng-model="filtros.UsCodigo">
+                                </div>
+                                <div class="form-group col-lg-12">
+                                    <label for="roles">Roles</label>
+                                    <div
+                                        isteven-multi-select
+                                        input-model="data.roles"
+                                        output-model="filtros.UsIdRol"
+                                        button-label="RolNombre"
+                                        item-label="RolNombre"
+                                        tick-property=""
+                                        max-labels="1"
+                                        max-height="100px"
+                                        traslation=localLang
+                                    >
+                                    </div>
+                                </div>
+                                <div class="form-group col-lg-12">
+                                    <label for="canales">Canales</label>
+                                    <div
+                                        isteven-multi-select
+                                        input-model="data.canales"
+                                        output-model="filtros.UsIdCanal"
+                                        button-label="CaNombreCanal"
+                                        item-label="CaNombreCanal"
+                                        tick-property=""
+                                        max-labels="1"
+                                        max-height="100px"
+                                        traslation=localLang
+                                    >
+                                    </div>
+                                </div>                                
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fin filtro de los usuarios -->
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 table-responsive">
+                        <table class="table margin-bottom-tres">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Nombre</th>
+                                    <th>Email</th>
+                                    <th>Rol</th>
+                                    <!-- <th>Canal</th> -->
+                                    <th>Eliminar</th>
+                                    <th>Accion</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr dir-paginate="usuario in usuarios.data | itemsPerPage: usuarios.per_page" total-items="usuarios.total">
+                                    <td> {{ usuario.UsCodigo }} </td>
+                                    <td> {{ usuario.UNombres + ' ' + usuario.UApellido }} </td>
+                                    <td> {{ usuario.UsCorreo }} </td>
+                                    <td> {{ usuario.rol.RolNombre }} </td>
+                                    <!-- <td> {{ usuario.canal.CaNombreCanal }} </td> -->
+                                    <td>
+                                        <input type="checkbox" data-ng-model="usuario.UsIdEstadoAux" data-ng-change="eliminar(usuario, $index)" class="js-switch invisible" ui-switch="{size: 'small'}" />
+                                    </td>
+                                    <td>
+                                        <div class="dropdown-primary dropdown">
+                                            <button class="btn btn-sm btn-inverse-primary dropdown-toggle" type="button" id="dropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-angular-ripple="">
+                                                <span class=" angular-ripple animate"></span> Accion
+                                            </button> 
+                                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown1" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+                                                <a class="dropdown-item" data-toggle="modal" data-target="#modal-editar"  data-angular-ripple data-ng-click="editar(usuario.UId)" >
+                                                    <i class="icofont icofont-ui-edit"></i> Modificar
+                                                </a>
+                                                <a class="dropdown-item" data-toggle="modal" data-target="#modal-password"  data-angular-ripple data-ng-click="editar(usuario.UId)" >
+                                                    <i class="icofont icofont-lock"></i> Password
+                                                </a>
+                                            </div> 
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="loader-block" data-ng-if="usuarios.length <= 0"  >
+                            <svg id="loader2" viewBox="0 0 100 100">
+                                <circle id="circle-loader2" cx="50" cy="50" r="45"></circle>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <dir-pagination-controls class="pull-right" template-url="js/dirPagination.tpl.html" on-page-change="listar('paginacion', newPageNumber)" >
+                        </dir-pagination-controls>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal crear -->
+<div class="modal fade modal-flex" id="modal-crear" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <form novalidate="" name="crear_usuario">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">
+                        <i class="icon-user"></i>
+                        Nuevo Usuario
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="form-group col-lg-4">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" class="form-control" data-ng-model="inputs.UNombres" ng-minlength="3" name="nombre" ng-class="crear_usuario.nombre.$valid ? 'input-success':'input-warning'" required>
+                            <i class="icofont  input-icon" ng-class="crear_usuario.nombre.$valid ? 'txt-success icofont-check':'txt-warning icofont-warning'" ></i>
+                            <small class="text-danger" data-ng-if="errores.UNombres" data-ng-repeat="error in errores.UNombres">{{ error }}</small>
+                        </div>
+                        <div class="form-group col-lg-4">
+                            <label for="primer_apellido">Primer Apellido</label>
+                            <input type="text" class="form-control" data-ng-model="inputs.UApellido" ng-minlength="3" name="primer_apellido" ng-class="crear_usuario.primer_apellido.$valid ? 'input-success':'input-warning'" required>
+                            <i class="icofont  input-icon" ng-class="crear_usuario.primer_apellido.$valid ? 'txt-success icofont-check':'txt-warning icofont-warning'" ></i>
+                            <small class="text-danger" data-ng-if="errores.UApellido" data-ng-repeat="error in errores.UApellido">{{ error }}</small>
+                        </div>
+                        <div class="form-group col-lg-4">
+                            <label for="segundo_apellido">Segundo Apellido</label>
+                            <input type="text" class="form-control" data-ng-model="inputs.USApellido" ng-minlength="3" name="segundo_apellido" ng-class="crear_usuario.segundo_apellido.$valid ? 'input-success':'input-warning'" required>
+                            <i class="icofont  input-icon" ng-class="crear_usuario.segundo_apellido.$valid ? 'txt-success icofont-check':'txt-warning icofont-warning'" ></i>
+                            <small class="text-danger" data-ng-if="errores.USApellido" data-ng-repeat="error in errores.USApellido">{{ error }}</small>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-lg-4">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" data-ng-model="inputs.UsCorreo" ng-minlength="3" name="email" ng-class="crear_usuario.email.$valid ? 'input-success':'input-warning'" required>
+                            <i class="icofont  input-icon" ng-class="crear_usuario.email.$valid ? 'txt-success icofont-check':'txt-warning icofont-warning'" ></i>
+                            <small class="text-danger" data-ng-if="errores.UsCorreo" data-ng-repeat="error in errores.UsCorreo">{{ error }}</small>
+                        </div>
+                        <div class="form-group col-lg-4">
+                            <label for="codigo">Codigo</label>
+                            <input type="text" class="form-control" data-ng-model="inputs.UsCodigo" ng-minlength="3" name="codigo" ng-class="crear_usuario.codigo.$valid ? 'input-success':'input-warning'" required>
+                            <i class="icofont  input-icon" ng-class="crear_usuario.codigo.$valid ? 'txt-success icofont-check':'txt-warning icofont-warning'" ></i>
+                            <small class="text-danger" data-ng-if="errores.UsCodigo" data-ng-repeat="error in errores.UsCodigo">{{ error }}</small>
+                        </div>
+                        <div class="form-group col-lg-4">
+                            <label for="UsIdRol">Rol</label>
+                            <ui-select ng-model="inputs.UsIdRol"  title="seleccione un rol" >
+                                <ui-select-match placeholder="Seleccionar Rol">{{ $select.selected.value }}</ui-select-match>
+                                <ui-select-choices class="size-3"  repeat="value.key as (key , value) in roles | filter: {'value':$select.search}">
+                                    {{ value.value }}
+                                </ui-select-choices>
+                            </ui-select>
+                            <small class="text-danger" data-ng-if="errores.UsIdRol" data-ng-repeat="error in errores.UsIdRol">{{ error }}</small>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-lg-4">
+                            <label for="dni">Tipo Identificacion</label>
+                            <!-- <input type="text" class="form-control" data-ng-model="inputs.UsIdTipoId"> -->
+                            <select name="UsIdTipoId" class="form-control" id="mySelect" ng-options="option.TdipId as option.TdipNombre for option in dni track by option.TdipId"
+                              ng-model="inputs.UsIdTipoId" required>
+                            </select>
+                            <small class="text-danger" data-ng-if="errores.UsIdTipoId" data-ng-repeat="error in errores.UsIdTipoId">{{ error }}</small>
+                        </div>
+                        <div class="form-group col-lg-4">
+                            <label for="identificacion">Identificacion</label>
+                            <input type="text" class="form-control" ng-minlength="5" data-ng-model="inputs.UNumeroId" name="identificacion" ng-class="crear_usuario.identificacion.$valid ? 'input-success':'input-warning'" required>
+                            <i class="icofont  input-icon" ng-class="crear_usuario.identificacion.$valid ? 'txt-success icofont-check':'txt-warning icofont-warning'" ></i>
+                            <small class="text-danger" data-ng-if="errores.UNumeroId" data-ng-repeat="error in errores.UNumeroId">{{ error }}</small>
+                        </div>
+                        <div class="form-group col-lg-4">
+                            <label for="">Proveedor</label>
+                            <ui-select ng-model="inputs.UsIdProveedor" title="seleccione un proveedor">
+                                <ui-select-match placeholder="Seleccionar Proveedor">{{ $select.selected.value }}</ui-select-match>
+                                <ui-select-choices class="size-3"  repeat="value.key as (key , value) in proveedores | filter: {'value':$select.search}">
+                                    {{ value.value }}
+                                </ui-select-choices>
+                            </ui-select>
+                            <small class="text-danger" data-ng-if="errores.UsIdProveedor" data-ng-repeat="error in errores.UsIdProveedor">{{ error }}</small>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-lg-4">
+                            <label for="">Canal</label>
+                            <ui-select ng-model="inputs.UsIdCanal" title="seleccione un proveedor">
+                                <ui-select-match placeholder="Seleccionar Canal">{{ $select.selected.value }}</ui-select-match>
+                                <ui-select-choices class="size-3"  repeat="value.key as (key , value) in canales | filter: {'value':$select.search}">
+                                    {{ value.value }}
+                                </ui-select-choices>
+                            </ui-select>
+                            <small class="text-danger" data-ng-if="errores.UsIdCanal" data-ng-repeat="error in errores.UsIdCanal">{{ error }}</small>
+                        </div>
+                        <div class="form-group col-lg-4">
+                            <label for="pw1">Password</label>
+                            <input type="password" class="form-control" name="pw1" data-ng-model="inputs.password" ng-class="crear_usuario.pw1.$valid ? 'input-success':'input-warning'" required>
+                            <i class="icofont  input-icon" ng-class="crear_usuario.pw1.$valid ? 'txt-success icofont-check':'txt-warning icofont-warning'" ></i>
+                            <small class="text-danger" data-ng-if="errores.password" data-ng-repeat="error in errores.password">{{ error }}</small>
+                        </div>
+                        <div class="form-group col-lg-4">
+                            <label for="pw2">Confirmar Password</label>
+                            <input type="password" match-password="pw1"  class="form-control" data-ng-model="inputs.confirmar_password" name="pw2" ng-class="crear_usuario.pw2.$valid ? 'input-success':'input-warning'" required>
+                            <i class="icofont  input-icon" ng-class="crear_usuario.pw2.$valid ? 'txt-success icofont-check':'txt-warning icofont-warning'" ></i>
+                            <small class="text-danger" data-ng-if="errores.confirmar_password" data-ng-repeat="error in errores.confirmar_password">{{ error }}</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default angular-dark" data-dismiss="modal" data-angular-ripple>Cerrar</button>
+                    <button type="button" data-ng-click="guardar(inputs)" class="btn btn-primary" data-ng-disabled="!crear_usuario.$valid " data-angular-ripple>Guardar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Modal editar -->
+<div class="modal fade modal-flex" id="modal-editar" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <form novalidate="" name="modificar_usuario">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">
+                        <i class="icon-user"></i>
+                        Modificar Usuario
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="form-group col-lg-4">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" class="form-control" data-ng-model="usuario.UNombres" required>
+                            <small class="text-danger" data-ng-if="errores.UNombres" data-ng-repeat="error in errores.UNombres">{{ error }}</small>
+                        </div>
+                        <div class="form-group col-lg-4">
+                            <label for="primer_apellido">Primer Apellido</label>
+                            <input type="text" class="form-control" data-ng-model="usuario.UApellido" required>
+                            <small class="text-danger" data-ng-if="errores.UApellido" data-ng-repeat="error in errores.UApellido">{{ error }}</small>
+                        </div>
+                        <div class="form-group col-lg-4">
+                            <label for="segundo_apellido">Segundo Apellido</label>
+                            <input type="text" class="form-control" data-ng-model="usuario.USApellido" required>
+                            <small class="text-danger" data-ng-if="errores.USApellido" data-ng-repeat="error in errores.USApellido">{{ error }}</small>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-lg-4">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" data-ng-model="usuario.UsCorreo" required>
+                            <small class="text-danger" data-ng-if="errores.UsCorreo" data-ng-repeat="error in errores.UsCorreo">{{ error }}</small>
+                        </div>
+                        <div class="form-group col-lg-4">
+                            <label for="codigo">Codigo</label>
+                            <input type="text" class="form-control" data-ng-model="usuario.UsCodigo" required>
+                            <small class="text-danger" data-ng-if="errores.UsCodigo" data-ng-repeat="error in errores.UsCodigo">{{ error }}</small>
+                        </div>
+                        <div class="form-group col-lg-4">
+                            <label for="UsIdRol">Rol</label>
+                            <ui-select ng-model="usuario.UsIdRol" name="UsIdRol" title="seleccione un rol" ng-required="true" >
+                                <ui-select-match >{{ $select.selected.value }}</ui-select-match>
+                                <ui-select-choices class="size-3" repeat="rol.key as (key , rol) in roles | filter: {'value':$select.search}" >
+                                    {{ rol.value }}
+                                </ui-select-choices>
+                            </ui-select>
+                            <i class="icofont  input-icon" ng-class="crear_usuario.UsIdRol.$valid ? 'txt-success icofont-check':'txt-warning icofont-warning'" ></i>
+                            <small class="text-danger" data-ng-if="errores.UsIdRol" data-ng-repeat="error in errores.UsIdRol">{{ error }}</small>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-lg-4">
+                            <label for="dni">Tipo Identificacion</label>
+                            <ui-select ng-model="usuario.UsIdTipoId"  title="seleccione un rol">
+                                <ui-select-match >{{ $select.selected.value }}</ui-select-match>
+                                <ui-select-choices class="size-3"  repeat="value.key as (key , value) in dni | filter: {'value':$select.search}">
+                                    {{ value.value }}
+                                </ui-select-choices>
+                            </ui-select>
+                            <small class="text-danger" data-ng-if="errores.UsIdTipoId" data-ng-repeat="error in errores.UsIdTipoId">{{ error }}</small>
+                        </div>
+                        <div class="form-group col-lg-4">
+                            <label for="identificacion">Identificacion</label>
+                            <input type="text" class="form-control" data-ng-model="usuario.UNumeroId" required>
+                            <small class="text-danger" data-ng-if="errores.UNumeroId" data-ng-repeat="error in errores.UNumeroId">{{ error }}</small>
+                        </div>
+                        <div class="form-group col-lg-4">
+                            <label for="">Proveedor</label>
+                            <ui-select ng-model="usuario.UsIdProveedor"  title="seleccione un proveedor">
+                                <ui-select-match >{{ $select.selected.value }}</ui-select-match>
+                                <ui-select-choices class="size-3"  repeat="proveedor.key as (key , proveedor) in proveedores | filter: {'value':$select.search}">
+                                    {{ proveedor.value }}
+                                </ui-select-choices>
+                            </ui-select>
+                            <small class="text-danger" data-ng-if="errores.UsIdProveedor" data-ng-repeat="error in errores.UsIdProveedor">{{ error }}</small>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-lg-4">
+                            <label for="">Canal</label>
+
+                            <ui-select ng-model="usuario.UsIdCanal"  title="seleccione un canal">
+                                <ui-select-match >{{ $select.selected.value }}</ui-select-match>
+                                <ui-select-choices class="size-3"  repeat="canal.key as (key , canal) in canales | filter: {'value':$select.search}">
+                                    {{ canal.value }}
+                                </ui-select-choices>
+                            </ui-select>
+
+                            <small class="text-danger" data-ng-if="errores.UsIdCanal" data-ng-repeat="error in errores.UsIdCanal">{{ error }}</small>
+                            
+                        </div>                        
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default angular-dark" data-dismiss="modal" data-angular-ripple>Cerrar</button>
+                    <button type="button" data-ng-click="actualizar()" class="btn btn-primary" data-ng-disabled="!modificar_usuario.$valid " data-angular-ripple>Guardar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Modal cambiar password -->
+<div class="modal fade modal-flex" id="modal-password" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <form novalidate="" name="actualizar_password">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">
+                        <i class="icon-user"></i>
+                        Password
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="form-group col-xs-12">
+                            <label for="">Password</label>
+                            <input type="password" class="form-control" name="password" data-ng-model="usuario.password" ng-minlength="6" name="password" required>
+                            <small class="text-danger" data-ng-if="errores.password" data-ng-repeat="error in errores.password">{{ error }}</small>
+                        </div>
+                        <div class="form-group col-xs-12">
+                            <label for="">Confirmar Password</label>
+                            <input type="password" match-password="password" name="confirpassword" class="form-control" data-ng-model="usuario.confirmar_password" ng-minlength="6" name="confirmar-password" required>
+                            <small class="text-danger" data-ng-if="errores.confirmar_password" data-ng-repeat="error in errores.confirmar_password">{{ error }}</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default angular-dark" data-dismiss="modal" data-angular-ripple>Cerrar</button>
+                    <button type="button" data-ng-click="password()" class="btn btn-primary" data-ng-disabled="!actualizar_password.$valid " data-angular-ripple>Actualizar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

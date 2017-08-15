@@ -1,0 +1,103 @@
+<div  class="sidebar-mini fixed" >
+   
+    <div class="wrapper" >
+   
+ <div ng-include="'shared/header.html'"></div>
+ <div ng-include="'shared/sidebar.html'" data-ng-controller="menuController" data-ng-init="setMenu()"></div> 
+    
+    <div class="content-wrapper">
+        <!-- Container-fluid starts -->
+        <div class="container-fluid">
+            <!-- Header Starts -->
+            <div class="row">
+                <div class="main-header">
+                    <h4>Echart</h4>
+                    <ol class="breadcrumb breadcrumb-title breadcrumb-arrow">
+                        <li class="breadcrumb-item">
+                            <a href="index.html">
+                                <i class="icofont icofont-home"></i>
+                            </a>
+                        </li>
+                        <li class="breadcrumb-item"><a href="">Charts & Maps</a></li>
+                        <li class="breadcrumb-item"><a href="echart.html">Echart</a></li>
+                    </ol>
+                </div>
+            </div>
+            <!-- Header end -->
+
+            <!-- Row start -->
+            <div class="row">
+                <!-- Line chart starts -->
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-header-text">Line chart</h5>
+                        </div>
+                        <div class="card-block" >
+                             <area-chart config="areaconfig" data="areadata" height="300px"></area-chart>
+                        </div>
+                    </div>
+                </div>
+                <!-- Line chart ends -->
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-header-text">Bar chart</h5>
+                        </div>
+                        <div class="card-block">
+                            <bar-chart config="barconfig" data="bardata" height="300px"></bar-chart>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- Row end -->
+            <div class="row">
+                <!-- Server Load start -->
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-header-text">Server Load</h5>
+                        </div>
+                        <div class="card-block">
+                            <gauge-chart config="gaugeconfig" data="gaugedata" height="300px"></gauge-chart>
+                        </div>
+                    </div>
+                </div>
+                <!-- Server Load end -->
+
+                <!-- Pie Chart start -->
+               <!--  <div class="col-md-6">
+                   <div class="card">
+                       <div class="card-header">
+                           <h5 class="card-header-text">Pie Chart</h5>
+                       </div>
+                       <div class="card-block">
+                           <pie-chart config="pieconfig" data="piedata" height="300px"></pie-chart>
+                       </div>
+                   </div>
+               </div> -->
+                <!-- Pie Chart end -->
+            </div>
+            <!-- <div class="row"> -->
+                <!-- Scatter chart start -->
+               <!--  <div class="col-md-6">
+                   <div class="card">
+                       <div class="card-header">
+                           <h5 class="card-header-text">Scatter chart</h5>
+                       </div>
+                       <div class="card-block" >
+                           <div id="scatter" style="height:300px"></div>
+                       </div>
+                   </div>
+               </div> -->
+                <!-- Scatter chart end -->
+          <!--   </div> -->
+
+            <!-- Main content ends -->
+        </div>
+        <!-- Container-fluid ends -->
+     </div>
+</div>
+</div>
+

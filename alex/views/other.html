@@ -1,0 +1,393 @@
+
+
+  <div  class="sidebar-mini fixed" >
+   
+    <div class="wrapper">
+   
+ <div ng-include="'shared/header.html'"></div>
+ <div ng-include="'shared/sidebar.html'" data-ng-controller="menuController" data-ng-init="setMenu()"></div> 
+
+    <div class="content-wrapper">
+        <!-- Container-fluid starts -->
+       <div class="container-fluid">
+      <!-- Main content starts -->
+      <div class="content">
+        <!-- Row Starts -->
+        <div class="row">
+            <div class="col-md-12 p-0">
+                <div class="main-header">
+                    <h4>Other</h4>
+                  <ol class="breadcrumb breadcrumb-title breadcrumb-arrow">
+                    <li class="breadcrumb-item"><a href="index.html"><i class="icofont icofont-home"></i></a>
+                    </li>
+                    <li class="breadcrumb-item"><a href="">UI Elements</a>
+                    </li>
+                    <li class="breadcrumb-item"><a href="other.html">Other</a>
+                    </li>
+                  </ol>
+                </div>
+                <!-- end of main-header -->
+            </div>
+            <!-- end of col-md-12 -->
+        </div>
+        <!-- Row end -->
+
+        <div class="row breadcrumb-block">
+          <div class="col-lg-4">
+            <div class="card">
+              <div class="card-header"><h5 class="card-header-text">Breadcrumb</h5></div>
+              <div class="card-block">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item active">Home</li>
+                </ol>
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="">Home</a></li>
+                  <li class="breadcrumb-item active">Breadcrumb</li>
+                </ol>
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="">Home</a></li>
+                  <li class="breadcrumb-item"><a href="">Breadcrumb</a></li>
+                  <li class="breadcrumb-item active">Data</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="card">
+             <div class="card-header"><h5 class="card-header-text">Breadcrumb with Arrow</h5></div>
+              <div class="card-block">
+
+                <ol class="breadcrumb breadcrumb-arrow">
+                  <li class="breadcrumb-item active">Home</li>
+                </ol>
+                <ol class="breadcrumb breadcrumb-arrow">
+                  <li class="breadcrumb-item"><a href="">Home</a></li>
+                  <li class="breadcrumb-item active">Breadcrumb</li>
+                </ol>
+                <ol class="breadcrumb breadcrumb-arrow">
+                  <li class="breadcrumb-item"><a href="">Home</a></li>
+                  <li class="breadcrumb-item"><a href="">Breadcrumb</a></li>
+                  <li class="breadcrumb-item active">Data</li>
+                </ol>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="card card_main">
+             <div class="card-header"><h5 class="card-header-text">Pager</h5></div>
+              <div class="card-block">
+                <!-- <div class="row"> -->
+                  <div aria-label="1">
+                    <ul class="pager">
+                      <li ><a href="">Previous</a></li>
+                      <li ><a href="">Next</a></li>
+                    </ul>
+                  </div>
+                  <div aria-label="2">
+                    <ul class="pager text-center">
+                      <li ><a href="">Previous</a></li>
+                      <li ><a href="">Next</a></li>
+                  </ul>
+                </div>
+                  <div aria-label="3">
+                    <ul class="pager">
+                      <li ><a class="prev" href="">Previous</a></li>
+                      <li ><a class="next" href="">Next</a></li>
+                  </ul>
+                </div>
+                  <div aria-label="4">
+                    <ul class="pager">
+                      <li class="previous disabled"><a href=""><span aria-hidden="true">&larr;</span> Older</a></li>
+                      <li class="next"><a href="">Newer <span aria-hidden="true">&rarr;</span></a></li>
+                    </ul>
+                  </div>
+
+                <!-- </div> -->
+                <!-- end of row -->
+              </div>
+              <!-- end of card-content -->
+            </div>
+            <!-- end of card_main -->
+          </div>
+
+        </div>
+
+        <div class="row">
+         <div class="col-md-12">
+            <div class="card">
+              <div class="card-header"><h5 class="card-header-text">Breadcrumb with icon</h5></div>
+              <div class="card-block breadcrumb-icon-block" >
+               <ul id="breadcrumb-triangle">
+                <li><a href=""><span class="icofont icofont-home"> </span></a></li>
+                  <li><a href=""><span class="icofont icofont-flask"> </span> Projects</a></li>
+                  <li><a href=""><span class="icofont icofont-double-right"></span> Breadcrumb</a></li>
+                  <li><a href=""><span class="icofont icofont-rocket-alt-2"> </span> Getting started</a></li>
+                  <li><a href=""><span class="icofont icofont-cloud-download"> </span> Download</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="card">
+              <div class="card-header"><h5 class="card-header-text">Breadcrumb without icon</h5></div>
+              <div class="card-block breadcrumb-icon-block" >
+               <ul id="breadcrumb-triangle">
+                <li><a href="">Home</a></li>
+                  <li><a href="">Projects</a></li>
+                  <li><a href="">Breadcrumb</a></li>
+                  <li><a href="">Getting started</a></li>
+                  <li><a href="">Download</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="card">
+              <div class="card-header"><h5 class="card-header-text">Other PAGINATION</h5></div>
+              <div class="card-block">
+               <div class="col-md-12 p-10">
+               <button class="btn btn-primary " ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1">
+        Previous
+    </button>
+    {{currentPage+1}}/10
+    <button class="btn btn-primary " ng-disabled="currentPage >= 9" ng-click="currentPage=currentPage+1">
+        Next
+    </button>
+</div>
+ <div class="col-md-12 p-10">
+      <button class="btn btn-primary " ng-disabled="startPage == 0" ng-click="startPage=startPage-1"><i class="icofont icofont-simple-left"></i>
+        Previous
+    </button>
+    Page - {{startPage+1}} of 10
+    <button class="btn btn-primary " ng-disabled="startPage >= 9" ng-click="startPage=startPage+1">
+        Next<i class="icofont icofont-simple-right"></i>
+    </button>
+    </div>
+    <div class="col-md-12 ">
+      <ul class="pagination pagination-sm">
+                    <li class="page-item">
+                      <a class="page-link angular-dark" href="" aria-label="Previous" data-angular-ripple>
+                        <span aria-hidden="true">Previous</span>
+                        <span class="sr-only">Previous</span>
+                      </a>
+                    </li>
+                    <li class="page-item"><a class="page-link angular-dark" href="" role="button" data-angular-ripple>1</a></li>
+                    <li class="page-item active"><a class="page-link angular-dark" href="" role="button" data-angular-ripple>2</a></li>
+                    <li class="page-item"><a class="page-link angular-dark" href="" role="button" data-angular-ripple>3</a></li>
+                    <li class="page-item"><a class="page-link angular-dark" href="" role="button" data-angular-ripple>4</a></li>
+                    <li class="page-item"><a class="page-link angular-dark" href="" role="button" data-angular-ripple>5</a></li>
+                    <li class="page-item">
+                      <a class="page-link angular-dark" href="" aria-label="Next" data-angular-ripple>
+                        <span aria-hidden="true">Next</span>
+                        <span class="sr-only">Next</span>
+                      </a>
+                    </li>
+      </ul>
+    </div>
+    <div class="col-md-12 ">
+      <ul class="pagination pagination-sm">
+                    <li class="page-item">
+                      <a class="page-link angular-dark" href="" aria-label="Previous" data-angular-ripple>
+                        <span aria-hidden="true">First</span>
+                        <span class="sr-only">First</span>
+                      </a>
+                    </li>
+                    <li class="page-item">                    
+                      <a class="page-link angular-dark" href="" aria-label="Previous" data-angular-ripple>
+                        <span aria-hidden="true">Previous</span>
+                        <span class="sr-only">Previous</span>
+                      </a>
+                    </li>
+                    <li class="page-item"><a class="page-link angular-dark" href="" role="button" data-angular-ripple>1</a></li>
+                    <li class="page-item active"><a class="page-link angular-dark" href="" role="button" data-angular-ripple>2</a></li>
+                    <li class="page-item"><a class="page-link angular-dark" href="" role="button" data-angular-ripple>3</a></li>
+                    <li class="page-item"><a class="page-link angular-dark" href="" role="button" data-angular-ripple>4</a></li>
+                    <li class="page-item"><a class="page-link angular-dark" href="" role="button" data-angular-ripple>5</a></li>
+                    <li class="page-item">
+                      <a class="page-link angular-dark" href="" aria-label="Next" data-angular-ripple>
+                        <span aria-hidden="true">Next</span>
+                        <span class="sr-only">Next</span>
+                      </a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link angular-dark" href="" aria-label="Next" data-angular-ripple>
+                        <span aria-hidden="true">Last</span>
+                        <span class="sr-only">Last</span>
+                      </a>
+                    </li>
+      </ul>
+    </div>
+    <div class="col-md-12 ">
+     <ul class="margin-pagination">
+                    <li class="page-item">
+                      <a class="page-link angular-dark" href="" aria-label="Previous" data-angular-ripple>
+                        <span aria-hidden="true">Previous</span>
+                        <span class="sr-only">Previous</span>
+                      </a>
+                    </li>
+                    <li class="page-item active"><a class="page-link " href="" role="button" data-angular-ripple>1</a></li>
+                    <li class="page-item"><a class="page-link angular-dark" href="" role="button" data-angular-ripple>2</a></li>
+                    <li class="page-item"><a class="page-link angular-dark" href="" role="button" data-angular-ripple>3</a></li>
+                    <li class="page-item"><a class="page-link angular-dark" href="" role="button" data-angular-ripple>4</a></li>
+                    <li class="page-item"><a class="page-link angular-dark" href="" role="button" data-angular-ripple>5</a></li>
+                    <li class="page-item">
+                      <a class="page-link angular-dark" href="" aria-label="Next" data-angular-ripple>
+                        <span aria-hidden="true">Next</span>
+                        <span class="sr-only">Next</span>
+                      </a>
+                    </li>
+                  </ul>
+    </div>
+              </div>
+              <!-- end of card-content -->
+            </div>
+
+          </div>
+          <div class="col-lg-6">
+            <div class="card">
+              <div class="card-header"><h5 class="card-header-text">Pagination Size</h5></div>
+              <div class="card-block">
+                <div class="inline-form-style">
+                <div aria-label="page list">
+                  <ul class="pagination pagination-lg m-0">
+                    <li class="page-item">
+                      <a class="page-link angular-dark" href="" aria-label="Previous" data-angular-ripple>
+                        <span aria-hidden="true">&laquo;</span>
+                        <span class="sr-only">Previous</span>
+                      </a>
+                    </li>
+                    <li class="page-item active"><a class="page-link " href="" role="button" data-angular-ripple>1</a></li>
+                    <li class="page-item"><a class="page-link angular-dark" href="" role="button" data-angular-ripple>2</a></li>
+                    <li class="page-item"><a class="page-link angular-dark" href="" role="button" data-angular-ripple>3</a></li>
+                    <li class="page-item"><a class="page-link angular-dark" href="" role="button" data-angular-ripple>4</a></li>
+                    <li class="page-item"><a class="page-link angular-dark" href="" role="button" data-angular-ripple>5</a></li>
+                    <li class="page-item">
+                      <a class="page-link angular-dark" href="" aria-label="Next" data-angular-ripple>
+                        <span aria-hidden="true">&raquo;</span>
+                        <span class="sr-only">Next</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div aria-label="Page navigation">
+                  <ul class="pagination m-b-0">
+                    <li class="page-item">
+                      <a class="page-link angular-dark" href="" aria-label="Previous" data-angular-ripple>
+                        <span aria-hidden="true">&laquo;</span>
+                        <span class="sr-only">Previous</span>
+                      </a>
+                    </li>
+                    <li class="page-item active"><a class="page-link " href="" role="button" data-angular-ripple>1</a></li>
+                    <li class="page-item"><a class="page-link angular-dark" href="" role="button" data-angular-ripple>2</a></li>
+                    <li class="page-item"><a class="page-link angular-dark" href="" role="button" data-angular-ripple>3</a></li>
+                    <li class="page-item"><a class="page-link angular-dark" href="" role="button" data-angular-ripple>4</a></li>
+                    <li class="page-item"><a class="page-link angular-dark" href="" role="button" data-angular-ripple>5</a></li>
+                    <li class="page-item">
+                      <a class="page-link angular-dark" href="" aria-label="Next" data-angular-ripple>
+                        <span aria-hidden="true">&raquo;</span>
+                        <span class="sr-only">Next</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div aria-label="page list small">
+                  <ul class="pagination pagination-sm">
+                    <li class="page-item">
+                      <a class="page-link angular-dark" href="" aria-label="Previous" data-angular-ripple>
+                        <span aria-hidden="true">&laquo;</span>
+                        <span class="sr-only">Previous</span>
+                      </a>
+                    </li>
+                    <li class="page-item"><a class="page-link angular-dark" href="" role="button" data-angular-ripple>1</a></li>
+                    <li class="page-item active"><a class="page-link angular-dark" href="" role="button" data-angular-ripple>2</a></li>
+                    <li class="page-item"><a class="page-link angular-dark" href="" role="button" data-angular-ripple>3</a></li>
+                    <li class="page-item"><a class="page-link angular-dark" href="" role="button" data-angular-ripple>4</a></li>
+                    <li class="page-item"><a class="page-link angular-dark" href="" role="button" data-angular-ripple>5</a></li>
+                    <li class="page-item">
+                      <a class="page-link angular-dark" href="" aria-label="Next" data-angular-ripple>
+                        <span aria-hidden="true">&raquo;</span>
+                        <span class="sr-only">Next</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div aria-label="Page navigation">
+                  <ul class="margin-pagination">
+                    <li class="page-item">
+                      <a class="page-link angular-dark" href="" aria-label="Previous" data-angular-ripple>
+                        <span aria-hidden="true">&laquo;</span>
+                        <span class="sr-only">Previous</span>
+                      </a>
+                    </li>
+                    <li class="page-item active"><a class="page-link " href="" role="button" data-angular-ripple>1</a></li>
+                    <li class="page-item"><a class="page-link angular-dark" href="" role="button" data-angular-ripple>2</a></li>
+                    <li class="page-item"><a class="page-link angular-dark" href="" role="button" data-angular-ripple>3</a></li>
+                    <li class="page-item"><a class="page-link angular-dark" href="" role="button" data-angular-ripple>4</a></li>
+                    <li class="page-item"><a class="page-link angular-dark" href="" role="button" data-angular-ripple>5</a></li>
+                    <li class="page-item">
+                      <a class="page-link angular-dark" href="" aria-label="Next" data-angular-ripple>
+                        <span aria-hidden="true">&raquo;</span>
+                        <span class="sr-only">Next</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+                </div>
+              </div>
+              <!-- end of card-content -->
+            </div>
+            <!-- end of card_main -->
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6">
+
+            <div class="card card_main">
+              <div class="card-header"><h5 class="card-header-text">Jumbotron</h5></div>
+              <div class="card-block">
+                <div class="jumbotron m-b-0">
+                  <h1 class="display-4">Hello, world!</h1>
+                  <p class="lead">this content providing all information about jumbotron inside BS4</p>
+                  <hr class="my-2">
+                  <p class="m-b-20">this utlities uses for typogrphically helpfull for larger container..</p>
+                  <p class="lead">
+                    <a class="btn btn-primary  btn-md" href="" role="button" data-angular-ripple>Learn more</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="card card_main">
+              <div class="card-header"><h5 class="card-header-text">Fluid Jumbotron</h5></div>
+              <div class="card-block">
+                <div class="jumbotron jumbotron-fluid m-b-0">
+                  <div class="container">
+                    <h1 class="display-4">Fluid jumbotron</h1>
+                    <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+        <!-- Container-fluid ends -->
+     </div>
+</div>
+
+</div>

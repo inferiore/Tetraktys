@@ -1,0 +1,148 @@
+
+
+  <div  class="sidebar-mini fixed" >
+   
+    <div class="wrapper">
+   
+ <div ng-include="'shared/header.html'"></div>
+ <div ng-include="'shared/sidebar.html'" data-ng-controller="menuController" data-ng-init="setMenu()"></div>
+    
+    <div class="content-wrapper">
+        <!-- Container-fluid starts -->
+       <div class="container-fluid">
+    <!-- Main content starts -->
+    <div class="row">
+      <div class="col-sm-12 p-0">
+        <div class="main-header">
+          <h4>Tooltip</h4>
+          <ol class="breadcrumb breadcrumb-title breadcrumb-arrow">
+            <li class="breadcrumb-item"><a href="index.html"><i class="icofont icofont-home"></i></a>
+            </li>
+            <li class="breadcrumb-item"><a href="#!">UI Elements</a>
+            </li>
+            <li class="breadcrumb-item"><a href="tooltips.html">Tooltip</a>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+    <!-- Tooltip start -->
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="card">
+          <div class="card-header"><h5 class="card-header-text">Tooltips On Button</h5></div>
+          <div class="card-block tooltip-btn button-list">
+            <button type="button" class="btn btn-default  angular-dark" tooltip-placement="top" uib-tooltip="tooltip on top" data-angular-ripple>Top
+            </button>
+            <button type="button" class="btn btn-primary" tooltip-placement="left" uib-tooltip="tooltip on left" data-angular-ripple>Left
+            </button>
+            <button type="button" class="btn btn-success" tooltip-placement="right" uib-tooltip="tooltip on right" data-angular-ripple>right
+            </button>
+            <button type="button" class="btn btn-warning" tooltip-placement="bottom" uib-tooltip="tooltip on bottom" data-angular-ripple>bottom
+            </button>
+            <button type="button" class="btn btn-info" uib-tooltip-html="htmlTooltip" data-angular-ripple>Html Tooltip
+            </button>  
+          </div>
+        </div>
+        <!-- end of card -->
+      </div>
+      <div class="col-lg-4">
+        <div class="card">
+          <div class="card-header"><h5 class="card-header-text">Tooltips On popover</h5></div>
+          <div class="card-block tooltip-pop button-list">
+            <button type="button" class="btn btn-default  angular-dark" popover-placement="top"  popover-title="tooltip on top" uib-popover="top by popover" data-angular-ripple>Top
+            </button>
+            <button type="button" class="btn btn-primary  " popover-placement="left"  popover-title="tooltip on left" uib-popover="left by popover" data-angular-ripple>Left
+            </button>
+            <button type="button" class="btn btn-success  " popover-placement="right"  popover-title="tooltip on right" uib-popover="right by popover" data-angular-ripple>right
+            </button>
+            <button type="button" class="btn btn-warning  " popover-placement="bottom"  popover-title="tooltip on bottom" uib-popover="bottom by popover" data-angular-ripple>bottom
+            </button>
+            <button type="button" class="btn btn-info" popover-placement="top" uib-popover-html="htmlPopover"  popover-title="tooltip by HTML" data-angular-ripple>Html Tooltip
+            </button>
+          </div>
+        </div>
+        <!-- end of card -->
+      </div>
+      <div class="col-lg-4">
+        <div class="card">
+          <div class="card-header"><h5 class="card-header-text">Tooltips with link</h5></div>
+          <div class="card-block tooltip-link">
+            <a href="#!" tooltip-placement="top" uib-tooltip="top!" >Top</a>
+            <a href="#!" tooltip-placement="bottom" uib-tooltip="bottom!">Bottom</a>
+            <a href="#!" tooltip-placement="left" uib-tooltip="left!">Left</a>
+            <a href="#!" tooltip-placement="right" uib-tooltip="right!">Right</a>
+          </div>
+        </div>
+        <!-- end of card -->
+      </div>
+      <!-- end of col-xl-4 col-md-6 -->
+    </div>
+    <!-- end of row -->
+
+            <div class="row">
+                <div class="">
+                    <div class="col-lg-6">
+                        <div class="card">
+                            <div class="card-header"><h5 class="card-header-text">Tooltips on textbox</h5></div>
+                            <div class="card-block button-list">
+                                <div class="md-group-add-on">
+                  <span class="md-add-on">
+          <i class="icofont icofont-ui-user"></i>
+          </span>
+                <div class="md-input-wrapper">
+                  <input type="text" id="name" class="md-form-control" title="yourname" tooltip-placement="top" uib-tooltip="yourname" />
+                  <label>Enter Your Name</label>
+                </div>
+              </div>
+              <div class="md-group-add-on">
+                  <span class="md-add-on">
+          <i class="icofont icofont-ui-email"></i>
+          </span>
+                <div class="md-input-wrapper">
+                  <input type="email" id="email" class="md-form-control" title="your email name must be 8-16 character long" uib-tooltip="your email name must be 8-16 character long"  tooltip-placement="top" />
+                  <label>Enter Email</label>
+                </div>
+              </div>
+              <button type="button" class="btn btn-primary   m-r-20" data-toggle="tooltip" data-placement="right" title="submit">Submit
+              </button>
+            </div>
+          </div>
+          <!-- end of card -->
+        </div>
+        <div class="col-lg-6">
+          <div class="card">
+            <div class="card-header"><h5 class="card-header-text">Tooltips on icon</h5></div>
+            <div class="card-block tooltip-icon button-list">
+              <button type="button" class="btn btn-primary btn-icon  "
+                      tooltip-placement="left" uib-tooltip=".icofont-home">
+                <i class="icofont icofont-home"></i>
+              </button>
+              <button type="button" class="btn btn-danger btn-icon  "
+                      tooltip-placement="top" uib-tooltip=".icofont icofont-search-alt-2">
+                <i class="icofont icofont-search-alt-2"></i>
+              </button>
+              <button type="button" class="btn btn-warning btn-icon  "
+                      tooltip-placement="right" uib-tooltip=".icofont-refresh">
+                <i class="icofont icofont-refresh"></i>
+              </button>
+              <button type="button" class="btn btn-info btn-icon  "
+                      tooltip-placement="top" uib-tooltip=".icofont-print">
+                <i class="icofont icofont-print"></i>
+              </button>
+              <button type="button" class="btn btn-success btn-icon  "
+                      tooltip-placement="bottom" uib-tooltip=".icofont-paper-plane">
+                <i class="icofont icofont-paper-plane"></i>
+              </button>
+            </div>
+          </div>
+          <!-- end of card -->
+        </div>
+      </div>
+      <!-- end of col-xl-4 col-md-6 -->
+    </div>
+  </div>
+        <!-- Container-fluid ends -->
+    </div>
+</div>
+</div>

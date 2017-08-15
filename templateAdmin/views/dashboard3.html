@@ -1,0 +1,212 @@
+<div  class="sidebar-mini fixed" >
+   
+    <div class="wrapper" >
+   
+<div ng-include="'shared/header.html'"></div>
+<div ng-include="'shared/sidebar.html'" data-ng-controller="menuController" data-ng-init="setMenu()"></div>
+   
+    <div class="content-wrapper">
+        <!-- Container-fluid starts -->
+        <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-12 p-0">
+                            <div class="main-header">
+                                <h4>Dashboard</h4>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- 1-1 blocks row start -->
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="card-block b-b-muted dashboard-total-growth">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <h5 count-to="{{countTo}}" value="{{countFrom}}" duration="4"></h5>
+                                                    <p>Total Growth</p>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <span class="barchart"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <div class="card-block b-b-muted dashboard-total-growth">
+                                            <div class="row d-flex">
+                                                <div class="col-sm-6">
+                                                   <h5 count-to="{{countTo1}}" value="{{countFrom}}" duration="4"></h5>
+                                                    <p>Social Users</p>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <h5 class="txt-success">+142</h5>
+                                                    <div class="widget-progress">
+                                                        <div class="progress">
+                                                            <div class="progress-bar1 bg-warning" style="width: 45%;">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <div class="card-block dashboard-total-growth">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <h5 count-to="{{countTo2}}" value="{{countFrom}}" duration="4"></h5>
+                                                    <p>New Followers</p>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div class="photo-table">
+                                                        <img class="img-circle" src="assets/images/avatar-1.png" alt="chat-user">
+                                                        <img class="img-circle" src="assets/images/avatar-2.png" alt="chat-user">
+                                                        <img class="img-circle" src="assets/images/avatar-3.png" alt="chat-user">
+                                                        <img class="img-circle" src="assets/images/avatar-4.png" alt="chat-user">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card">
+                                <div class="card-block">
+                                    <h6 class="m-b-15">Browser Used</h6>
+                                     <area-chart config="areaconfig" data="areadata" height="210px"></area-chart>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- 1-1-blocks row end -->
+
+                    <!-- 2nd row start -->
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="card">
+                                <div class="card-block">
+                                 <h6>Recent Users</h6>
+                                 <div class="table-responsive">
+                                    <table class="table m-b-0">
+                                        <thead>
+                                            <tr class="text-uppercase">
+                                                <th>ID</th>
+                                                <th>Name</th>
+                                                <th>Price</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th>1001</th>
+                                                <td>Dell Inspiron 3555 Laptop</td>
+                                                <td><a href="">$600</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>2581</th>
+                                                <td>HP 15-Ay008tx Laptop</td>
+                                                <td><a href="">$857</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>8596</th>
+                                                <td>HP Pavilion 13-S102TU X360 </td>
+                                                <td><a href="">$860</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>1256</th>
+                                                <td>Dell Inspiron 3555 Laptop</td>
+                                                <td><a href="">$600</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>1258</th>
+                                                <td>HP Pavilion Notebook</td>
+                                                <td><a href="">$700</a>
+                                                </td>
+                                            </tr>
+                                       </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="customchart-primary" id="customchart-primary" ></div>
+                        </div>
+
+                    </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <div class="card-block">
+                                    <h6>Server Load</h6>
+                                    <gauge-chart config="gaugeconfig" data="gaugedata" height="300px"></gauge-chart>
+                                </div>
+
+                            </div>
+                        </div>
+                </div>
+                    <!-- 2nd row end -->
+
+                    <!-- 3rd row start -->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card dasboard-map">
+                                <div class="card-block">
+                                    <h6 class="m-b-20">Map With Markers</h6>
+                                    <div class="row d-flex">
+                                        <div class="col-lg-9 col-md-7 ">
+                                            <div countrymap class="span10"></div> 
+                                            <div class="carousel-caption">
+                                                <h3 style="color:red" ><strong>{{countryName}}</strong><h3> 
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-5">
+                                            <div class="col-sm-12 daily-visiter">
+                                                <h6>Daily Visitors</h6>
+                                                <span>Last Week Rise by 62%</span>
+                                                <div class="widget-progress">
+                                                <div class="progress dashboard-progress">
+                                                        <div class="progress-bar1 bg-primary" style="width: 65%;">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-12 daily-visiter">
+                                                <h6>Registrations</h6>
+                                                <span>Up by 57% last 7 days</span>
+                                                <div class="widget-progress">
+                                                <div class="progress dashboard-progress">
+                                                        <div class="progress-bar1 bg-primary" style="width: 45%;">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-12 daily-visiter">
+                                                <h6>Direct Sales</h6>
+                                                <span>Last Month Rise by 22%</span>
+                                                <div class="widget-progress">
+                                                <div class="progress dashboard-progress">
+                                                        <div class="progress-bar1 bg-primary" style="width: 75%;">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 3rd row End -->
+
+        <!-- Container-fluid ends -->
+     </div>
+</div>
+</div>
+

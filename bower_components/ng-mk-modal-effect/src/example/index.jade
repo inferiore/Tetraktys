@@ -1,0 +1,60 @@
+doctype html
+html
+head
+  title
+  meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+  link(rel='stylesheet', href='theme.css')
+  link(rel='stylesheet', href='dist/mkModal.css')
+  script(src="lib/angular/angular.min.js")
+  script(src="lib/jquery/dist/jquery.min.js")
+  script(src='dist/mkModal.js')
+  script(src='main.js')
+
+body(ng-app='demo', ng-controller='demoCtrl')
+
+  header
+    h1 Modal Style Settings
+      span
+        div
+          label(for="styleHeight") Height
+          input#styleHeight(type="text", ng-model="data.modalData.style.height")
+          label(for="styleWidth") Width
+          input#styleWidth(type="text", ng-model="data.modalData.style.width")
+          label(for="styleTop") Top
+          input#styleTop(type="text", ng-model="data.modalData.style.top")
+          label(for="styleLeft") Left
+          input#styleLeft(type="text", ng-model="data.modalData.style.left")
+        div
+          #statusText
+          button(ng-click="resetStyle()") Reset
+          button#modalTriggerBtn(style="background: #aaa") Open Modal
+
+  .main.clearfix
+    .column
+      .item(id="{{effect.value}}Container", ng-repeat="effect in effects_1")
+        input(id="{{effect.value}}", name="effectType", type="radio", ng-model="data.effectType", value="{{effect.value}}", ng-change="setModalData()")
+        label(for="{{effect.value}}") {{effect.name}}
+    .column
+      .item(id="{{effect.value}}Container", ng-repeat="effect in effects_2")
+        input(id="{{effect.value}}", name="effectType", type="radio", ng-model="data.effectType", value="{{effect.value}}", ng-change="setModalData()")
+        label(for="{{effect.value}}") {{effect.name}}
+
+  mk-modal(trigger-element-id="modalTriggerBtn", close-element-id="modalCloseBtn", data="data.modalData", before-close="modalBeforeClosedHandler()", after-close="modalAfterClosedHandler()", ng-switch="data.effectType", mk-modal-id="mainModal")
+    .item(ng-switch-when="so")
+      input(type="radio", checked)
+      label Stand Out
+    div(ng-switch-default)
+      h3 Modal Dialog
+      div
+        p This is a modal window. You can do the following things with it:
+        ul
+          li
+            strong Read:
+            |  modal windows will probably tell you something important so don't forget to read what they say.
+          li
+            strong Look:
+            |  a modal window enjoys a certain kind of attention; just look at it and appreciate its presence.
+          li
+            strong Close:
+            |  click on the button below to close the modal.
+        button#modalCloseBtn Close me!

@@ -1,0 +1,46 @@
+<!-- <ul class="pagination pagination-sm" ng-if="1 < pages.length || !autoHide">
+    <li ng-if="boundaryLinks" ng-class="{ disabled : pagination.current == 1 } page-item">
+        <a href="" class="page-link angular-dark" ng-click="setCurrent(1)">&laquo;</a>
+    </li>
+    <li ng-if="directionLinks" ng-class="{ disabled : pagination.current == 1 }">
+        <a href="" ng-click="setCurrent(pagination.current - 1)">&lsaquo;</a>
+    </li>
+    <li ng-repeat="pageNumber in pages track by tracker(pageNumber, $index)" ng-class="{ active : pagination.current == pageNumber, disabled : pageNumber == '...' }">
+        <a href="" ng-click="setCurrent(pageNumber)">{{ pageNumber }}</a>
+    </li>
+
+    <li ng-if="directionLinks" ng-class="{ disabled : pagination.current == pagination.last }">
+        <a href="" ng-click="setCurrent(pagination.current + 1)">&rsaquo;</a>
+    </li>
+    <li ng-if="boundaryLinks"  ng-class="{ disabled : pagination.current == pagination.last }">
+        <a href="" ng-click="setCurrent(pagination.last)">&raquo;</a>
+    </li>
+</ul> -->
+
+<ul class="pagination pagination-sm" ng-if="1 < pages.length || !autoHide" >
+    <li ng-if="boundaryLinks" ng-class="{ disabled : pagination.current == 1 } page-item" >
+      <a class="page-link angular-dark" href="" ng-click="setCurrent(1)" data-angular-ripple="">
+        <span class=" angular-ripple-dark animate" style="width: 82px; height: 82px; left: 14px; top: -28px;"></span>
+        <i class="icofont icofont-simple-left"></i>
+      </a>
+    </li>
+    <li class="page-item"  ng-if="directionLinks" ng-class="{ disabled : pagination.current == 1 }" >
+      <a class="page-link angular-dark" href="" ng-click="setCurrent(pagination.current - 1)" data-angular-ripple="">
+        <span class=" angular-ripple-dark animate" style="width: 82px; height: 82px; left: 14px; top: -28px;"></span>
+        <i class="icofont icofont-simple-left"></i>
+      </a>
+    </li>
+    <li class="page-item" ng-repeat="pageNumber in pages track by tracker(pageNumber, $index)" ng-class="{ active : pagination.current == pageNumber, disabled : pageNumber == '...' }"  >
+        <a class="page-link angular-dark" ng-click="setCurrent(pageNumber)" href="" role="button" data-angular-ripple="">{{ pageNumber }}</a>
+    </li>
+    <li class="page-item" ng-if="boundaryLinks"  ng-class="{ disabled : pagination.current == pagination.last }">
+      <a class="page-link angular-dark" href=""  data-angular-ripple=""  ng-click="setCurrent(pagination.last)">
+        <i class="icofont icofont-simple-right"></i>
+      </a>
+    </li>
+    <li class="page-item" ng-if="directionLinks" ng-class="{ disabled : pagination.current == pagination.last }">
+      <a class="page-link angular-dark" href=""  data-angular-ripple="" ng-click="setCurrent(pagination.current + 1)">
+        <i class="icofont icofont-simple-right"></i>
+      </a>
+    </li>
+</ul>

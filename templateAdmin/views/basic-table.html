@@ -1,0 +1,484 @@
+
+
+  <div  class="sidebar-mini fixed" >
+   
+    <div class="wrapper" >
+   
+  <div ng-include="'shared/header.html'"></div>
+ <div ng-include="'shared/sidebar.html'" data-ng-controller="menuController" data-ng-init="setMenu()"></div>
+
+    <div class="content-wrapper">
+        <!-- Container-fluid starts -->
+        <div class="container-fluid">
+
+            <!-- Header Starts -->
+            <div class="row">
+                <div class="col-sm-12 p-0">
+                    <div class="main-header">
+                        <h4>Table</h4>
+                        <ol class="breadcrumb breadcrumb-title breadcrumb-arrow">
+                            <li class="breadcrumb-item">
+                                <a href="index.html">
+                                    <i class="icofont icofont-home"></i>
+                                </a>
+                            </li>
+                            <li class="breadcrumb-item"><a href="">Table</a>
+                            </li>
+                            <li class="breadcrumb-item"><a href="basic-table.html">Basic Table</a>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <!-- Header end -->
+
+            <!-- Tables start -->
+            <!-- Row start -->
+            <div class="row">
+                <div class="col-sm-12">
+                    <!-- Basic Table starts -->
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-header-text">Basic Table</h5>
+                            <p>Basic example <code>without any additional modification</code> classes</p>
+                        </div>
+                        <div class="card-block">
+                            <div class="row">
+                                <div class="col-sm-12 table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>First Name</th>
+                                            <th>Last Name</th>
+                                            <th>Username</th>
+                                            <th>Nickname</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>Ducky</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Jacob</td>
+                                            <td>Thornton</td>
+                                            <td>@fat</td>
+                                            <td>Ducky</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>Larry</td>
+                                            <td>the Bird</td>
+                                            <td>@twitter</td>
+                                            <td>Ducky</td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>Larry</td>
+                                            <td>the Bird</td>
+                                            <td>@twitter</td>
+                                            <td>Ducky</td>
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td>Larry</td>
+                                            <td>the Bird</td>
+                                            <td>@twitter</td>
+                                            <td>Ducky</td>
+                                        </tr>
+                                        <tr>
+                                            <td>6</td>
+                                            <td>Larry</td>
+                                            <td>the Bird</td>
+                                            <td>@twitter</td>
+                                            <td>Ducky</td>
+                                        </tr>
+                                        <tr>
+                                            <td>7</td>
+                                            <td>Larry</td>
+                                            <td>the Bird</td>
+                                            <td>@twitter</td>
+                                            <td>Ducky</td>
+                                        </tr>
+                                        <tr>
+                                            <td>8</td>
+                                            <td>Larry</td>
+                                            <td>the Bird</td>
+                                            <td>@twitter</td>
+                                            <td>Ducky</td>
+                                        </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Basic Table ends -->
+
+                    <!-- Striped Row Table starts -->
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-header-text">Striped rows</h5>
+                            <p>Add <code>.table-inverse</code> Class in table tag</p>
+                        </div>
+                        <div class="card-block">
+                            <div class="row">
+                                <div class="col-sm-12 table-responsive">
+                                    <table class="table table-inverse">
+                                        <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>First Name</th>
+                                            <th>Last Name</th>
+                                            <th>Username</th>
+                                            <th>Nickname</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>Ducky</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Jacob</td>
+                                            <td>Thornton</td>
+                                            <td>@fat</td>
+                                            <td>Ducky</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>Larry</td>
+                                            <td>the Bird</td>
+                                            <td>@twitter</td>
+                                            <td>Ducky</td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>Larry</td>
+                                            <td>the Bird</td>
+                                            <td>@twitter</td>
+                                            <td>Ducky</td>
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td>Larry</td>
+                                            <td>the Bird</td>
+                                            <td>@twitter</td>
+                                            <td>Ducky</td>
+                                        </tr>
+                                        <tr>
+                                            <td>6</td>
+                                            <td>Larry</td>
+                                            <td>the Bird</td>
+                                            <td>@twitter</td>
+                                            <td>Ducky</td>
+                                        </tr>
+                                        <tr>
+                                            <td>7</td>
+                                            <td>Larry</td>
+                                            <td>the Bird</td>
+                                            <td>@twitter</td>
+                                            <td>Ducky</td>
+                                        </tr>
+                                        <tr>
+                                            <td>8</td>
+                                            <td>Larry</td>
+                                            <td>the Bird</td>
+                                            <td>@twitter</td>
+                                            <td>Ducky</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Striped Row Table ends -->
+
+                    <!-- Hover effect table starts -->
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-header-text">Hover Effects on Row</h5>
+                            <p>Add <code>.table-hover</code> Class in table tag</p>
+                        </div>
+                        <div class="card-block">
+                            <div class="row">
+                                <div class="col-sm-12 table-responsive">
+                                    <table class="table table-hover">
+                                        <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>First Name</th>
+                                            <th>Last Name</th>
+                                            <th>Username</th>
+                                            <th>Nickname</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>Ducky</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Jacob</td>
+                                            <td>Thornton</td>
+                                            <td>@fat</td>
+                                            <td>Ducky</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>Larry</td>
+                                            <td>Otto</td>
+                                            <td>@twitter</td>
+                                            <td>Ducky</td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>Jacob</td>
+                                            <td>Thornton</td>
+                                            <td>@fat</td>
+                                            <td>Ducky</td>
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td>Jacob</td>
+                                            <td>Thornton</td>
+                                            <td>@fat</td>
+                                            <td>Ducky</td>
+                                        </tr>
+                                        <tr>
+                                            <td>6</td>
+                                            <td>Jacob</td>
+                                            <td>Thornton</td>
+                                            <td>@fat</td>
+                                            <td>Ducky</td>
+                                        </tr>
+                                        <tr>
+                                            <td>7</td>
+                                            <td>Jacob</td>
+                                            <td>Thornton</td>
+                                            <td>@fat</td>
+                                            <td>Ducky</td>
+                                        </tr>
+                                        <tr>
+                                            <td>8</td>
+                                            <td>Jacob</td>
+                                            <td>Thornton</td>
+                                            <td>@fat</td>
+                                            <td>Ducky</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Hover effect table ends -->
+
+                    <!-- Contextual classes table starts -->
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-header-text">Contextual classes</h5>
+                            <p>For Make row Contextual add Contextual class like <code>.table-success</code> in <code> tr tag</code> and For cell add Contextual class in <code> td or th tag</code> . </p>
+                        </div>
+                        <div class="card-block">
+                            <div class="row">
+                                <div class="col-sm-12 table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>First Name</th>
+                                            <th>Last Name</th>
+                                            <th>Username</th>
+                                            <th>Nickname</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr class="table-active">
+                                            <td>1</td>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>Ducky</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Jacob</td>
+                                            <td>Thornton</td>
+                                            <td>@fat</td>
+                                            <td>Ducky</td>
+                                        </tr>
+                                        <tr class="table-success">
+                                            <td>3</td>
+                                            <td>Larry</td>
+                                            <td>the Bird</td>
+                                            <td>@twitter</td>
+                                            <td>Ducky</td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>Larry</td>
+                                            <td>the Bird</td>
+                                            <td>@twitter</td>
+                                            <td>Ducky</td>
+                                        </tr>
+                                        <tr class="table-warning">
+                                            <td>5</td>
+                                            <td>Larry</td>
+                                            <td>the Bird</td>
+                                            <td>@twitter</td>
+                                            <td>Ducky</td>
+                                        </tr>
+                                        <tr>
+                                            <td>6</td>
+                                            <td>Larry</td>
+                                            <td>the Bird</td>
+                                            <td>@twitter</td>
+                                            <td>Ducky</td>
+                                        </tr>
+                                        <tr class="table-danger">
+                                            <td>7</td>
+                                            <td>Larry</td>
+                                            <td>the Bird</td>
+                                            <td>@twitter</td>
+                                            <td>Ducky</td>
+                                        </tr>
+                                        <tr>
+                                            <td>8</td>
+                                            <td>Larry</td>
+                                            <td>the Bird</td>
+                                            <td>@twitter</td>
+                                            <td>Ducky</td>
+                                        </tr>
+                                        <tr class="table-info">
+                                            <td>9</td>
+                                            <td>Larry</td>
+                                            <td>the Bird</td>
+                                            <td>@twitter</td>
+                                            <td>Ducky</td>
+                                        </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Contextual classes table ends -->
+
+                    <!-- Background Utilities table starts -->
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-header-text">Background Utilities</h5>
+                            <p>Regular table background variants are not available with the inverse table, however, you may use <code>text or background utilities</code> to achieve similar styles.</p>
+                        </div>
+                        <div class="card-block">
+                            <div class="row">
+                                <div class="col-sm-12 table-responsive">
+                                    <table class="table table-inverse">
+                                        <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>First Name</th>
+                                            <th>Last Name</th>
+                                            <th>Username</th>
+                                            <th>Nickname</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr class="bg-primary">
+                                            <td>1</td>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>Ducky</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Jacob</td>
+                                            <td>Thornton</td>
+                                            <td>@fat</td>
+                                            <td>Ducky</td>
+                                        </tr>
+                                        <tr class="bg-success">
+                                            <td>3</td>
+                                            <td>Larry</td>
+                                            <td>the Bird</td>
+                                            <td>@twitter</td>
+                                            <td>Ducky</td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>Larry</td>
+                                            <td>the Bird</td>
+                                            <td>@twitter</td>
+                                            <td>Ducky</td>
+                                        </tr>
+                                        <tr class="bg-warning">
+                                            <td>5</td>
+                                            <td>Larry</td>
+                                            <td>the Bird</td>
+                                            <td>@twitter</td>
+                                            <td>Ducky</td>
+                                        </tr>
+                                        <tr>
+                                            <td>6</td>
+                                            <td>Larry</td>
+                                            <td>the Bird</td>
+                                            <td>@twitter</td>
+                                            <td>Ducky</td>
+                                        </tr>
+                                        <tr class="bg-danger">
+                                            <td>7</td>
+                                            <td>Larry</td>
+                                            <td>the Bird</td>
+                                            <td>@twitter</td>
+                                            <td>Ducky</td>
+                                        </tr>
+                                        <tr>
+                                            <td>8</td>
+                                            <td>Larry</td>
+                                            <td>the Bird</td>
+                                            <td>@twitter</td>
+                                            <td>Ducky</td>
+                                        </tr>
+                                        <tr class="bg-info">
+                                            <td>9</td>
+                                            <td>Larry</td>
+                                            <td>the Bird</td>
+                                            <td>@twitter</td>
+                                            <td>Ducky</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Background Utilities table ends -->
+                </div>
+            </div>
+            <!-- Row end -->
+            <!-- Tables end -->
+        </div>
+
+        <!-- Container-fluid ends -->
+    </div>
+</div>
+</div>
+

@@ -1,0 +1,74 @@
+  <div  class="sidebar-mini fixed" >
+   
+    <div class="wrapper">
+   
+ <div ng-include="'shared/header.html'"></div>
+ <div ng-include="'shared/sidebar.html'" data-ng-controller="menuController" data-ng-init="setMenu()"></div> 
+
+    <div class="content-wrapper">
+        <!-- Container-fluid starts -->
+        <div class="container-fluid">
+        <!-- Main content starts -->
+    
+            <!-- Row Starts -->
+            <div class="row">
+                <div class="col-sm-12 p-0">
+                    <div class="main-header">
+                        <h4>Map-Google</h4>
+                        <ol class="breadcrumb breadcrumb-title breadcrumb-arrow">
+                            <li class="breadcrumb-item"><a href="index.html"><i class="icofont icofont-home"></i></a>
+                            </li>
+                            <li class="breadcrumb-item"><a href="#!">Charts & Maps</a>
+                            </li>
+                            <li class="breadcrumb-item"><a href="map-google.html">Map-Google</a>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <!-- Row end -->
+
+            <!-- Row start -->
+            <div class="row">
+                <!-- Form Control starts -->
+                <div class="col-md-12 col-lg-6">
+                    <div class="card">
+                       <div class="card-header"><h5 class="card-header-text">Basic</h5></div>
+                        <div class="card-block">
+                            <div data-ui-gmap-google-map class="basic-map" data-center="map.center" data-zoom="map.zoom" data-options="options">
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div class="col-md-12 col-lg-6">
+                    <div class="card">
+                       <div class="card-header"><h5 class="card-header-text">Markers</h5></div>
+                        <div class="card-block">
+                          <div data-ui-gmap-google-map data-center="markerMap.center" data-zoom="markerMap.zoom" id="markers-map" class="basic-map">
+                              <div data-ui-gmap-marker data-coords="markerMap.marker.coords" data-idkey="markerMap.marker.id" data-options="markerMap.marker.options"></div>
+                              <div data-ui-gmap-marker data-coords="markerMap.marker1.coords" data-idkey="markerMap.marker1.id" data-options="markerMap.marker1.options"></div>
+                          </div>
+                          </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <!-- Form Control starts -->
+                <div class="col-md-12 col-lg-6">
+                    <div class="card">
+                       <div class="card-header"><h5 class="card-header-text">Overlays</h5></div>
+                        <div class="card-block">
+                            <div data-ui-gmap-google-map data-center="map1.center" data-zoom="map1.zoom" id="mapOverlay" class="basic-map">
+                                <div data-ui-gmap-map-type data-options="squaresMapType" data-show="map1.showOverlay"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+            
+        </div>
+    </div>
+        <!-- Container-fluid ends -->
+     </div>
+</div>

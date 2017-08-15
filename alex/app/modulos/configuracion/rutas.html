@@ -1,0 +1,109 @@
+<!-- Row start -->
+<div class="row  animated fadeIn">
+    <div class="col-sm-12">
+        <!-- Basic Table starts -->
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-header-text">
+                    <i class="icon-direction"></i>&nbsp;
+                    Rutas del Sistema
+                </h5>
+                <!-- <p>Basic example classes</p> -->
+
+                <button type="button" class="btn btn-primary pull-right" data-ng-click="crear()" data-angular-ripple>
+                    <i class="ion-ios-loop-strong"></i><span class="m-l-10">Sinc</span>
+                </button>
+            </div>
+            <div class="card-block">
+                <div class="form-group row">
+                    <!-- Filtro de los usuarios -->
+                    <div class="col-md-6 block-center filtro">
+                        <div class="input-group">
+                            <span class="input-group-btn">
+                                <button type="submit" class="btn"  id="btn-filtro" data-ng-click="show = !show">
+                                    <span class="fa fa-caret-down"></span>
+                                </button>
+                            </span>
+                            <input id="buscar" type="text" class="form-control" placeholder="Nombre" data-ng-model="filtros.UNombres" ng-keydown="$event.keyCode === 13 ? listar('filtro'):false">
+                            <span class="input-group-btn">
+                                <button type="submit" class="btn btn-primary addon-btn waves-effect waves-light" data-ng-click="listar('filtro')">
+                                    Buscar
+                                </button>
+                            </span>
+                        </div>
+                        <div id="area-filtro"  class="animated flipInX z-depth-bottom-4" data-ng-show="show">
+                            <div class="col-md-12">
+                                <form class="form-horizontal">
+                                    <h5>Filtrar:</h5>
+                                    <hr>
+                                    <div class="form-group row">
+                                        <label class="control-label col-sm-3" for="controlador">Controlador</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control form-control-sm" data-ng-model="filtros.controlador">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="control-label col-sm-3" for="libre">Libre</label>
+                                        <div class="col-sm-9">
+                                            <input type="checkbox" ng-model="filtros.activo" class="js-switch col-md-12" ui-switch="{size: 'small'}" />
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fin filtro de los usuarios -->
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 table-responsive">
+                        <table class="table margin-bottom-tres">
+                            <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Nombre</th>
+                                <th>Controlador</th>
+                                <th>Libre</th>
+                                <th>Activo</th>
+                            </tr>
+                            </thead>
+                            <tbody data-ng-init="ruta = {id: 0}">
+                                <tr data-ng-repeat="ruta in rutas" >
+                                    <td> {{ ruta.id }} </td>
+                                    <td>
+                                        <a href="" editable-text="ruta.nombre" e-style="width:15em" buttons="no" class="editable editable-click row" onaftersave="editar(ruta, $index)">
+                                            {{ ruta.nombre || 'empty' }}
+                                        </a>
+                                    </td>
+                                    <td> 
+                                        <a href="" editable-text="ruta.controlador" e-style="width:38em" buttons="no" class="editable editable-click row" onaftersave="editar(ruta, $index)">
+                                            {{ ruta.controlador || 'empty' }}
+                                        </a>
+                                    </td>
+                                    <td> 
+                                        <input type="checkbox" ng-model="ruta.libre" data-ng-change="editar(ruta, $index)" class="js-switch invisible" ui-switch="{size: 'small', color: '#64bd63', secondaryColor: '#ff5252'}" />
+                                    </td>
+                                    <td>
+                                        <input type="checkbox" ng-model="ruta.activo" data-ng-change="editar(ruta, $index)" class="js-switch invisible" ui-switch="{size: 'small', color: '#64bd63', secondaryColor: '#ff5252' }" />
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-md-12">
+                        <dir-pagination-controls class="pull-right" template-url="js/dirPagination.tpl.html" on-page-change="listar('paginacion', newPageNumber)" >
+                        </dir-pagination-controls>
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="loader-block" data-ng-if="rutas.length <= 0"  >
+                            <svg id="loader2" viewBox="0 0 100 100">
+                                <circle id="circle-loader2" cx="50" cy="50" r="45"></circle>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Basic Table ends -->
+	
+	</div>
+</div>

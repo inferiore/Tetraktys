@@ -1,0 +1,81 @@
+<div  class="sidebar-mini fixed" >
+   
+    <div class="wrapper" >
+   
+ <div ng-include="'shared/header.html'"></div>
+ <div ng-include="'shared/sidebar.html'" data-ng-controller="menuController" data-ng-init="setMenu()"></div> 
+
+    <div class="content-wrapper">
+        <!-- Container-fluid starts -->
+       <div class="container-fluid">
+			<div >
+				<!-- Header Starts -->
+				<div class="row">
+					<div class="col-sm-12 p-0">
+						<div class="main-header">
+							<h4>Calender</h4>
+							<ol class="breadcrumb breadcrumb-title breadcrumb-arrow">
+								<li class="breadcrumb-item"><a href="index.html"><i class="icofont icofont-home"></i></a>
+								</li>
+								<li class="breadcrumb-item"><a href="">Extras</a>
+								</li>
+								<li class="breadcrumb-item"><a href="full-calender.html">Calender</a>
+								</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+				<!-- Header end -->
+
+				<!-- Row start -->
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="card">
+							<div class="card-block">
+									<div class="row">
+										<!-- <div class="col-xl-2 col-md-12">
+                      <div id="external-events">
+                        <h6 class="m-b-30 m-t-20">Events</h6>
+                        <div  class="fc-event ui-draggable ui-draggable-handle">My Event 1</div>
+                        <div class="fc-event ui-draggable ui-draggable-handle">My Event 2</div>
+                        <div class="fc-event ui-draggable ui-draggable-handle">My Event 3</div>
+                        <div class="fc-event ui-draggable ui-draggable-handle">My Event 4</div>
+                        <div class="fc-event ui-draggable ui-draggable-handle">My Event 5</div>
+                    
+                        <div class="rkmd-checkbox checkbox-rotate checkbox-ripple">
+                                                  <label class="input-checkbox checkbox-primary">
+                                                        <input type="checkbox" id="checkbox2" checked="">
+                                                        <span class="checkbox"></span>
+                                                  </label>
+                                                  <div class="captions">Remove After Drop</div>
+                                              </div>
+                    
+                    
+                      </div>
+                    </div> -->
+                    <div class="col-sm-12">
+                      <div class="btn-group f-right">
+                        <button class="btn btn-success"  ng-click="changeView('basicDay')" data-angular-ripple>Day</button>
+                        <button class="btn btn-success" ng-click="changeView('basicWeek')" data-angular-ripple>Week</button>
+                        <button class="btn btn-success"  ng-click="changeView('month')" data-angular-ripple>Month</button>
+                      </div>
+                    </div>
+										<div class="col-sm-12">
+												  <div ui-calendar="uiConfig.calendar" ng-model="eventSources" calendar="myCalendar">
+
+										</div>
+									</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Row end -->
+
+		</div>
+
+	</div>
+        <!-- Container-fluid ends -->
+     </div>
+</div>
+</div>
+

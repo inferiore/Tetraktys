@@ -1,0 +1,891 @@
+
+
+  <div  class="sidebar-mini fixed" >
+   
+    <div class="wrapper" >
+   
+ <div ng-include="'shared/header.html'"></div>
+ <div ng-include="'shared/sidebar.html'" data-ng-controller="menuController" data-ng-init="setMenu()"></div> 
+    
+    <div class="content-wrapper">
+        <!-- Container-fluid starts -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12 p-0">
+                    <div class="main-header">
+                        <h4>Task Board</h4>
+                        <ol class="breadcrumb breadcrumb-title breadcrumb-arrow">
+                            <li class="breadcrumb-item"><a href="index.html"><i class="icofont icofont-home"></i></a>
+                            </li>
+                            <li class="breadcrumb-item"><a href="#!">Apps</a>
+                            </li>
+                            <li class="breadcrumb-item"><a href="task-board.html">Task Board</a>
+                            </li>
+                        </ol>
+                    </div>
+                    <!-- end of main-header -->
+                </div>
+                <!-- end of col-sm-12 -->
+            </div>
+            <!-- end of row -->
+
+
+            <div class="row">
+                <div class="col-xl-3 col-md-4 col-sm-12 push-xl-9 push-md-8">
+                    <div class="card">
+                        <div class="card-header"><h5 class="card-header-text">Search Box</h5></div>
+                        <div class="card-block p-t-0">
+                            <!--<input class="form-control m-b-20" type="text" placeholder="You Searching Here."/>-->
+                            <div class="md-group-add-on">
+                                <span class="md-add-on f-right">
+									<i class="icofont icofont-search-alt-2"></i>
+                                </span>
+                                <div class="md-input-wrapper">
+                                    <input type="text" class="md-form-control">
+                                    <label>You Searching Here.</label>
+                                </div>
+                            </div>
+                            <!-- <div class="task-right">
+                                <div class="task-right-header-action">
+                                    <span data-toggle="collapse">Action Button</span>
+                                    <i class="icofont icofont-curved-down f-right"></i>
+                                </div> -->
+                            <!-- end of sidebar-header -->
+                            <!-- <div class="task-right-content-action d-none">
+                                <button type="button" class="btn btn-primary btn-md waves-effect waves-light m-r-10 m-t-10">
+                                <i class="fa fa-code-fork"></i> <span>Branch</span>
+                                </button>
+                                <button type="button" class="btn btn-danger waves-effect btn-md waves-light m-t-10">
+                                <i class="fa fa-code-fork"></i> <span>Branch</span>
+                                </button>
+                            </div> -->
+							<!-- end of task-right-content-action -->
+							<div class="task-right">
+								<div class="task-right-header-status" value="Toggle First = {{box1}}" ng-click="box1=!box1">
+									<span data-toggle="collapse" >Completed Stats</span>
+									<i class="icofont icofont-curved-down f-right"></i>
+								</div>
+								<!-- end of sidebar-header completed status-->
+
+								<div class="taskboard-right-progress" data-slide-toggle="box1" data-slide-toggle-duration="1000">
+
+                                    <h6>Highest Priority</h6>
+                                    <div class="faq-progress">
+                                        <div class="progress">
+                                            <!-- <span class="faq-text3"></span> -->
+                                            <div class="faq-bar3"></div>
+                                        </div>
+                                    </div>
+
+                                    <h6>High priority</h6>
+                                    <div class="faq-progress">
+                                        <div class="progress">
+                                            <!-- <span class="faq-text1"></span> -->
+                                            <div class="faq-bar1"></div>
+                                        </div>
+                                    </div>
+
+                                    <h6>Normal priority</h6>
+                                    <div class="faq-progress">
+                                        <div class="progress">
+                                            <!-- <span class="faq-text2"></span> -->
+                                            <div class="faq-bar2"></div>
+                                        </div>
+                                    </div>
+
+                                    <h6>Low priority</h6>
+                                    <div class="faq-progress">
+                                        <div class="progress">
+                                            <!-- <span class="faq-text4"></span> -->
+                                            <div class="faq-bar4"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end of task-board-right progress -->
+
+								<!-- start task right users -->
+								<div class="task-right-header-users" value="Toggle First = {{box2}}" ng-click="box2=!box2">
+									<span data-toggle="collapse">Assign Users</span>
+									<i class="icofont icofont-curved-down f-right"></i>
+								</div>
+
+								<div class="user-box assign-user taskboard-right-users" data-slide-toggle="box2" data-slide-toggle-duration="1000">
+									<div class="media">
+										<div class="media-left media-middle photo-table">
+											<a href="">
+												<img class="media-object img-circle" src="assets/images/avatar-1.jpg" alt="Generic placeholder image">
+												<div class="live-status bg-danger"></div>
+											</a>
+										</div>
+										<div class="media-body">
+											<h6>Josephin Doe</h6>
+											<p>Santa Ana,CA</p>
+										</div>
+									</div>
+									<div class="media">
+										<div class="media-left media-middle photo-table">
+											<a href="">
+												<img class="media-object img-circle" src="assets/images/avatar-2.jpg" alt="Generic placeholder image">
+												<div class="live-status bg-success"></div>
+											</a>
+										</div>
+										<div class="media-body">
+											<h6>Josephin Doe</h6>
+											<p>Huntingston, NJ</p>
+										</div>
+									</div>
+									<div class="media">
+										<div class="media-left media-middle photo-table">
+											<a href="">
+												<img class="media-object img-circle" src="assets/images/avatar-3.jpg" alt="Generic placeholder image">
+												<div class="live-status bg-danger"></div>
+											</a>
+										</div>
+										<div class="media-body">
+											<h6>Josephin Doe</h6>
+											<p>Willingstion, WA</p>
+										</div>
+									</div>
+									<div class="media">
+										<div class="media-left media-middle photo-table">
+											<a href="">
+												<img class="media-object img-circle" src="assets/images/avatar-2.jpg" alt="Generic placeholder image">
+												<div class="live-status bg-success"></div>
+											</a>
+										</div>
+										<div class="media-body">
+											<h6>Josephin Doe</h6>
+											<p>Illions, IL</p>
+										</div>
+									</div>
+								</div>
+								<!-- end of task-board-right users -->
+
+								<div class="task-right-header-revision" value="Toggle First = {{box3}}" ng-click="box3=!box3">
+									<span data-toggle="collapse">Revision</span>
+									<i class="icofont icofont-curved-down f-right"></i>
+								</div>
+
+								<div class="taskboard-right-revision user-box" data-slide-toggle="box3" data-slide-toggle-duration="1000">
+
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <a class="btn btn-primary btn-lg bg-white txt-muted btn-icon" href="#!" role="button"><i class="icofont icofont-gears"></i>
+                                            </a>
+                                        </div>
+                                        <div class="media-body">
+                                            <div class="chat-header">Drop the IE specific hacks for temporal inputs</div>
+                                            <p class="chat-header  text-muted">4 minutes ago</p>
+                                        </div>
+                                        <!-- end of media body -->
+                                    </div>
+                                    <!-- end of media -->
+
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <a class="btn btn-danger btn-lg bg-white txt-muted btn-icon" href="#!" role="button"><i class="icofont icofont-share"></i>
+                                            </a>
+                                        </div>
+                                        <div class="media-body">
+                                            <div class="chat-header">Have Carousel ignore keyboard events</div>
+                                            <p class="chat-header  text-muted">12 Dec,2015</p>
+                                        </div>
+                                        <!-- end of media body -->
+                                    </div>
+                                    <!-- end of media -->
+
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <a class="btn btn-warning btn-lg bg-white txt-muted btn-icon" href="#!" role="button"><i class="icofont icofont-font"></i>
+                                            </a>
+                                        </div>
+
+                                        <div class="media-body">
+                                            <div class="chat-header">Add full font overrides for popovers and tooltips</div>
+                                            <p class="chat-header text-muted">2 month ago</p>
+                                        </div>
+                                        <!-- end of media body -->
+                                    </div>
+                                    <!-- end of media -->
+
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <a class="btn btn-success btn-lg bg-white txt-muted btn-icon" href="#!" role="button"><i class="icofont icofont-responsive"></i>
+                                            </a>
+                                        </div>
+
+                                        <div class="media-body">
+                                            <div class="chat-header">Responsive Asssignment</div>
+                                            <p class="chat-header  text-muted">6 month ago</p>
+                                        </div>
+                                        <!-- end of media body -->
+                                    </div>
+                                    <!-- end of media -->
+                                </div>
+                                <!-- end of task-right-revision -->
+                            </div>
+                            <!-- end of sidebar-right -->
+                        </div>
+                        <!-- end of card-block -->
+                    </div>
+                    <!-- end of card-block -->
+                </div>
+
+                <div class="col-xl-9 col-md-8 col-sm-12 pull-xl-3 pull-md-4 filter-bar">
+                    <nav class="navbar navbar-light bg-faded m-b-30 p-10">
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#!">Filter: <span class="sr-only">(current)</span></a>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#!" id="bydate" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="icofont icofont-clock-time"></i> By Date</a>
+                                <div class="dropdown-menu" aria-labelledby="bydate">
+                                    <a class="dropdown-item" href="#!">Show all</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#!">Today</a>
+                                    <a class="dropdown-item" href="#!">Yesterday</a>
+                                    <a class="dropdown-item" href="#!">This week</a>
+                                    <a class="dropdown-item" href="#!">This month</a>
+                                    <a class="dropdown-item" href="#!">This year</a>
+                                </div>
+                            </li>
+                            <!-- end of by date dropdown -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#!" id="bystatus" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="icofont icofont-chart-histogram-alt"></i> By Status</a>
+                                <div class="dropdown-menu" aria-labelledby="bystatus">
+                                    <a class="dropdown-item" href="#!">Show all</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#!">Open</a>
+                                    <a class="dropdown-item" href="#!">On hold</a>
+                                    <a class="dropdown-item" href="#!">Resolved</a>
+                                    <a class="dropdown-item" href="#!">Closed</a>
+                                    <a class="dropdown-item" href="#!">Dublicate</a>
+                                    <a class="dropdown-item" href="#!">Wontfix</a>
+                                </div>
+                            </li>
+                            <!-- end of by status dropdown -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#!" id="bypriority" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="icofont icofont-sub-listing"></i> By Priority</a>
+                                <div class="dropdown-menu" aria-labelledby="bypriority">
+                                    <a class="dropdown-item" href="#!">Show all</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#!">Highest</a>
+                                    <a class="dropdown-item" href="#!">High</a>
+                                    <a class="dropdown-item" href="#!">Normal</a>
+                                    <a class="dropdown-item" href="#!">Low</a>
+                                </div>
+                            </li>
+                            <!-- end of by priority dropdown -->
+                        </ul>
+
+                        <ul class="nav navbar-nav f-right">
+
+                            <li class="nav-item">
+                                <span class="m-r-15">View Mode: </span>
+                                <button type="button" class="btn btn-primary waves-effect waves-light m-r-10" data-toggle="tooltip" data-placement="top" title="list view">
+                                    <i class="icofont icofont-listine-dots"></i>
+                                </button>
+                                <button type="button" class="btn btn-primary waves-effect waves-light" data-toggle="tooltip" data-placement="top" title="grid view">
+                                    <i class="icofont icofont-table"></i>
+                                </button>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!-- end of main navbar  -->
+                    <div class="row">
+
+                        <div class="col-xl-6 col-md-12">
+                            <div class="card b-l-primary">
+                                <div class="card-header">
+                                    <a href="#!" class="card-title">#24. Create UI design model </a>
+                                    <span class="label label-default f-right m-t-5"> 28 January, 2015 </span>
+                                </div>
+                                <div class="card-block">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <p class="task-detail">A collection of textile samples lay spread out on the table One morning, when Gregor Samsa woke from troubled.</p>
+                                            <p><strong> Due : </strong><strong class="label label-danger">23 hours</strong></p>
+                                        </div>
+                                        <!-- end of col-sm-8 -->
+                                    </div>
+                                    <!-- end of row -->
+                                </div>
+                                <!-- end of card-block -->
+
+                                <div class="card-footer">
+                                    <div class="task-list-table">
+                                        <a href="#!"><img class="img-fluid img-circle" src="assets/images/avatar-1.png" alt="1"/></a>
+                                        <a href="#!"><img class="img-fluid img-circle" src="assets/images/avatar-2.png" alt="1"/></a>
+                                        <a href="#!"><i class="icofont icofont-plus"></i></a>
+                                    </div>
+                                    <div class="task-board">
+                                        <div class="dropdown-secondary dropdown">
+                                            <button class="btn btn-primary btn-mini dropdown-toggle waves-effect waves-light" type="button" id="dropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Normal</button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdown1" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+                                                <a class="dropdown-item waves-light waves-effect" href="#!"><span class="point-marker bg-danger"></span>Highest priority</a>
+                                                <a class="dropdown-item waves-light waves-effect" href="#!"><span class="point-marker bg-warning"></span>High priority</a>
+                                                <a class="dropdown-item waves-light waves-effect active" href="#!"><span class="point-marker bg-success"></span>Normal priority</a>
+                                                <a class="dropdown-item waves-light waves-effect" href="#!"><span class="point-marker bg-info"></span>Low priority</a>
+                                            </div>
+                                            <!-- end of dropdown menu -->
+                                        </div>
+                                        <div class="dropdown-secondary dropdown">
+                                            <button class="btn btn-default btn-mini dropdown-toggle waves-light bg-white b-none txt-muted" type="button" id="dropdown2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Open</button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdown2" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+                                                <a class="dropdown-item waves-light waves-effect active" href="#!">Open</a>
+                                                <a class="dropdown-item waves-light waves-effect" href="#!">On hold</a>
+                                                <a class="dropdown-item waves-light waves-effect" href="#!">Resolved</a>
+                                                <a class="dropdown-item waves-light waves-effect" href="#!">Closed</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item waves-light waves-effect" href="#!">Dublicate</a>
+                                                <a class="dropdown-item waves-light waves-effect" href="#!">Invalid</a>
+                                                <a class="dropdown-item waves-light waves-effect" href="#!">Wontfix</a>
+                                            </div>
+                                            <!-- end of dropdown menu -->
+                                        </div>
+                                        <!-- end of dropdown-secondary -->
+                                        <div class="dropdown-secondary dropdown">
+                                            <button class="btn btn-default btn-mini dropdown-toggle waves-light bg-white b-none txt-muted" type="button" id="dropdown3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="icofont icofont-navigation-menu"></i></button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdown3" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+                                                <a class="dropdown-item waves-light waves-effect" href="#!"><i class="icofont icofont-ui-alarm"></i> Check in</a>
+                                                <a class="dropdown-item waves-light waves-effect" href="#!"><i class="icofont icofont-attachment"></i> Attach screenshot</a>
+                                                <a class="dropdown-item waves-light waves-effect" href="#!"><i class="icofont icofont-spinner-alt-5"></i> Reassign</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item waves-light waves-effect" href="#!"><i class="icofont icofont-ui-edit"></i> Edit task</a>
+                                                <a class="dropdown-item waves-light waves-effect" href="#!"><i class="icofont icofont-close-line"></i> Remove</a>
+                                            </div>
+                                            <!-- end of dropdown menu -->
+                                        </div>
+                                        <!-- end of seconadary -->
+                                    </div>
+                                    <!-- end of pull-right class -->
+                                </div>
+                                <!-- end of card-footer -->
+                            </div>
+                            <!-- end of card -->
+                        </div>
+                        <!-- end of col-sm-6 -->
+
+                        <div class="col-xl-6 col-md-12">
+                            <div class="card b-l-danger">
+                                <div class="card-header">
+                                    <a href="#!" class="card-title">#23. New icons set for an iOS app </a>
+                                    <span class="label label-default f-right m-t-5"> 20 January, 2015 </span>
+                                </div>
+                                <div class="card-block">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <p class="task-detail">A collection of textile samples lay spread out on the table One morning, when Gregor Samsa woke from troubled.</p>
+                                            <p><strong> Due : </strong> <strong class="label label-danger">18 hours</strong></p>
+                                        </div>
+                                        <!-- end of col-sm-8 -->
+                                    </div>
+                                    <!-- end of row -->
+                                </div>
+                                <!-- end of card-block -->
+
+                                <div class="card-footer">
+                                    <div class="task-list-table">
+                                        <a href="#!"><img class="img-fluid img-circle" src="assets/images/avatar-1.png" alt="1"/></a>
+                                        <a href="#!"><img class="img-fluid img-circle" src="assets/images/avatar-2.png" alt="1"/></a>
+                                        <a href="#!"><i class="icofont icofont-plus"></i></a>
+                                    </div>
+                                    <div class="task-board">
+                                        <div class="dropdown-secondary dropdown">
+                                            <button class="btn btn-danger btn-mini dropdown-toggle waves-effect waves-light" type="button" id="dropdown4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Highest</button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdown4" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+                                                <a class="dropdown-item waves-light waves-effect active" href="#!"><span class="point-marker bg-danger "></span>Highest priority</a>
+                                                <a class="dropdown-item waves-light waves-effect" href="#!"><span class="point-marker bg-warning"></span>High priority</a>
+                                                <a class="dropdown-item waves-light waves-effect" href="#!"><span class="point-marker bg-success"></span>Normal priority</a>
+                                                <a class="dropdown-item waves-light waves-effect" href="#!"><span class="point-marker bg-info"></span>Low priority</a>
+                                            </div>
+                                            <!-- end of dropdown menu -->
+                                        </div>
+                                        <div class="dropdown-secondary dropdown">
+                                            <button class="btn btn-default btn-mini dropdown-toggle waves-light bg-white b-none txt-muted" type="button" id="dropdown5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">On hold</button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdown5" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+                                                <a class="dropdown-item waves-light waves-effect" href="#!">Open</a>
+
+                                                <a class="dropdown-item waves-light waves-effect active" href="#!">On hold</a>
+                                                <a class="dropdown-item waves-light waves-effect" href="#!">Resolved</a>
+                                                <a class="dropdown-item waves-light waves-effect" href="#!">Closed</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item waves-light waves-effect" href="#!">Dublicate</a>
+                                                <a class="dropdown-item waves-light waves-effect" href="#!">Invalid</a>
+                                                <a class="dropdown-item waves-light waves-effect" href="#!">Wontfix</a>
+                                            </div>
+                                            <!-- end of dropdown menu -->
+                                        </div>
+                                        <!-- end of dropdown-secondary -->
+                                        <div class="dropdown-secondary dropdown">
+                                            <button class="btn btn-default btn-mini dropdown-toggle waves-light bg-white b-none txt-muted" type="button" id="dropdown6" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="icofont icofont-navigation-menu"></i></button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdown6" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+                                                <a class="dropdown-item waves-light waves-effect" href="#!"><i class="icofont icofont-ui-alarm"></i> Check in</a>
+                                                <a class="dropdown-item waves-light waves-effect" href="#!"><i class="icofont icofont-attachment"></i>Attach screenshot</a>
+                                                <a class="dropdown-item waves-light waves-effect" href="#!"><i class="icofont icofont-spinner-alt-5"></i> Reassign</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item waves-light waves-effect" href="#!"><i class="icofont icofont-ui-edit"></i> Edit task</a>
+                                                <a class="dropdown-item waves-light waves-effect" href="#!"><i class="icofont icofont-close-line"></i> Remove</a>
+                                            </div>
+                                            <!-- end of dropdown menu -->
+                                        </div>
+                                        <!-- end of seconadary -->
+                                    </div>
+                                    <!-- end of pull-right class -->
+                                </div>
+                                <!-- end of card-footer -->
+                            </div>
+                            <!-- end of card -->
+                        </div>
+                        <!-- end of col-sm-6 -->
+
+                        <div class="col-xl-6 col-md-12">
+                            <div class="card b-l-success">
+                                <div class="card-header">
+                                    <a href="#!" class="card-title">#22. Create ad campaign banners set </a>
+                                    <span class="label label-default f-right m-t-5"> 10 January, 2015 </span>
+                                </div>
+                                <div class="card-block">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <p class="task-detail">A collection of textile samples lay spread out on the table One morning, when Gregor Samsa woke from troubled.</p>
+                                            <p><strong> Due : </strong><strong class="label label-danger">22 hours</strong></p>
+                                        </div>
+                                        <!-- end of col-sm-8 -->
+                                    </div>
+                                    <!-- end of row -->
+                                </div>
+                                <!-- end of card-block -->
+
+                                <div class="card-footer">
+                                    <div class="task-list-table">
+                                        <a href="#!"><img class="img-fluid img-circle" src="assets/images/avatar-1.png" alt="1"/></a>
+                                        <a href="#!"><img class="img-fluid img-circle" src="assets/images/avatar-2.png" alt="1"/></a>
+                                        <a href="#!"><i class="icofont icofont-close-line"></i></a>
+                                    </div>
+                                    <div class="task-board">
+                                        <div class="dropdown-secondary dropdown">
+                                            <button class="btn btn-success btn-mini dropdown-toggle waves-effect waves-light" type="button" id="dropdown7" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Low</button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdown7" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+                                                <a class="dropdown-item waves-light waves-effect" href="#!"><span class="point-marker bg-danger"></span>Highest priority</a>
+                                                <a class="dropdown-item waves-light waves-effect" href="#!"><span class="point-marker bg-warning"></span>High priority</a>
+                                                <a class="dropdown-item waves-light waves-effect" href="#!"><span class="point-marker bg-success"></span>Normal priority</a>
+                                                <a class="dropdown-item waves-light waves-effect active" href="#!"><span class="point-marker bg-info"></span>Low priority</a>
+                                            </div>
+                                            <!-- end of dropdown menu -->
+                                        </div>
+                                        <div class="dropdown-secondary dropdown">
+                                            <button class="btn btn-default btn-mini dropdown-toggle waves-light bg-white b-none txt-muted" type="button" id="dropdown8" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Resolved</button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdown8" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+                                                <a class="dropdown-item waves-light waves-effect" href="#!">Open</a>
+
+                                                <a class="dropdown-item waves-light waves-effect" href="#!">On hold</a>
+                                                <a class="dropdown-item waves-light waves-effect active" href="#!">Resolved</a>
+                                                <a class="dropdown-item waves-light waves-effect" href="#!">Closed</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item waves-light waves-effect" href="#!">Dublicate</a>
+                                                <a class="dropdown-item waves-light waves-effect" href="#!">Invalid</a>
+                                                <a class="dropdown-item waves-light waves-effect" href="#!">Wontfix</a>
+                                            </div>
+                                            <!-- end of dropdown menu -->
+                                        </div>
+                                        <!-- end of dropdown-secondary -->
+                                        <div class="dropdown-secondary dropdown">
+                                            <button class="btn btn-default btn-mini dropdown-toggle waves-light bg-white b-none txt-muted" type="button" id="dropdown9" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="icofont icofont-navigation-menu"></i></button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdown9" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+                                                <a class="dropdown-item waves-light waves-effect" href="#!"><i class="icofont icofont-ui-alarm"></i> Check in</a>
+                                                <a class="dropdown-item waves-light waves-effect" href="#!"><i class="icofont icofont-attachment"></i>Attach screenshot</a>
+                                                <a class="dropdown-item waves-light waves-effect" href="#!"><i class="icofont icofont-spinner-alt-5"></i> Reassign</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item waves-light waves-effect" href="#!"><i class="icofont icofont-ui-edit"></i> Edit task</a>
+                                                <a class="dropdown-item waves-light waves-effect" href="#!"><i class="icofont icofont-close-line"></i> Remove</a>
+                                            </div>
+                                            <!-- end of dropdown menu -->
+                                        </div>
+                                        <!-- end of seconadary -->
+                                    </div>
+                                    <!-- end of pull-right class -->
+                                </div>
+                                <!-- end of card-footer -->
+                            </div>
+                            <!-- end of card -->
+                        </div>
+                        <!-- end of col-sm-6 -->
+
+                        <div class="col-xl-6 col-md-12">
+                            <div class="card b-l-warning">
+                                <div class="card-header">
+                                    <a href="#!" class="card-title">#21: Edit the draft for the icons</a>
+                                    <span class="label label-default f-right m-t-5"> 4 January, 2015 </span>
+                                </div>
+                                <div class="card-block">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <p class="task-detail">A collection of textile samples lay spread out on the table One morning, when Gregor Samsa woke from troubled.</p>
+                                            <p><strong> Due : </strong><strong class="label label-danger">27 hours</strong></p>
+                                        </div>
+                                        <!-- end of col-sm-8 -->
+                                    </div>
+                                    <!-- end of row -->
+                                </div>
+                                <!-- end of card-block -->
+
+                                <div class="card-footer">
+                                    <div class="task-list-table">
+                                        <a href="#!"><img class="img-fluid img-circle" src="assets/images/avatar-1.png" alt="1"/></a>
+                                        <a href="#!"><i class="icofont icofont-plus"></i></a>
+                                    </div>
+                                    <div class="task-board">
+                                        <div class="dropdown-secondary dropdown">
+                                            <button class="btn btn-primary btn-mini dropdown-toggle waves-effect waves-light" type="button" id="dropdown10" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Normal</button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdown10" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+                                                <a class="dropdown-item waves-light waves-effect" href="#!"><span class="point-marker bg-danger"></span>Highest priority</a>
+                                                <a class="dropdown-item waves-light waves-effect" href="#!"><span class="point-marker bg-warning"></span>High priority</a>
+                                                <a class="dropdown-item waves-light waves-effect active" href="#!"><span class="point-marker bg-success"></span>Normal priority</a>
+                                                <a class="dropdown-item waves-light waves-effect" href="#!"><span class="point-marker bg-info"></span>Low priority</a>
+                                            </div>
+                                            <!-- end of dropdown menu -->
+                                        </div>
+                                        <div class="dropdown-secondary dropdown">
+                                            <button class="btn btn-default btn-mini dropdown-toggle waves-light bg-white b-none txt-muted" type="button" id="dropdown11" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Invalid</button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdown11" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+                                                <a class="dropdown-item waves-light waves-effect" href="#!">Open</a>
+
+                                                <a class="dropdown-item waves-light waves-effect" href="#!">On hold</a>
+                                                <a class="dropdown-item waves-light waves-effect" href="#!">Resolved</a>
+                                                <a class="dropdown-item waves-light waves-effect" href="#!">Closed</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item waves-light waves-effect" href="#!">Dublicate</a>
+                                                <a class="dropdown-item waves-light waves-effect active" href="#!">Invalid</a>
+                                                <a class="dropdown-item waves-light waves-effect" href="#!">Wontfix</a>
+                                            </div>
+                                            <!-- end of dropdown menu -->
+                                        </div>
+                                        <!-- end of dropdown-secondary -->
+                                        <div class="dropdown-secondary dropdown">
+                                            <button class="btn btn-default btn-mini dropdown-toggle waves-light bg-white b-none txt-muted" type="button" id="dropdown12" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="icofont icofont-navigation-menu"></i></button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdown12" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+                                                <a class="dropdown-item waves-light waves-effect" href="#!"><i class="icofont icofont-ui-alarm"></i> Check in</a>
+                                                <a class="dropdown-item waves-light waves-effect" href="#!"><i class="icofont icofont-attachment"></i> Attach screenshot</a>
+                                                <a class="dropdown-item waves-light waves-effect" href="#!"><i class="icofont icofont-spinner-alt-5"></i> Reassign</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item waves-light waves-effect" href="#!"><i class="icofont icofont-ui-edit"></i> Edit task</a>
+                                                <a class="dropdown-item waves-light waves-effect" href="#!"><i class="icofont icofont-close-line"></i> Remove</a>
+                                            </div>
+                                            <!-- end of dropdown menu -->
+                                        </div>
+                                        <!-- end of seconadary -->
+                                    </div>
+                                    <!-- end of pull-right class -->
+                                </div>
+                                <!-- end of card-footer -->
+                            </div>
+                            <!-- end of card -->
+                        </div>
+                        <!-- end of col-sm-6 -->
+
+                        <div class="col-xl-6 col-md-12">
+                            <div class="card b-l-danger">
+                                <div class="card-header">
+                                    <a href="#!" class="card-title">#23. New icons set for an iOS app </a>
+                                    <span class="label label-default f-right m-t-5"> 20 January, 2015 </span>
+                                </div>
+                                <div class="card-block">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <p class="task-detail">A collection of textile samples lay spread out on the table One morning, when Gregor Samsa woke from troubled.</p>
+                                            <p><strong> Due : </strong><strong class="label label-danger">18 hours</strong></p>
+                                        </div>
+                                        <!-- end of col-sm-8 -->
+                                    </div>
+                                    <!-- end of row -->
+                                </div>
+                                <!-- end of card-block -->
+
+                                <div class="card-footer">
+                                    <div class="task-list-table">
+                                        <a href="#!"><img class="img-fluid img-circle" src="assets/images/avatar-1.png" alt="1"/></a>
+                                        <a href="#!"><img class="img-fluid img-circle" src="assets/images/avatar-2.png" alt="1"/></a>
+                                        <a href="#!"><i class="icofont icofont-close-line"></i></a>
+                                    </div>
+                                    <div class="task-board">
+                                        <div class="dropdown-secondary dropdown">
+                                            <button class="btn btn-danger btn-mini dropdown-toggle waves-effect waves-light" type="button" id="dropdown4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Highest</button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdown4" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+                                                <a class="dropdown-item waves-light waves-effect active" href="#!"><span class="point-marker bg-danger "></span>Highest priority</a>
+                                                <a class="dropdown-item waves-light waves-effect" href="#!"><span class="point-marker bg-warning"></span>High priority</a>
+                                                <a class="dropdown-item waves-light waves-effect" href="#!"><span class="point-marker bg-success"></span>Normal priority</a>
+                                                <a class="dropdown-item waves-light waves-effect" href="#!"><span class="point-marker bg-info"></span>Low priority</a>
+                                            </div>
+                                            <!-- end of dropdown menu -->
+                                        </div>
+                                        <div class="dropdown-secondary dropdown">
+                                            <button class="btn btn-default btn-mini dropdown-toggle waves-light bg-white b-none txt-muted" type="button" id="dropdown5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">On hold</button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdown5" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+                                                <a class="dropdown-item waves-light waves-effect" href="#!">Open</a>
+
+                                                <a class="dropdown-item waves-light waves-effect active" href="#!">On hold</a>
+                                                <a class="dropdown-item waves-light waves-effect" href="#!">Resolved</a>
+                                                <a class="dropdown-item waves-light waves-effect" href="#!">Closed</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item waves-light waves-effect" href="#!">Dublicate</a>
+                                                <a class="dropdown-item waves-light waves-effect" href="#!">Invalid</a>
+                                                <a class="dropdown-item waves-light waves-effect" href="#!">Wontfix</a>
+                                            </div>
+                                            <!-- end of dropdown menu -->
+                                        </div>
+                                        <!-- end of dropdown-secondary -->
+                                        <div class="dropdown-secondary dropdown">
+                                            <button class="btn btn-default btn-mini dropdown-toggle waves-light bg-white b-none txt-muted" type="button" id="dropdown6" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="icofont icofont-navigation-menu"></i></button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdown6" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+                                                <a class="dropdown-item waves-light waves-effect" href="#!"><i class="icofont icofont-ui-alarm"></i> Check in</a>
+                                                <a class="dropdown-item waves-light waves-effect" href="#!"><i class="icofont icofont-attachment"></i> Attach screenshot</a>
+                                                <a class="dropdown-item waves-light waves-effect" href="#!"><i class="icofont icofont-spinner-alt-5"></i> Reassign</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item waves-light waves-effect" href="#!"><i class="icofont icofont-ui-edit"></i> Edit task</a>
+                                                <a class="dropdown-item waves-light waves-effect" href="#!"><i class="icofont icofont-close-line"></i> Remove</a>
+                                            </div>
+                                            <!-- end of dropdown menu -->
+                                        </div>
+                                        <!-- end of seconadary -->
+                                    </div>
+                                    <!-- end of pull-right class -->
+                                </div>
+                                <!-- end of card-footer -->
+                            </div>
+                            <!-- end of card -->
+                        </div>
+                        <!-- end of col-sm-6 -->
+
+                        <div class="col-xl-6 col-md-12">
+                            <div class="card b-l-success">
+                                <div class="card-header">
+                                    <a href="#!" class="card-title">#22. Create ad campaign banners set </a>
+                                    <span class="label label-default f-right m-t-5"> 10 January, 2015 </span>
+                                </div>
+                                <div class="card-block">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <p class="task-detail">A collection of textile samples lay spread out on the table One morning, when Gregor Samsa woke from troubled.</p>
+                                            <p><strong> Due : </strong><strong class="label label-danger">22 hours</strong></p>
+                                        </div>
+                                        <!-- end of col-sm-8 -->
+                                    </div>
+                                    <!-- end of row -->
+                                </div>
+                                <!-- end of card-block -->
+
+                                <div class="card-footer">
+                                    <div class="task-list-table">
+                                        <a href="#!"><img class="img-fluid img-circle" src="assets/images/avatar-1.png" alt="1"/></a>
+                                        <a href="#!"><img class="img-fluid img-circle" src="assets/images/avatar-2.png" alt="1"/></a>
+                                        <a href="#!"><i class="icofont icofont-plus"></i></a>
+                                    </div>
+                                    <div class="task-board">
+                                        <div class="dropdown-secondary dropdown">
+                                            <button class="btn btn-success btn-mini dropdown-toggle waves-effect waves-light" type="button" id="dropdown7" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Low</button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdown7" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+                                                <a class="dropdown-item waves-light waves-effect" href="#!"><span class="point-marker bg-danger"></span>Highest priority</a>
+                                                <a class="dropdown-item waves-light waves-effect" href="#!"><span class="point-marker bg-warning"></span>High priority</a>
+                                                <a class="dropdown-item waves-light waves-effect" href="#!"><span class="point-marker bg-success"></span>Normal priority</a>
+                                                <a class="dropdown-item waves-light waves-effect active" href="#!"><span class="point-marker bg-info"></span>Low priority</a>
+                                            </div>
+                                            <!-- end of dropdown menu -->
+                                        </div>
+                                        <div class="dropdown-secondary dropdown">
+                                            <button class="btn btn-default btn-mini dropdown-toggle waves-light bg-white b-none txt-muted" type="button" id="dropdown8" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Resolved</button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdown8" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+                                                <a class="dropdown-item waves-light waves-effect" href="#!">Open</a>
+
+                                                <a class="dropdown-item waves-light waves-effect" href="#!">On hold</a>
+                                                <a class="dropdown-item waves-light waves-effect active" href="#!">Resolved</a>
+                                                <a class="dropdown-item waves-light waves-effect" href="#!">Closed</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item waves-light waves-effect" href="#!">Dublicate</a>
+                                                <a class="dropdown-item waves-light waves-effect" href="#!">Invalid</a>
+                                                <a class="dropdown-item waves-light waves-effect" href="#!">Wontfix</a>
+                                            </div>
+                                            <!-- end of dropdown menu -->
+                                        </div>
+                                        <!-- end of dropdown-secondary -->
+                                        <div class="dropdown-secondary dropdown">
+                                            <button class="btn btn-default btn-mini dropdown-toggle waves-light bg-white b-none txt-muted" type="button" id="dropdown9" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="icofont icofont-navigation-menu"></i></button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdown9" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+                                                <a class="dropdown-item waves-light waves-effect" href="#!"><i class="icofont icofont-ui-alarm"></i> Check in</a>
+                                                <a class="dropdown-item waves-light waves-effect" href="#!"><i class="icofont icofont-attachment"></i> Attach screenshot</a>
+                                                <a class="dropdown-item waves-light waves-effect" href="#!"><i class="icofont icofont-spinner-alt-5"></i> Reassign</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item waves-light waves-effect" href="#!"><i class="icofont icofont-ui-edit"></i> Edit task</a>
+                                                <a class="dropdown-item waves-light waves-effect" href="#!"><i class="icofont icofont-close-line"></i> Remove</a>
+                                            </div>
+                                            <!-- end of dropdown menu -->
+                                        </div>
+                                        <!-- end of seconadary -->
+                                    </div>
+                                    <!-- end of pull-right class -->
+                                </div>
+                                <!-- end of card-footer -->
+                            </div>
+                            <!-- end of card -->
+                        </div>
+                        <!-- end of col-sm-6 -->
+
+                        <div class="col-xl-6 col-md-12">
+                            <div class="card b-l-primary">
+                                <div class="card-header">
+                                    <a href="#!" class="card-title">#24. Create UI design model </a>
+                                    <span class="label label-default f-right m-t-5"> 28 January, 2015 </span>
+                                </div>
+                                <div class="card-block">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <p class="task-detail">A collection of textile samples lay spread out on the table One morning, when Gregor Samsa woke from troubled.</p>
+                                            <p><strong> Due : </strong><strong class="label label-danger">23 hours</strong></p>
+                                        </div>
+                                        <!-- end of col-sm-8 -->
+                                    </div>
+                                    <!-- end of row -->
+                                </div>
+                                <!-- end of card-block -->
+
+                                <div class="card-footer">
+                                    <div class="task-list-table">
+                                        <a href="#!"><img class="img-fluid img-circle" src="assets/images/avatar-1.png" alt="1"/></a>
+                                        <a href="#!"><img class="img-fluid img-circle" src="assets/images/avatar-2.png" alt="1"/></a>
+                                        <a href="#!"><i class="icofont icofont-plus"></i></a>
+                                    </div>
+                                    <div class="task-board">
+                                        <div class="dropdown-secondary dropdown">
+                                            <button class="btn btn-primary btn-mini dropdown-toggle waves-effect waves-light" type="button" id="dropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Normal</button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdown1" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+                                                <a class="dropdown-item waves-light waves-effect" href="#!"><span class="point-marker bg-danger"></span>Highest priority</a>
+                                                <a class="dropdown-item waves-light waves-effect" href="#!"><span class="point-marker bg-warning"></span>High priority</a>
+                                                <a class="dropdown-item waves-light waves-effect active" href="#!"><span class="point-marker bg-success"></span>Normal priority</a>
+                                                <a class="dropdown-item waves-light waves-effect" href="#!"><span class="point-marker bg-info"></span>Low priority</a>
+                                            </div>
+                                            <!-- end of dropdown menu -->
+                                        </div>
+                                        <div class="dropdown-secondary dropdown">
+                                            <button class="btn btn-default btn-mini dropdown-toggle waves-light bg-white b-none txt-muted" type="button" id="dropdown2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Open</button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdown2" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+                                                <a class="dropdown-item waves-light waves-effect active" href="#!">Open</a>
+                                                <a class="dropdown-item waves-light waves-effect" href="#!">On hold</a>
+                                                <a class="dropdown-item waves-light waves-effect" href="#!">Resolved</a>
+                                                <a class="dropdown-item waves-light waves-effect" href="#!">Closed</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item waves-light waves-effect" href="#!">Dublicate</a>
+                                                <a class="dropdown-item waves-light waves-effect" href="#!">Invalid</a>
+                                                <a class="dropdown-item waves-light waves-effect" href="#!">Wontfix</a>
+                                            </div>
+                                            <!-- end of dropdown menu -->
+                                        </div>
+                                        <!-- end of dropdown-secondary -->
+                                        <div class="dropdown-secondary dropdown">
+                                            <button class="btn btn-default btn-mini dropdown-toggle waves-light bg-white b-none txt-muted" type="button" id="dropdown3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="icofont icofont-navigation-menu"></i></button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdown3" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+                                                <a class="dropdown-item waves-light waves-effect" href="#!"><i class="icofont icofont-ui-alarm"></i> Check in</a>
+                                                <a class="dropdown-item waves-light waves-effect" href="#!"><i class="icofont icofont-attachment"></i> Attach screenshot</a>
+                                                <a class="dropdown-item waves-light waves-effect" href="#!"><i class="icofont icofont-spinner-alt-5"></i> Reassign</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item waves-light waves-effect" href="#!"><i class="icofont icofont-ui-edit"></i> Edit task</a>
+                                                <a class="dropdown-item waves-light waves-effect" href="#!"><i class="icofont icofont-close-line"></i> Remove</a>
+                                            </div>
+                                            <!-- end of dropdown menu -->
+                                        </div>
+                                        <!-- end of seconadary -->
+                                    </div>
+                                    <!-- end of pull-right class -->
+                                </div>
+                                <!-- end of card-footer -->
+                            </div>
+                            <!-- end of card -->
+                        </div>
+                        <!-- end of col-sm-6 -->
+
+                        <div class="col-xl-6 col-md-12">
+                            <div class="card b-l-warning">
+                                <div class="card-header">
+                                    <a href="#!" class="card-title">#21: Edit the draft for the icons</a>
+                                    <span class="label label-default f-right m-t-5"> 4 January, 2015 </span>
+                                </div>
+                                <div class="card-block">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <p class="task-detail">A collection of textile samples lay spread out on the table One morning, when Gregor Samsa woke from troubled.</p>
+                                            <p><strong> Due : </strong><strong class="label label-danger">27 hours</strong></p>
+                                        </div>
+                                        <!-- end of col-sm-8 -->
+                                    </div>
+                                    <!-- end of row -->
+                                </div>
+                                <!-- end of card-block -->
+
+                                <div class="card-footer">
+                                    <div class="task-list-table">
+                                        <a href="#!"><img class="img-fluid img-circle" src="assets/images/avatar-1.png" alt="1"/></a>
+                                        <a href="#!"><img class="img-fluid img-circle" src="assets/images/avatar-3.png" alt="1"/></a>
+                                        <a href="#!"><i class="icofont icofont-plus"></i></a>
+                                    </div>
+                                    <div class="task-board">
+                                        <div class="dropdown-secondary dropdown">
+                                            <button class="btn btn-primary btn-mini dropdown-toggle waves-effect waves-light" type="button" id="dropdown10" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Normal</button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdown10" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+                                                <a class="dropdown-item waves-light waves-effect" href="#!"><span class="point-marker bg-danger"></span>Highest priority</a>
+                                                <a class="dropdown-item waves-light waves-effect" href="#!"><span class="point-marker bg-warning"></span>High priority</a>
+                                                <a class="dropdown-item waves-light waves-effect active" href="#!"><span class="point-marker bg-success"></span>Normal priority</a>
+                                                <a class="dropdown-item waves-light waves-effect" href="#!"><span class="point-marker bg-info"></span>Low priority</a>
+                                            </div>
+                                            <!-- end of dropdown menu -->
+                                        </div>
+                                        <div class="dropdown-secondary dropdown">
+                                            <button class="btn btn-default btn-mini dropdown-toggle waves-light bg-white b-none txt-muted" type="button" id="dropdown11" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Invalid</button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdown11" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+                                                <a class="dropdown-item waves-light waves-effect" href="#!">Open</a>
+
+                                                <a class="dropdown-item waves-light waves-effect" href="#!">On hold</a>
+                                                <a class="dropdown-item waves-light waves-effect" href="#!">Resolved</a>
+                                                <a class="dropdown-item waves-light waves-effect" href="#!">Closed</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item waves-light waves-effect" href="#!">Dublicate</a>
+                                                <a class="dropdown-item waves-light waves-effect active" href="#!">Invalid</a>
+                                                <a class="dropdown-item waves-light waves-effect" href="#!">Wontfix</a>
+                                            </div>
+                                            <!-- end of dropdown menu -->
+                                        </div>
+                                        <!-- end of dropdown-secondary -->
+                                        <div class="dropdown-secondary dropdown">
+                                            <button class="btn btn-default btn-mini dropdown-toggle waves-light bg-white b-none txt-muted" type="button" id="dropdown12" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="icofont icofont-navigation-menu"></i></button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdown12" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+                                                <a class="dropdown-item waves-light waves-effect" href="#!"><i class="icofont icofont-ui-alarm"></i> Check in</a>
+                                                <a class="dropdown-item waves-light waves-effect" href="#!"><i class="icofont icofont-attachment"></i> Attach screenshot</a>
+                                                <a class="dropdown-item waves-light waves-effect" href="#!"><i class="icofont icofont-spinner-alt-5"></i> Reassign</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item waves-light waves-effect" href="#!"><i class="icofont icofont-ui-edit"></i> Edit task</a>
+                                                <a class="dropdown-item waves-light waves-effect" href="#!"><i class="icofont icofont-close-line"></i> Remove</a>
+                                            </div>
+                                            <!-- end of dropdown menu -->
+                                        </div>
+                                        <!-- end of seconadary -->
+                                    </div>
+                                    <!-- end of pull-right class -->
+                                </div>
+                                <!-- end of card-footer -->
+                            </div>
+                            <!-- end of card -->
+                        </div>
+                        <!-- end of col-sm-6 -->
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- end of col-sm-2 -->
+        </div>
+
+        <!-- end of section -->
+        <!-- Container-fluid ends -->
+    </div>
+</div>
+</div>
+

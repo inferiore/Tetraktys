@@ -1,0 +1,110 @@
+<div  class="sidebar-mini fixed" >
+   
+    <div class="wrapper" >
+   
+ <div ng-include="'shared/header.html'"></div>
+ <div ng-include="'shared/sidebar.html'" data-ng-controller="menuController" data-ng-init="setMenu()"></div>
+    
+    <div class="content-wrapper">
+        <!-- Container-fluid starts -->
+        <div class="container-fluid">
+            <!-- Main content starts -->
+            <div >
+                <!-- Row Starts -->
+                <div class="row">
+                    <div class="col-sm-12 p-0">
+                        <div class="main-header">
+                            <h4>Rating</h4>
+                            <ol class="breadcrumb breadcrumb-title breadcrumb-arrow">
+                                <li class="breadcrumb-item"><a href="index.html"><i class="icofont icofont-home"></i></a>
+                                </li>
+                                <li class="breadcrumb-item"><a href="#!">UI Elements</a>
+                                </li>
+                                <li class="breadcrumb-item"><a href="rating.html">Rating</a>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <!-- Row end -->
+
+                <!-- Row Starts -->
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card loaders">
+                            <div class="card-header"><h5 class="card-header-text">Rating Style</h5></div>
+                            <div class="card-block">
+                                <div class="row">
+                                    <div class="col-xl-3 col-lg-4 col-sm-6 col-xs-12">
+                                        <h6 class="sub-title">1/10 Rating</h6>
+                                        <div class="box-body">
+                                           <div ng-model="model['onetoten']" data-bar-rating-options="ratingOptions" data-bar-rating-settings="ratingSettings1" data-ng-bar-rating ></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-4 col-sm-6 col-xs-12">
+                                        <h6 class="sub-title">Moive Rating</h6>
+                                        <div class="box-body">
+                                           <div ng-model="model['horizontal']" data-bar-rating-options="ratingOptions2" data-bar-rating-settings="ratingSettings2" data-ng-bar-rating></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6 col-sm-6 col-xs-12">
+                                        <h6 class="sub-title">sequre rating</h6>
+                                        <div class="box-body">
+                                            <div ng-model="model['movie']" data-bar-rating-options="ratingOptions" data-bar-rating-settings="ratingSettings3" data-ng-bar-rating></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-4 col-sm-6 col-xs-12">
+                                        <h6 class="sub-title">Pill rating</h6>
+                                        <div class="box-body">
+                                            <div ng-model="model['pill']" data-bar-rating-options="ratingOptionsNumbers" data-bar-rating-settings="ratingSettings4" data-ng-bar-rating></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-4 col-sm-6 col-xs-12">
+                                        <h6 class="sub-title">Reverse rating</h6>
+                                        <div class="box-body">
+                                            <div ng-model="model['reversed']" data-bar-rating-options="ratingOptionsLetters" data-bar-rating-settings="ratingSettings5" data-ng-bar-rating></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-4 col-sm-6 col-xs-12">
+                                        <h6 class="sub-title">Horizontal Rating</h6>
+                                        <div class="box-body">
+                                            <div ng-model="model['square']" data-bar-rating-options="ratingOptionsNumbers" data-bar-rating-settings="ratingSettings6" data-ng-bar-rating></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-4 col-sm-6 col-xs-12">
+                                        <h6 class="sub-title">fractional star Rating</h6>
+                                        <div class="stars stars-example-fontawesome">
+                                           <div ng-model="model['bootstrap_stars']" data-bar-rating-options="ratingOptions" data-bar-rating-settings="ratingSettings7" data-ng-bar-rating></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-4 col-sm-6 col-xs-12">
+                                        <h6 class="sub-title">CSS Stars Rating</h6>
+                                        <div class="stars stars-example-css">
+                                           <div ng-model="model['css_stars']" data-bar-rating-options="ratingOptions" data-bar-rating-settings="ratingSettings8" data-ng-bar-rating></div>  
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-4 col-sm-6 col-xs-12">
+                                        <h6 class="sub-title">Font awesome Rating</h6>
+                                        <div class="stars stars-example-fontawesome-o">
+                                            <div ng-model="model['fontawesome_stars']" data-bar-rating-options="ratingOptions" data-bar-rating-settings="ratingSettings9" data-ng-bar-rating></div>
+                                        </div>
+                                    </div>
+                                     <div class="col-xl-3 col-lg-4 col-sm-6 col-xs-12">
+                                        <h6 class="sub-title">fractional star Rating</h6>
+                                        <div ng-model="model['fontawesome_stars_o']" data-bar-rating-options="ratingOptions" data-bar-rating-settings="ratingSettings10" data-ng-bar-rating></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- Row end -->
+
+            </div>
+            <!-- Main content ends -->
+        </div>
+        <!-- Container-fluid ends -->
+    </div>
+</div>
+</div>

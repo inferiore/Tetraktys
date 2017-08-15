@@ -1,0 +1,176 @@
+<div  class="sidebar-mini fixed" >
+   
+    <div class="wrapper" >
+   
+ <div ng-include="'shared/header.html'"></div>
+ <div ng-include="'shared/sidebar.html'" data-ng-controller="menuController" data-ng-init="setMenu()"></div> 
+ 
+    <div class="content-wrapper">
+        <!-- Container-fluid starts -->
+        <div class="container-fluid">
+
+            <!-- Main content starts -->
+            <div>
+                <!-- Row Starts -->
+                <div class="row">
+                    <div class="col-sm-12 p-0">
+                        <div class="main-header">
+                            <h4>Range-slider</h4>
+                            <ol class="breadcrumb breadcrumb-title breadcrumb-arrow">
+                                <li class="breadcrumb-item"><a href="index.html"><i class="icofont icofont-home"></i></a>
+                                </li>
+                                <li class="breadcrumb-item"><a href="#!">UI Elements</a>
+                                </li>
+                                <li class="breadcrumb-item"><a href="range-slider.html">Range-slider</a>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <!-- Row end -->
+
+                <!-- Row start -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- loader starts -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-header-text">Range slider</h5>
+                            </div>
+
+                            <div class="row card-block">
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                                    <h6 class="sub-title">Basic Range Slider</h6>
+                                    <div class="range-slider">
+                                       <rzslider rz-slider-model="slider.value"></rzslider>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                                    <h6 class="sub-title">Range selector Slider</h6>
+                                    <div class="range-slider">
+                                        <rzslider rz-slider-model="slider1.minValue" rz-slider-high="slider1.maxValue" rz-slider-options="slider1.options"></rzslider>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                                    <h6 class="sub-title">Slider with custom style</h6>
+                                    <div class="range-slider">
+                                           <rzslider class="custom-slider" rz-slider-model="slider3.minValue" rz-slider-high="slider3.maxValue" rz-slider-options="slider3.options"></rzslider>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                                    <h6 class="sub-title">Range slider with min limit set to 10 and max limit set to 90</h6>
+                                    <div class="range-slider">
+                                         <rzslider rz-slider-model="slider4.value" rz-slider-options="slider4.options"></rzslider>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                                    <h6 class="sub-title"> Range slider with a minimal range set to 10 and maximum of 50</h6>
+                                    <div class="range-slider">
+                                        <rzslider rz-slider-model="slider5.minValue" rz-slider-high="slider5.maxValue" rz-slider-options="slider5.options"></rzslider>
+                                    </div>
+
+                                </div>
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                                    <h6 class="sub-title"> Range slider with noSwitching=true</h6>
+                                    <div class="range-slider">
+                                        <rzslider rz-slider-model="slider6.minValue" rz-slider-high="slider6.maxValue" rz-slider-options="slider6.options"></rzslider>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                                    <h6 class="sub-title"> Slider with visible selection bar</h6>
+                                    <div class="range-slider">
+                                       <rzslider rz-slider-model="slider7.value" rz-slider-options="slider7.options"></rzslider>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                                    <h6 class="sub-title"> Slider with visible selection bar at the end</h6>
+                                    <div class="range-slider">
+                                        <rzslider rz-slider-model="slider8.value" rz-slider-options="slider8.options"></rzslider>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                                    <h6 class="sub-title"> Slider with selection bar gradient</h6>
+                                    <div class="range-slider">
+                                        <rzslider rz-slider-model="slider9.minValue" rz-slider-high="slider9.maxValue" rz-slider-options="slider9.options"></rzslider>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                                    <h6 class="sub-title"> Slider with dynamic selection bar color</h6>
+                                    <div class="range-slider">
+                                       <rzslider rz-slider-model="slider10.value" rz-slider-options="slider10.options"></rzslider>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                                    <h6 class="sub-title">Slider with dynamic pointer color</h6>
+                                    <div class="range-slider">
+                                        <rzslider rz-slider-model="slider11.value" rz-slider-options="slider11.options"></rzslider>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                                    <h6 class="sub-title">Right to left slider</h6>
+                                    <div class="range-slider">
+                                        <rzslider rz-slider-model="slider12.value" rz-slider-options="slider12.options"></rzslider>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                                    <h6 class="sub-title">Slider with ticks</h6>
+                                    <div class="range-slider">
+                                        <rzslider rz-slider-model="slider13.value" rz-slider-options="slider13.options"></rzslider>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6  col-md-6 col-sm-12">
+                                    <h6 class="sub-title">Slider with ticks at intermediate positions</h6>
+                                    <div class="range-slider">
+                                        <rzslider rz-slider-model="slider14.value" rz-slider-options="slider14.options"></rzslider>
+                                    </div>
+                                </div> 
+                                <div class="col-xl-6  col-md-6 col-sm-12">
+                                    <h6 class="sub-title">Slider with ticks values and legend</h6>
+                                    <div class="range-slider">
+                                        <rzslider rz-slider-model="slider15.value" rz-slider-options="slider15.options"></rzslider>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6  col-md-6 col-sm-12">
+                                    <h6 class="sub-title">Slider with ticks and tooltips</h6>
+                                    <div class="range-slider">
+                                       <rzslider rz-slider-model="slider16.value" rz-slider-options="slider16.options"></rzslider>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                                    <h6 class="sub-title">Slider with dynamic tick color</h6>
+                                    <div class="range-slider">
+                                        <rzslider rz-slider-model="slider17.value" rz-slider-options="slider17.options"></rzslider>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                                    <h6 class="sub-title">Slider with draggable range</h6>
+                                    <div class="range-slider">
+                                       <rzslider rz-slider-model="slider18.minValue" rz-slider-high="slider18.maxValue" rz-slider-options="slider18.options"></rzslider>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                                    <h6 class="sub-title">Slider with draggable range only</h6>
+                                    <div class="range-slider">
+                                        <rzslider rz-slider-model="slider19.minValue" rz-slider-high="slider19.maxValue" rz-slider-options="slider19.options"></rzslider>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                                    <h6 class="sub-title">Slider with custom scale</h6>
+                                    <div class="range-slider">
+                                       <rzslider rz-slider-model="slider20.value" rz-slider-options="slider20.options"></rzslider>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Row end -->
+
+            </div>
+            <!-- Main content ends -->
+        </div>
+        <!-- Container-fluid ends -->
+    </div>
+</div>
+</div>
+

@@ -1,0 +1,127 @@
+<div  class="sidebar-mini fixed" >
+   
+    <div class="wrapper" >
+   
+<div ng-include="'shared/header.html'"></div>
+ <div ng-include="'shared/sidebar.html'" data-ng-controller="menuController" data-ng-init="setMenu()"></div> 
+
+    <div class="content-wrapper">
+        <!-- Container-fluid starts -->
+       <div class="container-fluid">
+    <!-- Main content starts -->
+    <div class="content">
+        <!-- Row Starts -->
+        <div class="row">
+            <div class="col-sm-12 p-0">
+                <div class="main-header">
+                    <h4>Map Vector</h4>
+                    <ol class="breadcrumb breadcrumb-title breadcrumb-arrow">
+                        <li class="breadcrumb-item"><a href="index.html"><i class="icofont icofont-home"></i></a>
+                        </li>
+                        <li class="breadcrumb-item"><a href="#!">Charts & Maps</a>
+                        </li>
+                        <li class="breadcrumb-item"><a href="map-vector.html">Map Vector</a>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <!-- Row end -->
+
+        <!-- Row start -->
+        <div class="row">
+            <!-- Form Control starts -->
+            <div class="col-md-12 col-lg-6">
+                <div class="card">
+                    <div class="card-header"><h5 class="card-header-text">Basic Map With Markers</h5></div>
+                    <div class="card-block">
+                       <div class="item active">
+                          <div countrymap class="span10"></div> 
+                          <div class="carousel-caption">
+                              <h3 style="color:red" ><strong>{{countryName}}</strong><h3> 
+                          </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 col-lg-6">
+                <div class="card">
+                    <div class="card-header"><h5 class="card-header-text">India Map</h5></div>
+                    <div class="card-block">
+                        <div class="item active">
+                          <div indiamap class="span10"></div> 
+                          <div class="carousel-caption">
+                              <h3 style="color:red" ><strong>{{indiamap}}</strong><h3> 
+                          </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Form Control starts -->
+            <div class="col-md-12 col-lg-6">
+                <div class="card">
+                    <div class="card-header"><h5 class="card-header-text">Asia Map</h5></div>
+                    <div class="card-block">
+                         <div class="item active">
+                          <div asiamap class="span10"></div> 
+                          <div class="carousel-caption">
+                              <h3 style="color:red" ><strong>{{asiamap}}</strong><h3> 
+                          </div>
+                      </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-12 col-lg-6">
+                <div class="card">
+                    <div class="card-header"><h5 class="card-header-text">Canada Map</h5></div>
+                    <div class="card-block">
+                        <div class="item active">
+                          <div canadamap class="span10"></div> 
+                          <div class="carousel-caption">
+                              <h3 style="color:red" ><strong>{{canadamap}}</strong><h3> 
+                          </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <!-- Form Control starts -->
+            <div class="col-md-12 col-lg-6">
+                <div class="card">
+                    <div class="card-header"><h5 class="card-header-text">USA Map</h5></div>
+                    <div class="card-block">
+                       <div class="item active">
+                          <div usamap class="span10"></div> 
+                          <div class="carousel-caption">
+                              <h3 style="color:red" ><strong>{{usamap}}</strong><h3> 
+                          </div>
+                      </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-12 col-lg-6">
+                <div class="card">
+                    <div class="card-header"><h5 class="card-header-text">UK Map</h5></div>
+                    <div class="card-block">
+                         <div class="item active">
+                          <div ukmap class="span10"></div> 
+                          <div class="carousel-caption">
+                              <h3 style="color:red" ><strong>{{ukmap}}</strong><h3> 
+                          </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        <!-- Container-fluid ends -->
+     </div>
+</div>
+</div>

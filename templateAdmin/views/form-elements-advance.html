@@ -1,0 +1,1405 @@
+ <div  class="sidebar-mini fixed" >
+   
+    <div class="wrapper" >
+   
+ <div ng-include="'shared/header.html'"></div>
+ <div ng-include="'shared/sidebar.html'" data-ng-controller="menuController" data-ng-init="setMenu()"></div> 
+
+	<div class="content-wrapper">
+		<!-- Container-fluid starts -->
+		<div class="container-fluid">
+			<!-- Header Starts -->
+			<div class="row">
+				<div class="col-sm-12 p-0">
+					<div class="main-header">
+						<h4>Advance Form Elements</h4>
+						<ol class="breadcrumb breadcrumb-title breadcrumb-arrow">
+							<li class="breadcrumb-item">
+								<a href="index.html">
+									<i class="icofont icofont-home"></i>
+								</a>
+							</li>
+							<li class="breadcrumb-item"><a href="">Forms</a>
+							</li>
+							<li class="breadcrumb-item"><a href="">Advance Form Elements</a>
+							</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+			<!-- Header end -->
+
+			<!-- Switches start -->
+			<!-- Row start -->
+			<div class="row">
+				<div class="col-md-12">
+					<div class="card">
+						<div class="card-header"><h5 class="card-header-text">Raised Button</h5></div>
+						<div class="card-block">
+							<div class="row advance-elements">
+								<div class="col-xl-6">
+									<div class="sub-title">Basic
+										
+									</div>
+									
+									
+                 <input type="checkbox" class="js-dynamic-default" ng-model="switches.basic" ui-switch="{color: '#ddd', secondaryColor: '#fff',jackColor:'#fff'}" checked/>
+                  <input type="checkbox" class="js-dynamic-primary" ng-model="switches.basic1" ui-switch="{color: '#2196F3', secondaryColor: '#fff'}" checked/>
+                  <input type="checkbox" class="js-switch" ng-model="switches.basic2" ui-switch checked/>
+                  <input type="checkbox" class="js-dynamic-warning" ng-model="switches.basic3" ui-switch="{color: '#f57c00', secondaryColor: '#fff'}" checked/>
+                  <input type="checkbox" class="js-dynamic-danger" ng-model="switches.basic4" ui-switch="{color: '#ff5252', secondaryColor: '#fff'}" checked/>
+                  <input type="checkbox" class="js-dynamic-info" ng-model="switches.basic5" ui-switch="{color: '#40c4ff', secondaryColor: '#fff'}" checked/>
+                  <input type="checkbox" class="js-dynamic-secondary" ng-model="switches.basic6" ui-switch="{color: '#40c4ff', secondaryColor: '#2196F3',jackColor: '#2196F3', jackSecondaryColor : '#ff5252'}" checked/>
+								</div>
+
+								<div class="col-xl-6">
+									<!-- <h6 class="sub-title">Diffrent Sizes</h6> -->
+									<div class="sub-title">Diffrent Sizes
+										
+									</div>
+									
+                  <input type="checkbox" class="js-dynamic-sm" ng-model="switches.basic7" ui-switch="{  size: 'small'}" checked/>
+                  <input type="checkbox" class="js-switch" ng-model="switches.basic8" ui-switch checked />
+                  <input type="checkbox" class="js-dynamic-lg" ng-model="switches.basic9" ui-switch="{ size: 'large'}" checked/>
+								</div>
+							
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Row end -->
+			<!-- Switches end -->
+
+			<!-- Checkbox start -->
+			<!-- Row start -->
+			<div class="row">
+				<div class="col-md-12">
+					<div class="card">
+						<div class="card-header">
+							<h5 class="card-header-text">Checkboxes</h5>
+						</div>
+
+						<div class="card-block">
+							<div class="row m-b-30 advance-elements">
+								<div class="col-lg-6">
+									<!-- Border Check box Start -->
+									<!-- <h6 class="sub-title">Border Checkbox</h6> -->
+									<div class="sub-title">Border Checkbox
+										
+
+									</div>
+									
+
+									<div class="rkmd-checkbox checkbox-rotate checkbox-ripple">
+										<label class="input-checkbox checkbox-primary">
+											<input type="checkbox" id="checkbox" checked>
+											<span class="checkbox"></span>
+										</label>
+										<div class="captions">Primary</div>
+									</div>
+									<div class="rkmd-checkbox checkbox-rotate checkbox-ripple">
+										<label class="input-checkbox checkbox-warning">
+											<input type="checkbox" id="checkbox-1" checked>
+											<span class="checkbox"></span>
+										</label>
+										<div class="captions">Warning</div>
+									</div>
+									<div class="rkmd-checkbox checkbox-rotate checkbox-ripple">
+										<label class="input-checkbox checkbox-success">
+											<input type="checkbox" id="checkbox-2" checked>
+											<span class="checkbox"></span>
+										</label>
+										<div class="captions">Success</div>
+									</div>
+									<div class="rkmd-checkbox checkbox-rotate checkbox-ripple">
+										<label class="input-checkbox checkbox-info">
+											<input type="checkbox" id="checkbox-3" checked>
+											<span class="checkbox"></span>
+										</label>
+										<div class="captions">Info</div>
+									</div>
+									<div class="rkmd-checkbox checkbox-rotate checkbox-ripple">
+										<label class="input-checkbox checkbox-danger">
+											<input type="checkbox" id="checkbox-4" checked>
+											<span class="checkbox"></span>
+										</label>
+										<div class="captions">Danger</div>
+									</div>
+									<div class="rkmd-checkbox checkbox-rotate checkbox-ripple checkbox-disable">
+										<label class="input-checkbox checkbox-primary">
+											<input type="checkbox" id="checkbox-5" disabled="">
+											<span class="checkbox"></span>
+										</label>
+										<div class="captions">Disabled</div>
+									</div>
+									<!-- Border Check box End -->
+								</div>
+								<div class="col-lg-6">
+									<!-- Fade-in start -->
+									<!-- <h6 class="sub-title">Fade-In Checkbox</h6> -->
+									<div class="sub-title">Fade-In Checkbox
+										
+
+									</div>
+									
+
+									<div class="checkbox-fade fade-in-primary">
+										<label>
+											<input type="checkbox" value="">
+											<span class="cr"><i class="cr-icon fa fa-check txt-primary"></i></span> Primary
+										</label>
+									</div>
+									<div class="checkbox-fade fade-in-warning">
+										<label>
+											<input type="checkbox" value="">
+											<span class="cr"><i class="cr-icon fa fa-check txt-warning"></i></span> Warning
+										</label>
+									</div>
+									<div class="checkbox-fade fade-in-success">
+										<label>
+											<input type="checkbox" value="">
+											<span class="cr"><i class="cr-icon fa fa-check txt-success"></i></span> Success
+										</label>
+									</div>
+									<div class="checkbox-fade fade-in-info">
+										<label>
+											<input type="checkbox" value="">
+											<span class="cr"><i class="cr-icon fa fa-check txt-info"></i></span> Info
+										</label>
+									</div>
+									<div class="checkbox-fade fade-in-danger">
+										<label>
+											<input type="checkbox" value="">
+											<span class="cr"><i class="cr-icon fa fa-check txt-danger"></i></span> Danger
+										</label>
+									</div>
+									<div class="checkbox-fade fade-in-default">
+										<label>
+											<input type="checkbox" value="" disabled="">
+											<span class="cr"><i class="cr-icon fa fa-check text-default"></i></span> Disabled
+										</label>
+									</div>
+									<!-- Fade-in end -->
+								</div>
+							</div>
+							<div class="row advance-elements">
+								<div class="col-lg-6">
+									<!-- Fade-in start -->
+									<!-- <h6 class="sub-title">Color Checkbox</h6> -->
+									<div class="sub-title">Color Checkbox
+										
+
+									</div>
+									
+
+									<div class="checkbox-color checkbox-primary">
+										<input id="checkbox2" type="checkbox" checked="">
+										<label for="checkbox2">
+											Primary
+										</label>
+									</div>
+									<div class="checkbox-color checkbox-success">
+										<input id="checkbox3" type="checkbox" checked="">
+										<label for="checkbox3">
+											Success
+										</label>
+									</div>
+									<div class="checkbox-color checkbox-info">
+										<input id="checkbox4" type="checkbox" checked="">
+										<label for="checkbox4">
+											Info
+										</label>
+									</div>
+									<div class="checkbox-color checkbox-warning">
+										<input id="checkbox5" type="checkbox" checked="">
+										<label for="checkbox5">
+											Warning
+										</label>
+									</div>
+									<div class="checkbox-color checkbox-danger">
+										<input id="checkbox6" type="checkbox" checked="">
+										<label for="checkbox6">
+											Check me out
+										</label>
+									</div>
+									<div class="checkbox-color checkbox-default">
+										<input id="checkbox7" type="checkbox" disabled="">
+										<label for="checkbox7">
+											Disabled
+										</label>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Row end -->
+			<!-- Checkbox end -->
+
+			<!-- Radio-Button start -->
+			<!-- Row start -->
+			<div class="row">
+				<div class="col-md-12">
+					<div class="card">
+						<div class="card-header">
+							<h5 class="card-header-text">Radio-Buttons</h5>
+
+						</div>
+						
+						<div class="card-block">
+							<!-- Row start -->
+							<div class="row advance-elements">
+								<div class="col-xl-3 col-md-6">
+									<!-- <h6 class="sub-title">Default</h6> -->
+									<div class="sub-title">Default
+										
+									</div>
+									
+									<div class="form-radio">
+										<form>
+											<div class="radio radiofill">
+												<label>
+													<input type="radio" name="radio" /><i class="helper"></i>I'm the label from a radio button
+												</label>
+											</div>
+											<div class="radio radiofill">
+												<label>
+													<input type="radio" name="radio" checked="checked" /><i class="helper"></i>I'm the label from a radio button
+												</label>
+											</div>
+											<div class="radio radiofill radio-disable">
+												<label>
+													<input type="radio" disabled name="radio" /><i class="helper"></i>This is Disable Radio Button
+												</label>
+											</div>
+										</form>
+									</div>
+								</div>
+								<div class="col-xl-3 col-md-6">
+									<!-- <h6 class="sub-title">Filled</h6> -->
+									<div class="sub-title">Filled
+										
+									</div>
+									
+									<div class="form-radio">
+										<form>
+											<div class="radio">
+												<label>
+													<input type="radio" name="radio" checked="checked" /><i class="helper"></i>I'm the label from a radio button
+												</label>
+											</div>
+											<div class="radio">
+												<label>
+													<input type="radio" name="radio" /><i class="helper"></i>I'm the label from a radio button
+												</label>
+											</div>
+											<div class="radio radio-disable">
+												<label>
+													<input type="radio" name="radio" disabled="" /><i class="helper"></i>This is Disabled Radio Button
+												</label>
+											</div>
+										</form>
+									</div>
+								</div>
+								<div class="col-xl-3 col-md-6">
+									<!-- <h6 class="sub-title">Radio Inline</h6> -->
+									<div class="sub-title">Radio Inline
+										
+									</div>
+									
+									<div class="form-radio">
+										<form>
+											<div class="radio radiofill radio-inline">
+												<label>
+													<input type="radio" name="radio" /><i class="helper"></i>Inline 1
+												</label>
+											</div>
+											<div class="radio radiofill radio-inline">
+												<label>
+													<input type="radio" name="radio" checked="checked" /><i class="helper"></i>Inline 2
+												</label>
+											</div>
+											<div class="radio radiofill radio-inline radio-disable">
+												<label>
+													<input type="radio" disabled="" name="radio" /><i class="helper"></i>Inline Disable
+												</label>
+											</div>
+										</form>
+									</div>
+								</div>
+								<div class="col-xl-3 col-md-6">
+									<div class="sub-title">Filled Inline
+										
+									</div>
+								
+
+									<div class="form-radio">
+										<form>
+											<div class="form-radio">
+												<div class="radio radio-inline">
+													<label>
+														<input type="radio" name="radio" checked="checked" /><i class="helper"></i>Inline 1
+													</label>
+												</div>
+												<div class="radio radio-inline">
+													<label>
+														<input type="radio" name="radio" /><i class="helper"></i>Inline 2
+													</label>
+												</div>
+												<div class="radio radio-inline radio-disable">
+													<label>
+														<input type="radio" name="radio" disabled="" /><i class="helper"></i>Disable Inline
+													</label>
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+							<!-- Row end -->
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Row end -->
+			<!-- Radio-Button End -->
+
+			<!-- Select-2 start -->
+			<!-- Row start -->
+			<div class="row">
+				<div class="col-md-12">
+					<div class="card">
+						<div class="card-header">
+							<h5 class="card-header-text">Select 2</h5>
+						</div>
+						<div class="card-block">
+							<!-- Row-1 Inside Start -->
+							<div class="row m-b-30 advance-elements">
+								<div class="col-xl-3 col-lg-6">
+									<!-- <h6 class="sub-title">Multi Select</h6> -->
+									<div class="sub-title">Multi Select
+										
+									</div>
+									
+									<!-- end of modal -->									
+                  <ui-select multiple ng-model="multipleDemo" theme="bootstrap" close-on-select="false"  title="Choose a option">
+                    <ui-select-match >{{$item}}</ui-select-match>
+                    <ui-select-choices repeat="opt in availableOptions | filter:$select.search">
+                      {{opt}}
+                    </ui-select-choices>
+                  </ui-select>
+								</div>
+								<div class="col-xl-3 col-lg-6">
+									<!-- <h6 class="sub-title">Single Select</h6> -->
+									<div class="sub-title">Single Select
+										
+									</div>
+									
+                    <ui-select ng-model="person"  theme="bootstrap" title="Choose a person">
+                     <ui-select-match >{{$select.selected.name}}</ui-select-match>
+                      <ui-select-choices  group-by="'group'" repeat="person in personList ">
+                        {{person.name}}
+                      </ui-select-choices>
+                    </ui-select>
+								</div>
+								<div class="col-xl-3 col-lg-6">
+									<!-- <h6 class="sub-title">With Placeholder</h6> -->
+									<div class="sub-title">With Placeholder
+										
+									</div>
+									
+									<ui-select multiple ng-model="multipleDemo" theme="bootstrap" close-on-select="false"  title="Choose a option">
+                    <ui-select-match placeholder="Select options...">{{$item}}</ui-select-match>
+                    <ui-select-choices repeat="opt in availableOptions | filter:$select.search">
+                      {{opt}}
+                    </ui-select-choices>
+                  </ui-select>
+								</div>
+								<div class="col-xl-3 col-lg-6">
+									<!-- <h6 class="sub-title">Limiting the number of selections</h6> -->
+									<div class="sub-title">Limiting the number of selections
+										
+									</div>
+									
+								<ui-select multiple   ng-model="LimitedResult.selectedItems" theme="bootstrap" close-on-select="false" on-select="onSelectCallback($item)" limit="2">
+                    <ui-select-match placeholder="Select up to 2 items">{{$item}}</ui-select-match>
+                    <ui-select-choices repeat="opt in availableOptions | filter:$select.search">
+                      {{opt}}
+                    </ui-select-choices>
+                  </ui-select>
+								</div>
+							</div>
+							<!-- Row-1 Inside End -->
+							<!-- Row-2 Inside Start -->
+							<div class="row m-b-30 advance-elements">
+								<div class="col-xl-3 col-lg-6">
+									<!-- <h6 class="sub-title">Tagging Support</h6> -->
+									<div class="sub-title">Tagging Support
+										
+									</div>
+									
+									  <ui-select multiple tagging tagging-label="(custom 'new' label)" ng-model="multipleDemo.colors" theme="bootstrap" sortable="true" >
+                        <ui-select-match >{{$item}}</ui-select-match>
+                        <ui-select-choices repeat="opt in availableOptions | filter:$select.search">
+                      {{opt}}
+                    </ui-select-choices>
+                      </ui-select>
+								</div>
+								<div class="col-xl-3 col-lg-6">
+									<!-- <h6 class="sub-title">Automatic Tokenization</h6> -->
+									<div class="sub-title">Automatic Tokenization
+										
+									</div>
+									
+									 <ui-select multiple ng-model="multipleDemo" theme="bootstrap" close-on-select="false"  title="Choose a option">
+                    <ui-select-match >{{$item}}</ui-select-match>
+                    <ui-select-choices repeat="opt in availableOptions | filter:$select.search" >
+                      {{opt}}
+                    </ui-select-choices>
+                  </ui-select>
+								</div>
+								<div class="col-xl-3 col-lg-6">
+									<!-- <h6 class="sub-title">RTL Support</h6> -->
+									<div class="sub-title">RTL Support
+										
+									</div>
+									
+									 <ui-select multiple ng-model="multipleDemo" theme="bootstrap" close-on-select="false"  title="Choose a option" class="rtl">
+                    <ui-select-match >{{$item}}</ui-select-match>
+                    <ui-select-choices repeat="opt in availableOptions | filter:$select.search" >
+                      {{opt}}
+                    </ui-select-choices>
+                  </ui-select>
+								</div>
+								<div class="col-xl-3 col-lg-6">
+									<!-- <h6 class="sub-title">Diacritics support</h6> -->
+									<div class="sub-title">Diacritics support
+										
+									</div>
+									 
+									 <ui-select ng-model="person" theme="bootstrap" >
+                     <ui-select-match >{{$select.selected.name}}</ui-select-match>
+                      <ui-select-choices  repeat="person in personList | filter: $select.search">
+                        {{person.name}}
+                      </ui-select-choices>
+                    </ui-select>
+								</div>
+							</div>
+							<!-- Row-2 Inside End -->
+
+							<!-- Row-3 Inside Start -->
+							<div class="row m-b-30 advance-elements">
+								<div class="col-xl-3 col-lg-6">
+									<!-- <h6 class="sub-title">Responsive Width</h6> -->
+									<div class="sub-title">Responsive Width
+										
+									</div>
+									
+									<ui-select multiple ng-model="multipleDemo" theme="bootstrap" close-on-select="false"  title="Choose a option">
+                    <ui-select-match >{{$item}}</ui-select-match>
+                    <ui-select-choices repeat="opt in availableOptions | filter:$select.search">
+                      {{opt}}
+                    </ui-select-choices>
+                  </ui-select>
+
+								</div>
+                <div class="col-xl-3 col-lg-6">
+                  <!-- <h6 class="sub-title">Hiding the search box</h6> -->
+                  <div class="sub-title">Hiding the search box
+                   
+                  </div>
+               
+                  <ui-select ng-model="person" theme="bootstrap" search-enabled="searchEnabled">
+                     <ui-select-match >{{$select.selected.name}}</ui-select-match>
+                      <ui-select-choices  repeat="person in personList | filter: $select.search">
+                        {{person.name | highlight: $select.search}}
+                      </ui-select-choices>
+                    </ui-select>
+                </div>
+                <div class="col-xl-3 col-lg-6">
+                  <!-- <h6 class="sub-title">Theme support</h6> -->
+                  <div class="sub-title">Theme support
+                   
+                  </div>
+                 
+                  <ui-select ng-model="person1"  theme="bootstrap">
+                     <ui-select-match >{{$select.selected.name}}</ui-select-match>
+                      <ui-select-choices  repeat="person1 in person1List | filter: $select.search">
+                        {{person1.name | highlight: $select.search}}
+                      </ui-select-choices>
+                    </ui-select>
+                </div>
+				
+							</div>
+
+							<div class="row advance-elements">
+								
+								<div class="col-xl-6 col-lg-8">
+									<!-- <h6 class="sub-title">Theme support</h6> -->
+									<div class="sub-title">Theme support
+										
+									</div>
+									
+									<div class="row">
+										<div class="col-md-6">
+											<ui-select ng-model="person1"  theme="bootstrap" ng-disabled="disabled">
+                     <ui-select-match >{{$select.selected.name}}</ui-select-match>
+                      <ui-select-choices  repeat="person1 in person1List | filter: $select.search">
+                        {{person1.name | highlight: $select.search}}
+                      </ui-select-choices>
+                    </ui-select>
+										</div>
+										<div class="col-md-6">
+											<button class="btn btn-success waves-effect waves-light js-programmatic-enable" ng-click="enable()"> Enable</button>
+											<button class="btn btn-danger waves-effect waves-light js-programmatic-disable" ng-click="disable()"> Disable</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- Row-3 Inside End -->
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Row end -->
+			<!-- Select-2 end -->		
+
+			<!-- Multi-Select start -->
+			<!-- Row Start -->
+			<div class="row">
+				<div class="col-md-12">
+					<div class="card">
+
+						<div class="card-header">
+							<h5 class="card-header-text">Multi Select</h5>
+						</div>
+						<div class="card-block">
+							<!-- Row inside-1 start -->
+							<div class="row m-b-30 advance-elements">
+								<div class="col-lg-4">
+									<div class="sub-title">Single
+										
+									</div>
+									
+									<p class="m-b-20">The following example shows the default behavior when the <code>multiple</code> attribute is omitted</p>
+									<div isteven-multi-select input-model="singleSelect" output-model="outputBrowsers" button-label="name" item-label="name" tick-property="ticked" selection-mode="single" >
+                  </div>
+								</div>
+								<div class="col-lg-4">
+									<div class="sub-title">Multiple
+										
+									</div>
+									
+									<p class="m-b-20">If multiple options are selected in advance and the select lacks the multiple attribute, the last option marked as <code>selected</code> will initially be <code>selected</code> by the plugin</p>
+									
+                  <div isteven-multi-select input-model="multipleSelect" output-model="outputBrowsers1" button-label="name" item-label="name" tick-property="ticked">
+                  </div>
+                </div>								
+								<div class="col-lg-4">
+									<div class="sub-title">All Group Option Select
+										
+									</div>
+									
+									<p class="m-b-20">The following example shows the default behavior when the <code>multiple</code> attribute is omitted</p>
+									<div isteven-multi-select input-model="groupSelect" output-model="outputBrowsers1" button-label="name" item-label="name" tick-property="ticked" group-property="msGroup">
+                  </div>
+								</div>
+							</div>
+							<!-- Row inside-2 end -->
+
+							<!-- Row inside-2 start -->
+							<div class="row m-b-30 advance-elements">								
+								<div class="col-lg-4">
+									<div class="sub-title">Disable Option
+										
+									</div>
+									
+									<p class="m-b-20">The following example shows disable option,add <code>disabled</code> keyword to that option</p>
+									<div isteven-multi-select input-model="groupSelect1" output-model="outputBrowsers1" button-label="name" item-label="name" tick-property="ticked" group-property="msGroup" disable-property="disabled" is-disabled="disableDir">
+                  </div>
+								</div>
+								<div class="col-lg-4">
+									<div class="sub-title">Multiple Group Select
+										
+									</div>
+									
+									<p class="m-b-20">The plugin naturally supports optgroups, however the group headers are not clickable by default. See the <code>enableClickableOptGroups</code> option for details.</p>
+									<div isteven-multi-select input-model="groupSelect2" output-model="outputBrowsers1" button-label="name" item-label="name" tick-property="ticked" group-property="msGroup">
+                  </div>
+								</div>
+                <div class="col-lg-4">
+                  <div class="sub-title">Pre-selected options
+                    
+                  </div>
+               
+                 <div class="multiSelect">                       
+                       <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-6">                     
+                          <div class="pool">
+                            <ul>
+                              <li ng-repeat="item in options2.items | filter: searchItem ">
+                                <a href="" ng-click="change(options2.items, options2.selectedItems, options2.items.indexOf(item))">{{item[options2.labelShow]}}</a>
+                              </li>                              
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                          <div class="pool">                             
+                            <ul>
+                              <li ng-repeat="item in options2.selectedItems ">
+                                <a href="" ng-click="change(options2.selectedItems, options2.items, options2.selectedItems.indexOf(item))">{{item[options2.labelShow]}}</a>
+                              </li>
+                            </ul>                              
+                          </div>                        
+                        </div>
+                       </div>
+                    </div>
+                </div>
+							</div>
+							<!-- Row inside-2 end -->
+
+							<!-- Row inside-3 -->
+							<div class="row m-b-30 advance-elements">								
+								<div class="col-lg-4">
+									<div class="sub-title">Custom headers and footers
+										
+									</div>
+									
+									<div class="multiSelect">                       
+                       <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-6">   
+                         <div class="custom-header">Selectable items</div>                      
+                          <div class="pool">
+                            <ul>
+                              <li ng-repeat="item in options1.items | filter: searchItem ">
+                                <a href="" ng-click="change(options1.items, options1.selectedItems, options1.items.indexOf(item))">{{item[options1.labelShow]}}</a>
+                              </li>                              
+                            </ul>
+                          </div>
+                          <div class="custom-header">Selectable footer</div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6">                          
+                          <div class="custom-header">Selectable items</div>
+                          <div class="pool">                             
+                            <ul>
+                              <li ng-repeat="item in options1.selectedItems ">
+                                <a href="" ng-click="change(options1.selectedItems, options1.items, options1.selectedItems.indexOf(item))">{{item[options1.labelShow]}}</a>
+                              </li>
+                            </ul>                              
+                          </div>
+                          <div class="custom-header">Selectable footer</div>
+                        </div>
+                       </div>
+                    </div>
+								</div>
+								
+                <div class="col-lg-4">
+                  <div class="sub-title">Searchable
+                    
+                  </div>
+                
+                   <div class="multiSelect">                       
+                       <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                        
+                        <input class="form-control" placeholder="{{options3.searchPlaceHolder}}" ng-model="searchItem3">
+                          <div class="pool">
+                            <ul>
+                              <li ng-repeat="item in options3.items | filter: searchItem3 ">
+                                <a href="" ng-click="change(options3.items, options3.selectedItems, options3.items.indexOf(item))">{{item[options3.labelShow]}}</a>
+                              </li>                              
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                        <input class="form-control" placeholder="{{options3.searchPlaceHolder}}" ng-model="searchItem4">
+                          <div class="pool">                             
+                            <ul>
+                              <li ng-repeat="item in options3.selectedItems| filter: searchItem4">
+                                <a href="" ng-click="change(options3.selectedItems, options3.items, options3.selectedItems.indexOf(item))">{{item[options3.labelShow]}}</a>
+                              </li>
+                            </ul>                              
+                          </div>                        
+                        </div>
+                       </div>
+                    </div>
+                </div>
+							</div>
+							<!-- Row inside-3 end -->
+
+							<!-- Row inside-4 -->
+							<div class="row advance-elements">
+								
+								<div class="col-lg-8 col-md-12">
+									<!-- <h6 class="sub-title">Public methods</h6> -->
+									<div class="sub-title">Public methods
+										
+									</div>
+									
+									<div class="row">
+										<div class="col-md-4">
+											<button type="button" class="btn btn-primary waves-effect waves-light m-b-5" id='select-all' ng-click="change(options.items, options.selectedItems, -1)" data-angular-ripple>select all</button>
+											<button type="button" class="btn btn-primary waves-effect waves-light m-b-5" id='deselect-all' ng-click="change(options.selectedItems,options.items, -1)" data-angular-ripple>deselect all</button>
+										</div>
+                    <div class="col-md-8">
+                    <div class="multiSelect">                       
+                       <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-6">                         
+                          <div class="pool">
+                            <ul>
+                              <li ng-repeat="item in options.items | filter: searchItem ">
+                                <a href="" ng-click="change(options.items, options.selectedItems, options.items.indexOf(item))">{{item[options.labelShow]}}</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6">                          
+                         
+                          <div class="pool">
+                            <ul>
+                              <li ng-repeat="item in options.selectedItems ">
+                                <a href="" ng-click="change(options.selectedItems, options.items, options.selectedItems.indexOf(item))">{{item[options.labelShow]}}</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                       </div>
+                    </div>
+									</div>
+									</div>
+								</div>
+							</div>
+							<!-- Row inside 4 end -->
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Row end -->
+			<!-- Multi-Select end -->
+
+			<!-- Tags start -->
+			<!-- Row start -->
+			<div class="row">
+				<div class="col-md-12">
+					<div class="card">
+						<div class="card-header">
+							<h5 class="card-header-text">Tags</h5>
+						</div>
+						<div class="card-block">
+							<!-- Row inside-1 start -->
+							<div class="row m-b-30 advance-elements">
+								<div class="col-lg-3">
+									<!-- <h6 class="sub-title">Markup</h6> -->
+									<div class="sub-title">Markup
+										
+									</div>
+								
+									<p class="m-b-20">Just add <code>data-role="tagsinput"</code> to your input field to automatically change it to a tags input field.
+									</p>
+                  <div class="tags_add">
+									 <tags-input ng-model="tags"></tags-input>
+                  </div>
+								</div>
+								<div class="col-lg-3">
+									<!-- <h6 class="sub-title">Colors</h6> -->
+									<div class="sub-title">Colors
+										
+									</div>
+									
+									<p class="m-b-20">Just add <code>data-role="tagsinput"</code> to your input field to automatically change it to a tags input field.
+									</p>
+									<div class="color-tags">
+										<tags-input ng-model="tags4" tag-class="{even: $index % 2 == 0, odd: $index % 2 != 0}">
+									</div>
+								</div>
+								<div class="col-lg-3">
+									<!-- <h6 class="sub-title">Max-Characters</h6> -->
+									<div class="sub-title">Max-Characters
+										
+									</div>
+									
+									<p class="m-b-20">Just add <code>data-role="tagsinput"</code> to your input field to automatically change it to a tags input field.
+									</p>
+									<div class="tags_max_char">
+										<tags-input ng-model="tags2" max-length="8" ></tags-input>
+									</div>
+								</div>
+								<div class="col-lg-3">
+									<!-- <h6 class="sub-title">Multiple</h6> -->
+									<div class="sub-title">Multiple
+										
+									</div>
+									
+									<p class="m-b-20">
+										Use a <code> &lt;select multiple /&gt;</code> as your input element for a tags input, to gain true multivalue support. Instead of a comma separated string, the values will be set in an array.
+									</p>
+									<div class="tags_add_multiple">
+										<tags-input ng-model="tags1"></tags-input>
+									</div>
+
+								</div>
+
+							</div>
+
+							<!-- Row inside-1 end -->
+
+							<!-- Row inside-2 start -->
+							<div class="row advance-elements">
+								<div class="col-lg-3">
+									<!-- <h6 class="sub-title">Max-Tags</h6> -->
+									<div class="sub-title">Max-Tags
+										
+									</div>
+									
+									<p class="m-b-20">Just add <code>data-role="tagsinput"</code> to your input field to automatically change it to a tags input field.
+									</p>
+									<div class="tags_add_max">
+										<tags-input ng-model="tags3" max-tags="5" class="validate-max-tag"></tags-input>
+									</div>
+								</div>
+							</div>
+							<!-- Row inside-2 end -->
+
+						</div>
+						<!-- Multi-Select end -->
+					</div>
+				</div>
+			</div>
+			<!-- Row end -->
+			<!-- Tags end -->
+
+			<!-- Timing Widget start -->
+			<!-- Row start -->
+			<div class="row">
+				<div class="col-md-12">
+					<div class="card">
+						<div class="card-header">
+							<h5 class="card-header-text">Date-Time Widgets</h5>
+						</div>
+						<div class="card-block">
+							<!-- Row start -->
+							<div class="row m-b-30 advance-elements">
+								<div class="col-xl-3">
+									<!-- <h6 class="sub-title">Date Picker</h6> -->
+									<div class="sub-title">Date Picker
+										
+									</div>
+									
+									<div class="form-control-wrapper">
+										 <input type="text" id="date" class="form-control floating-label" placeholder="Date"> 
+									</div>
+								</div>
+								<div class="col-xl-3">
+									<!-- <h6 class="sub-title">Time Picker</h6> -->
+									<div class="sub-title">Time Picker
+										
+									</div>
+									
+									<div class="form-control-wrapper">
+										<input type="text" id="time" class="form-control floating-label" placeholder="Time">
+									</div>
+								</div>
+								<div class="col-xl-6">
+									<!-- <h6 class="sub-title">Date & Time Picker</h6> -->
+									<div class="sub-title">Date & Time Picker
+										
+									</div>
+									
+									<div class="form-control-wrapper">
+										<input type="text" id="date-format" class="form-control floating-label" placeholder="Begin Date Time">
+									</div>
+								</div>
+							</div>
+							<!-- Row end -->
+
+							<!-- Row Start -->
+							<div class="row advance-elements">
+								<div class="col-xl-3">
+									<!-- <h6 class="sub-title">Min Date Set</h6> -->
+									<div class="sub-title">Min Date Set
+										
+									</div>
+									
+									<div class="form-control-wrapper">
+										<input type="text" id="min-date" class="form-control floating-label" placeholder="Start Date">
+									</div>
+								</div>
+								<div class="col-xl-4">
+									<!-- <h6 class="sub-title">Min Date Set</h6> -->
+									<div class="sub-title">Min Date Set
+										
+									</div>
+									
+									<div class="form-control-wrapper">
+										<input type="text" id="date-fr" class="form-control" value="18/03/2015 08:00" data-dtp="dtp_5xXoR">
+									</div>
+								</div>
+								<div class="col-xl-4">
+									<!-- <h6 class="sub-title">Date Time Range Picker</h6> -->
+									<div class="sub-title">Date Time Range Picker
+										
+									</div>
+									
+									<div class="row">
+										<div class="col-md-6">
+											<div class="form-control-wrapper">
+												<input type="text" id="date-start" class="form-control floating-label" placeholder="Start Date">
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="form-control-wrapper">
+												<input type="text" id="date-end" class="form-control floating-label" placeholder="End Date">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- Row End -->
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Row end -->
+			<!-- Timing Widgtet end -->
+
+			<!-- Bootstrap Datepicker start -->
+			<!-- Row start -->
+			<div class="row">
+				<div class="col-md-12">
+					<div class="card">
+						<div class="card-header">
+							<h5 class="card-header-text">bootstrap-date time picker</h5>
+						</div>
+						<div class="card-block bootstrap-timer">
+							<!-- Row Start -->
+							<div class="row m-b-30 advance-elements">
+								<div class="col-xl-3 col-md-6">
+									<!-- <h6 class="sub-title">Date Time Picker</h6> -->
+									<div class="sub-title">Date Time Picker
+										
+									</div>
+									
+
+									<div class="form-group">
+										<div class='input-group date' id='datetimepicker1'>
+											 <!-- <input id="datepicker" type="text" data-ng-datepicker data-options="datepickerOptions" data-ng-model="date" > -->
+                        
+                <div class="dropdown">
+                    <div class="dropdown-toggle1" id="dropdown3" role="button" data-toggle="dropdown" href="">
+                        <div class="input-group">
+                            <input type="text" class="form-control" data-ng-model="data.inputOnTimeSet">
+                            <span class="input-group-addon bg-primary"><i class="icofont icofont-ui-calendar"></i></span>
+                        </div>
+                    </div>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                        <datetimepicker data-ng-model="data.inputOnTimeSet" data-datetimepicker-config="{ modelType: 'MM/DD/YYYY HH:mm A' }"
+                                        data-on-set-time="inputOnTimeSet(newDate)"></datetimepicker>
+                    </ul>
+                </div>
+										</div>
+									</div>
+								</div>
+								<div class="col-xl-3 col-md-6">
+									<!-- <h6 class="sub-title">Using Locales</h6> -->
+									<div class="sub-title">Using Locales
+										
+									</div>
+									
+									<div class="form-group">
+										<div class="dropdown">
+                    <div class="dropdown-toggle1" id="dropdown4" role="button" data-toggle="dropdown" href="" ng-init="init()">
+                        <div class="input-group">
+                            <input type="text" class="form-control" data-ng-model="data.inputOnTimeSet1">
+                            <span class="input-group-addon bg-primary"><i class="icofont icofont-ui-calendar"></i></span>
+                        </div>
+                    </div>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                        <datetimepicker data-ng-model="data.inputOnTimeSet1" data-datetimepicker-config="{ modelType: 'MM/DD/YYYY HH:mm A' }"
+                                        data-on-set-time="inputOnTimeSet1(newDate)"></datetimepicker>
+                    </ul>
+                </div>
+									</div>
+								</div>
+								<div class="col-xl-3 col-md-6">
+									<!-- <h6 class="sub-title">Time Picker</h6> -->
+									<div class="sub-title">Time Picker
+										
+									</div>
+									
+									<div class="form-group">
+										<div class='input-group date' id='datetimepicker3'>
+											<input type='text' class="form-control" />
+											<span class="input-group-addon bg-primary">
+		                                    				<span class="icofont icofont-ui-calendar"></span>
+		                                                </span>
+										</div>
+									</div>
+								</div>
+								<div class="col-xl-3 col-md-6">
+									<!-- <h6 class="sub-title">No Icon (input field only)</h6> -->
+									<div class="sub-title">No Icon (input field only)
+										
+									</div>
+									
+									<div class="form-group">
+										    <div class="dropdown">
+                    <div class="dropdown-toggle2" id="dropdown5" role="button" data-toggle="dropdown" href="">
+                        <div class="input-group">
+                            <input type="text" class="form-control" data-ng-model="data.inputOnTimeSet2">
+                            
+                        </div>
+                    </div>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                        <datetimepicker data-ng-model="data.inputOnTimeSet2" data-datetimepicker-config="{ modelType: 'MM/DD/YYYY HH:mm A' }"
+                                        data-on-set-time="inputOnTimeSet2(newDate)"></datetimepicker>
+                    </ul>
+                </div>
+									</div>
+								</div>
+							</div>
+							<!-- Row End -->
+
+							<!-- Row Start -->
+							<div class="row m-b-30 advance-elements">
+								<div class="col-xl-3 col-md-6">
+									<!-- <h6 class="sub-title">Enabled/Disabled Dates</h6> -->
+									<div class="sub-title">Enabled/Disabled Dates
+										
+									</div>
+									
+									<div class="form-group">
+									<div class="dropdown">
+                    <div class="dropdown-toggle2" id="dropdown6" role="button" data-toggle="dropdown" href="" >
+                        <div class="input-group">
+                            <input type="text" class="form-control" data-ng-model="data.inputOnTimeSet3" ng-disabled="data.inputOnTimeSet3">
+                             <span class="input-group-addon bg-primary"><i class="icofont icofont-ui-calendar"></i></span>
+                        </div>
+                    </div>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                        <datetimepicker data-ng-model="data.inputOnTimeSet3" data-datetimepicker-config="{ modelType: 'MM/DD/YYYY HH:mm A' }" 
+                                        data-on-set-time="inputOnTimeSet3(newDate)"></datetimepicker>
+                    </ul>
+                </div>
+									</div>
+								</div>
+								<div class="col-xl-3 col-md-6">
+									<!-- <h6 class="sub-title">Custom Icons</h6> -->
+									<div class="sub-title">Custom Icons
+										
+									</div>
+									
+                  <div class="form-group">
+									   <div class="dropdown">
+                    <div class="dropdown-toggle1" id="dropdown7" role="button" data-toggle="dropdown" href="">
+                        <div class="input-group">
+                            <input type="text" class="form-control" data-ng-model="data.inputOnTimeSet4">
+                            <span class="input-group-addon bg-primary"><i class="icofont icofont-ui-calendar"></i></span>
+                        </div>
+                    </div>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                        <datetimepicker data-ng-model="data.inputOnTimeSet4" data-datetimepicker-config="{ modelType: 'MM/DD/YYYY HH:mm A' }"
+                                        data-on-set-time="inputOnTimeSet4(newDate)"></datetimepicker>
+                    </ul>
+                </div>
+                </div>
+								</div>
+								<div class="col-xl-6 col-md-12">
+									<!-- <h6 class="sub-title">Linked Pickers</h6> -->
+									<div class="sub-title">Linked Pickers
+										
+									</div>
+									
+									<div class="row">
+										<div class='col-md-6'>
+											<div class="form-group">
+												 <div class="dropdown ">
+                            <div class="dropdown-toggle1" id="dropdownStart" role="button" data-toggle="dropdown" href="">
+                                <div class="input-group date">
+                                    <input type="text" class="form-control" data-ng-model="dateRangeStart">
+                                    <span class="input-group-addon bg-primary"><i class="icofont icofont-ui-calendar"></i></span>
+                                </div>
+                            </div>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                                <datetimepicker data-ng-model="dateRangeStart"
+                                                data-datetimepicker-config="{ dropdownSelector: '#dropdownStart', renderOn: 'end-date-changed' ,modelType: 'MM/DD/YYYY HH:mm A' }"
+                                                data-on-set-time="startDateOnSetTime()"
+                                                data-before-render="startDateBeforeRender($dates)"></datetimepicker>
+                            </ul>
+                        </div>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="form-group">
+												 <div class="dropdown ">
+                            <div class="dropdown-toggle1" id="dropdownEnd" role="button" data-toggle="dropdown"  href="">
+                                <div class="input-group date">
+                                    <input type="text" class="form-control" data-ng-model="dateRangeEnd">
+                                    <span class="input-group-addon bg-primary"><i class="icofont icofont-ui-calendar"></i></span>
+                                </div>
+                            </div>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                                <datetimepicker data-ng-model="dateRangeEnd"
+                                                data-datetimepicker-config="{ dropdownSelector: '#dropdownEnd', renderOn: 'start-date-changed',modelType: 'MM/DD/YYYY HH:mm A' }"
+                                                data-on-set-time="endDateOnSetTime()"
+                                                data-before-render="endDateBeforeRender($view, $dates, $leftDate, $upDate, $rightDate)"></datetimepicker>
+                            </ul>
+                        </div>
+											</div>
+										</div>
+									</div>
+
+
+								</div>
+							</div>
+
+							<!-- Row end -->
+
+							<!-- Row start -->
+							<div class="row m-b-30 advance-elements">
+								<div class="col-xl-3 col-md-6">
+									<!-- <h6 class="sub-title">Min View Mode</h6> -->
+									<div class="sub-title">Min View Mode
+										
+									</div>
+									
+								  <div class="dropdown">
+                    <div class="dropdown-toggle1" id="dropdown8" role="button" data-toggle="dropdown" href="">
+                        <div class="input-group">
+                            <input type="text" class="form-control" data-ng-model="data.inputOnTimeSet5">
+                            <span class="input-group-addon bg-primary"><i class="icofont icofont-ui-calendar"></i></span>
+                        </div>
+                    </div>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                        <datetimepicker data-ng-model="data.inputOnTimeSet5" data-datetimepicker-config="{ modelType: 'MM/DD/YYYY ' , minView: 'day' ,startView :  'year'}" data-on-set-time="inputOnTimeSet5(newDate)"></datetimepicker>
+                    </ul>
+                </div>
+								</div>
+								<div class="col-xl-3 col-md-6">
+									<!-- <h6 class="sub-title">Disabled Days of the Week</h6> -->
+									<div class="sub-title">Disabled Days of the Week
+										
+									</div>
+									
+								 <div class="dropdown ">
+                            <div class="dropdown-toggle1" id="dropdownDisable" role="button" data-toggle="dropdown" href="">
+                                <div class="input-group date">
+                                    <input type="text" class="form-control" data-ng-model="dateDisable">
+                                    <span class="input-group-addon bg-primary"><i class="icofont icofont-ui-calendar"></i></span>
+                                </div>
+                            </div>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                                <datetimepicker data-ng-model="dateDisable"
+                                                data-datetimepicker-config="{ dropdownSelector: '#dropdownDisable', renderOn: 'disable-date-changed' ,modelType: 'MM/DD/YYYY HH:mm A' }"
+                                                data-on-set-time="disableDateOnSetTime()"
+                                                data-before-render="disableDateBeforeRender($dates)"></datetimepicker>
+                            </ul>
+                        </div>
+								</div>
+								<div class="col-xl-3 col-md-6">
+									<!-- <h6 class="sub-title">View Mode</h6> -->
+									<div class="sub-title">View Mode
+										
+									</div>
+									
+								<div class="dropdown">
+                    <div class="dropdown-toggle1" id="dropdown9" role="button" data-toggle="dropdown" href="">
+                        <div class="input-group">
+                            <input type="text" class="form-control" data-ng-model="data.inputOnTimeSet6">
+                            <span class="input-group-addon bg-primary"><i class="icofont icofont-ui-calendar"></i></span>
+                        </div>
+                    </div>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                        <datetimepicker data-ng-model="data.inputOnTimeSet6" data-datetimepicker-config="{ modelType: 'MM/DD/YYYY HH:mm A' ,startView :  'year'}" data-on-set-time="inputOnTimeSet6(newDate)"></datetimepicker>
+                    </ul>
+                </div>
+								</div>
+							<div class="col-xl-3 col-md-6">
+                  <!-- <h6 class="sub-title">Date Range Picker</h6> -->
+                  <div class="sub-title">Date Range Picker
+                   
+                  </div>
+                 
+                  <input date-range-picker id="daterange1" name="daterange1" class="form-control date-picker" type="text" ng-model="date" required/>
+                </div>
+							</div>
+							<!-- Row end -->
+							<!-- Row start -->
+							<div class="row m-b-30 advance-elements">
+								
+								<div class="col-xl-3 col-md-6">
+									<!-- <h6 class="sub-title">Date Range Picker Blank input</h6> -->
+									<div class="sub-title">Date Range Picker Blank input
+										
+									</div>
+									
+									<input date-range-picker id="daterange2" name="daterange2" class="form-control date-picker" type="text" ng-model="date1"  ng-init="date1=''" required/>
+								</div>
+								<div class="col-xl-3 col-md-6">
+									<!-- <h6 class="sub-title">Multiple Option</h6> -->
+									<div class="sub-title">Multiple Option
+										
+									</div>
+									
+									<input date-range-picker id="daterange3" name="daterange3" class="form-control date-picker" type="text" ng-model="date" options="opts" required/>
+								</div>
+								<div class="col-xl-3 col-md-6" id="sandbox-container">
+                  <!-- <h6 class="sub-title">Date Time Picker</h6> -->
+                  <div class="sub-title">Date Time Picker
+                    
+                  </div>
+                 
+                  <div class="input-daterange input-group" id="datepicker">
+                     <div class="dropdown ">
+                            <div class="dropdown-toggle1" id="dropdownFirst" role="button" data-toggle="dropdown" href="">
+                                <div class="input-group date">
+                                    <input type="text" class="form-control" data-ng-model="dateRangeFirst">
+                                </div>
+                            </div>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                                <datetimepicker data-ng-model="dateRangeFirst"
+                                                data-datetimepicker-config="{ dropdownSelector: '#dropdownFirst', renderOn: 'second-date-changed' ,modelType: 'MM/DD/YYYY', minView : 'day' }"
+                                                data-on-set-time="firstDateOnSetTime()"
+                                                data-before-render="firstDateBeforeRender($dates)"></datetimepicker>
+                            </ul>
+                     </div>
+                    <span class="input-group-addon">to</span>
+                       <div class="dropdown ">
+                            <div class="dropdown-toggle1" id="dropdownSecond" role="button" data-toggle="dropdown"  href="">
+                                <div class="input-group date">
+                                    <input type="text" class="form-control" data-ng-model="dateRangeSecond">
+                                </div>
+                            </div>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                                <datetimepicker data-ng-model="dateRangeSecond"
+                                                data-datetimepicker-config="{ dropdownSelector: '#dropdownSecond', renderOn: 'first-date-changed',modelType: 'MM/DD/YYYY' , minView : 'day'}"
+                                                data-on-set-time="secondDateOnSetTime()"
+                                                data-before-render="secondDateBeforeRender($view, $dates, $leftDate, $upDate, $rightDate)"></datetimepicker>
+                            </ul>
+                        </div>
+                  </div>
+                </div>
+                <div class="col-xl-3 col-md-6">
+                  <!-- <h6 class="sub-title">Date Picker with Today</h6> -->
+                  <div class="sub-title">Date Picker with Today
+                   
+                  </div>
+                 
+                  <div class="input-group date input-group-date-custom">
+                    <input type="text" class="form-control">
+                    <span class="input-group-addon bg-primary">
+                      <i class="icofont icofont-clock-time"></i>
+                    </span>
+                  </div>
+                </div>
+							</div>
+							<!-- row end -->
+
+							<!-- Row start -->
+							<div class="row advance-elements">
+								
+								
+								<div class="col-xl-3 col-md-6">
+									<!-- <h6 class="sub-title">Multi Select Dates</h6> -->
+									<div class="sub-title">Multi Select Dates
+										
+									</div>
+									
+									<div class="input-group date multiple-select">
+										<input type="text" class="form-control">
+										<span class="input-group-addon bg-primary">
+		                                            <i class="icofont icofont-clock-time"></i>
+		                                          </span>
+									</div>
+								</div>
+							</div>
+							<!-- Row end -->
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Row end -->
+			<!-- Bootstrap Datepicker end -->
+
+			<!-- Color Picker start -->
+			<!-- Row start -->
+			<div class="row">
+				<div class="col-md-12">
+					<div class="card">
+						<div class="card-header">
+							<h5 class="card-header-text">Color picker</h5>
+						</div>
+						<div class="card-block">
+							<!-- Row Start -->
+							<div class="row m-b-30 advance-elements">
+								<div class="col-xl-3 col-lg-12">
+									<!-- <h6 class="sub-title">Basic</h6> -->
+									<div class="sub-title">Basic
+										
+									</div>
+									
+									<div class="input-group">   
+                    <spectrum-colorpicker ng-model="firstColor" class="m-b-15"></spectrum-colorpicker>               
+										<hr>
+                    <input color-picker color-picker-model="var2" ng-style="{background:var2}"/>
+										<hr>
+									<!--   <button class="btn btn-primary m-b-15 m-r-15" onclick="document.getElementById('foo').jscolor.show()">
+                    Show Picker</button>
+                  <button class="btn btn-primary m-b-15" onclick="document.getElementById('foo').jscolor.hide()">
+                    Hide Picker</button>
+                  <p>
+                    <input id="foo" class="jscolor" value="cc4499">
+                  </p> -->
+									</div>
+								</div>
+								<div class="col-lg-3 col-md-6">
+									<!-- <h6 class="sub-title">Using Locales</h6> -->
+									<div class="sub-title">Flat mode
+										
+									</div>
+									
+									<div class="form-group">
+										 <spectrum-colorpicker ng-model="someModel" options="{ flat: true,showInput: true}"></spectrum-colorpicker>
+									</div>
+								</div>
+								<div class="col-lg-3 col-md-6">
+									<!-- <h6 class="sub-title">Time Picker</h6> -->
+									<div class="sub-title">Flat mode with clear
+										
+									</div>
+								
+									<div class="form-group">
+										<spectrum-colorpicker ng-model="someModel1" options="{ flat: true,showInput: true,allowEmpty:true}"></spectrum-colorpicker>                   
+									</div>
+								</div>
+								<div class="col-lg-3 col-md-6">
+									<!-- <h6 class="sub-title">No Icon (input field only)</h6> -->
+									<div class="sub-title">No Icon (input field only)
+										
+									</div>
+									
+									<div class="form-group">
+										<input type='color' name='color' />
+										<input type='color' name='color2' value='#3355cc'  />
+										<hr> Large dark picker:
+										<input value="ffcc00" class="jscolor {width:243, height:150, position:'right',
+		                                				borderColor:'#FFF', insetColor:'#FFF', backgroundColor:'#666'}">
+									</div>
+								</div>
+							</div>
+							<!-- Row End -->
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Row end -->
+			<!-- Color Picker end -->
+		</div>
+	</div>
+</div>
+
+		<!-- Container-fluid ends -->
+
+</div>

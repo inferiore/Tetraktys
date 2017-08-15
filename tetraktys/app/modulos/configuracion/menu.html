@@ -1,0 +1,242 @@
+<script type="text/ng-template" id="menu_administrador.html">
+    <div ui-tree-handle class="tree-node tree-node-content">
+        <a class="btn btn-primary btn-mini" ng-if="node.children && node.children.length > 0" data-nodrag ng-click="toggle(this)">
+            <span class="cualquiera" ng-class="{ 'ion-arrow-right-b': collapsed, 'ion-arrow-down-b': !collapsed }"></span>
+        </a>
+        <i class="{{ node.icono }}"></i>
+        {{node.nombre}}
+        <a class="pull-right "  data-nodrag ng-click="eliminar(node)">
+            <i class="icofont icofont-ui-power" data-ng-class="node.activo == 1 ? 'text-success':'text-danger'"></i>
+        </a>
+        <a class="pull-right " data-toggle="modal" data-target="#modal-editar" data-angular-ripple data-nodrag ng-click="editar(this)" style="margin-right: 8px;">
+            <i class="icofont icofont-ui-edit text-muted"></i>
+        </a>
+        <a class="pull-right" data-toggle="modal" data-target="#modal-crear" data-angular-ripple data-nodrag ng-click="crear(this, 'hijo')" style="margin-right: 8px;">
+            <i class="icofont icofont-plus-circle text-primary"></i>
+        </a>
+    </div>
+    <ol ui-tree-nodes="" ng-model="node.children" ng-class="{hidden: collapsed}">
+        <li ng-repeat="node in node.children" ui-tree-node ng-include="'menu_administrador.html'"></li>
+    </ol>
+</script>
+
+<script type="text/ng-template" id="menu_usuario.html">
+    <div ui-tree-handle class="tree-node tree-node-content">
+        <a class="btn btn-primary btn-mini" ng-if="node.children && node.children.length > 0" data-nodrag ng-click="toggle(this)">
+            <span class="cualquiera" ng-class="{ 'ion-arrow-right-b': collapsed, 'ion-arrow-down-b': !collapsed }"></span>
+        </a>
+        <i class="{{ node.icono }}"></i>
+        {{node.nombre}}
+        <a class="pull-right "  data-nodrag ng-click="eliminar(node)">
+            <i class="icofont icofont-ui-power" data-ng-class="node.activo == 1 ? 'text-success':'text-danger'"></i>
+        </a>
+        <a class="pull-right " data-toggle="modal" data-target="#modal-editar" data-angular-ripple data-nodrag ng-click="editar(this)" style="margin-right: 8px;">
+            <i class="icofont icofont-ui-edit text-muted"></i>
+        </a>
+        <a class="pull-right" data-toggle="modal" data-target="#modal-crear" data-angular-ripple data-nodrag ng-click="crear(this, 'hijo')" style="margin-right: 8px;">
+            <i class="icofont icofont-plus-circle text-primary"></i>
+        </a>
+    </div>
+    <ol ui-tree-nodes="" ng-model="node.children" ng-class="{hidden: collapsed}">
+        <li ng-repeat="node in node.children" ui-tree-node ng-include="'menu_usuario.html'"></li>
+    </ol>
+</script>
+<!-- Fin del template de angular -->
+
+<!-- Menu drag and drop -->
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-header-text">
+                    <i class="icon-list"></i> &nbsp;
+                    Menu
+                </h4>
+               <button type="button" class="btn btn-primary pull-right" data-toggle="modal" data-target="#modal-crear" data-angular-ripple data-ng-click="crear()">
+                    <i class="icofont icofont-plus-circle"></i>
+                    <span class="m-l-10">Agregar</span>
+                </button>
+            </div>
+            <div class="card-block">
+                <!-- <div class="row">
+                    <div class="col-sm-6 form-group">
+                        <button class="btn btn-inverse-primary" ng-click="expandAll()">
+                            <i class="ion-arrow-down-b"></i>
+                            Expandir
+                        </button>
+                        <button class="btn btn-inverse-primary text-right" ng-click="collapseAll()">
+                            <i class="ion-arrow-right-b"></i>
+                            Agrupar
+                        </button>
+                    </div>
+                    <div class="col-sm-6 form-group text-right">
+                        
+                    </div>
+                </div> -->
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group col-sm-12">
+                            <label for="rol">Rol</label>
+                            <ui-select ng-model="inputs.rol_id" title="seleccione un rol" on-select="listar(inputs, 'izquierda')">
+                                <ui-select-match placeholder="Seleccionar Rol">{{ $select.selected.value }}</ui-select-match>
+                                <ui-select-choices class="size-3"  repeat="value.key as (key , value) in roles | filter: {'value':$select.search}">
+                                    {{ value.value }}
+                                </ui-select-choices>
+                            </ui-select>
+                        </div>
+                        <!-- data-max-depth="3" -->
+                        <div ui-tree="opciones" id="tree-root" data-max-depth="3" data-clone-enabled="true" >
+                            <ol ui-tree-nodes ng-model="menu_left">
+                                <li ng-repeat="node in menu_left" ui-tree-node ng-include="'menu_administrador.html'"></li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group col-sm-12">
+                            <label for="rol">Rol</label>
+                            <ui-select ng-model="inputsdrc.rol_id" title="seleccione un rol" on-select="listar(inputsdrc, 'derecha')">
+                                <ui-select-match placeholder="Seleccionar Rol">{{ $select.selected.value }}</ui-select-match>
+                                <ui-select-choices class="size-3"  repeat="value.key as (key , value) in roles | filter: {'value':$select.search}">
+                                    {{ value.value }}
+                                </ui-select-choices>
+                            </ui-select>
+                        </div>
+                        <div ui-tree="opciones" data-max-depth="3" id="tree-root_dos">
+                            <ol ui-tree-nodes  ng-model="menu_right">
+                                <li ng-repeat="node in menu_right" ui-tree-node ng-include="'menu_usuario.html'"></li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Fin de la vista -->
+
+<!-- Modal crear -->
+<div class="modal fade modal-flex" id="modal-crear" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>                 
+                    </button>
+                    <h4 class="modal-title">
+                        <i class="icon-list"></i> &nbsp;
+                        Nueva Opcion
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <form novalidate="" name="crear_opcion">
+                            <div class="form-group col-lg-6">
+                                <label for="nombre">Nombre</label>
+                                <input type="text" class="form-control" ng-minlength="3" name="menuNombre" data-ng-model="data.nombre" required />
+                                <i class="icofont  input-icon" ng-class="crear_opcion.menuNombre.$valid ? 'txt-success icofont-check':'txt-warning icofont-warning'" ></i>
+                                <small class="text-danger" data-ng-if="errores.nombre" data-ng-repeat="error in errores.nombre">{{ error }}</small>
+                            </div>
+                            <div class="form-group col-lg-6">
+                                <label for="url">URL</label>
+                                <input type="text" class="form-control" name="urlMenu" ng-minlength="3" data-ng-model="data.estado" required />
+                                <i class ="icofont  input-icon" ng-class="crear_opcion.urlMenu.$valid ? 'txt-success icofont-check':'txt-warning icofont-warning'" ></i>
+                                <small class="text-danger" data-ng-if="errores.estado" data-ng-repeat="error in errores.estado">{{ error }}</small>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="icon">icono</label>
+                                <i class ="icofont  input-icon" ng-class="crear_opcion.icon.$valid ? 'txt-success icofont-check':'txt-warning icofont-warning'" ></i>
+                                <div class="input-group">  
+                                    <input type="text" name="icon" ng-minlength="3" class="form-control" data-ng-model="data.icono" required />
+                                    <span class="input-group-addon"><i class="pull-right {{data.icono}}"></i> </span>
+                                    <small class="text-danger" data-ng-if="errores.icono" data-ng-repeat="error in errores.icono">{{ error }}</small>
+                                </div>
+                                <small>
+                                    <a href="http://simplelineicons.com/" class="label label-info" target="_blank">Line Icon</a>
+                                    <a href="http://fontawesome.io/icons/" class="label label-success" target="_blank">Awesome</a>
+                                    <a href="http://ionicons.com/" class="label label-default" target="_blank">Ion</a>
+                                    <a href="http://icofont.com/" class="label label-danger" target="_blank">Ico Font</a>
+                                </small>
+                            </div>
+                            <!-- <div class="form-group col-lg-6" data-ng-if="hijo">
+                                <label for="rol">Rol</label>
+                                <ui-select ng-model="data.rol_id" ng-disabled="true" title="seleccione un rol"  >
+                                    <ui-select-match placeholder="Seleccionar Rol">{{ $select.selected.value }}</ui-select-match>
+                                    <ui-select-choices class="size-3"  repeat="value.key as (key , value) in roles | filter: {'value':$select.search}">
+                                        {{ value.value }}
+                                    </ui-select-choices>
+                                </ui-select>
+                                <small class="text-danger" data-ng-if="errores.rol_id" data-ng-repeat="error in errores.rol_id">{{ error }}</small>
+                            </div> -->
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default angular-dark" data-dismiss="modal" data-angular-ripple>Cerrar</button>
+                    <button type="button" data-ng-click="guardar(data)" class="btn btn-primary" data-ng-disabled="!crear_opcion.$valid " data-angular-ripple>Guardar</button>
+                </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Editar -->
+<div class="modal fade modal-flex" id="modal-editar" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <form novalidate="" name="editar_opcion">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>                 
+                    </button>
+                    <h4 class="modal-title">
+                        <i class="icon-list"></i> &nbsp;
+                        Editar Opcion
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" class="form-control" data-ng-model="opcion.nombre" required>
+                            <small class="text-danger" data-ng-if="errores.nombre" data-ng-repeat="error in errores.nombre">{{ error }}</small>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="nombre">URL</label>
+                            <input type="text" class="form-control" data-ng-model="opcion.estado" required>
+                            <small class="text-danger" data-ng-if="errores.estado" data-ng-repeat="error in errores.estado">{{ error }}</small>
+                        </div>
+                        <div class="form-group col-md-6" data-ng-if="hijo">
+                            <label for="rol">Rol</label>
+                            <ui-select ng-model="opcion.rol_id" title="seleccione un rol" >
+                                <ui-select-match placeholder="Seleccionar Rol">{{ $select.selected.value }}</ui-select-match>
+                                <ui-select-choices class="size-3"  repeat="value.key as (key , value) in roles | filter: {'value':$select.search}">
+                                    {{ value.value }}
+                                </ui-select-choices>
+                            </ui-select>
+                            <small class="text-danger" data-ng-if="errores.rol_id" data-ng-repeat="error in errores.rol_id">{{ error }}</small>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="icon">icono</label>
+                            <div class="input-group">
+                                <input type="text" name="icon" class="form-control" data-ng-model="opcion.icono" required >
+                                <span class="input-group-addon"><i class="pull-right {{opcion.icono}}"></i> </span>
+                                <small class="text-danger" data-ng-if="errores.icono" data-ng-repeat="error in errores.icono">{{ error }}</small>
+                            </div>
+                            <small>
+                                <a href="http://simplelineicons.com/" class="label label-info" target="_blank">Line Icon</a>
+                                <a href="http://fontawesome.io/icons/" class="label label-success" target="_blank">Awesome</a>
+                                <a href="http://ionicons.com/" class="label label-default" target="_blank">Ion</a>
+                                <a href="http://icofont.com/" class="label label-danger" target="_blank">Ico Font</a>
+                            </small>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default angular-dark" data-dismiss="modal" data-angular-ripple>Cerrar</button>
+                    <button type="button" data-ng-click="actualizar(opcion)" class="btn btn-primary" data-ng-disabled="!editar_opcion.$valid " data-angular-ripple>Guardar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

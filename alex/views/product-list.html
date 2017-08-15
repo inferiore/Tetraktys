@@ -1,0 +1,295 @@
+<div  class="sidebar-mini fixed" >
+   
+    <div class="wrapper">
+   
+ <div ng-include="'shared/header.html'"></div>
+ <div ng-include="'shared/sidebar.html'" data-ng-controller="menuController" data-ng-init="setMenu()"></div> 
+    
+    <div class="content-wrapper">
+        <!-- Container-fluid starts -->
+        <div class="container-fluid">
+            <!-- Main content starts -->
+            <div >
+                <!-- Row Starts -->
+                <div class="row">
+                    <div class="col-sm-12 p-0">
+                        <div class="main-header">
+                            <h4>Product-List</h4>
+                            <ol class="breadcrumb breadcrumb-title breadcrumb-arrow">
+                                <li class="breadcrumb-item"><a href="index.html"><i class="icofont icofont-home"></i></a>
+                                </li>
+                                <li class="breadcrumb-item"><a href="#!">E-Commerce</a>
+                                </li>
+                                <li class="breadcrumb-item"><a href="product-list.html">Product List</a>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <!-- Row end -->
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-header-text">project List</h5>
+                                <button type="button" class="btn btn-primary waves-effect waves-light f-right d-inline-block"> <i class="icofont icofont-plus m-r-5"></i> ADD PROJECTS
+                                </button>
+                            </div>
+                            <div>
+                                <div class="row">
+
+                                    <div class="table-content p-l-30 p-r-30">
+                                        <div class="project-table">
+                                            <table id="e-product-list" class="table table-striped dt-responsive nowrap" width="100%" cellspacing="0" datatable="">
+                                                <thead>
+                                                <tr>
+                                                    <th>Image</th>
+                                                    <th>Product Name</th>
+                                                    <th>Amount</th>
+                                                    <th>Stock</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <td class="pro-list-img">
+                                                        <img src="assets/images/e-commerce/product-list/pro-l1.png" class="img-fluid" alt="tbl">
+                                                    </td>
+                                                    <td class="pro-name">
+                                                        <h6>Frock Designs</h6>
+                                                        <span>Lorem ipsum dolor sit consec te imperdiet iaculis ipsum..</span>
+                                                    </td>
+                                                    <td>$456</td>
+                                                    <td><label class="text-danger">Out Of Stock</label></td>
+                                                    <td class="action-icon">
+                                                        <a href="#!" class="m-r-15 text-muted" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"><i class="icofont icofont-edit"></i></a>
+                                                        <a href="#!" class="text-muted" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"><i class="icofont icofont-ui-delete"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="pro-list-img">
+                                                        <img src="assets/images/e-commerce/product-list/pro-l6.png" class="img-fluid" alt="tbl">
+                                                    </td>
+                                                    <td class="pro-name"><h6> Style Tops </h6>
+                                                        <span>Interchargebla lens Digital Camera with APS-C-X Trans CMOS Sens</span>
+                                                    </td>
+                                                    <td>$689</td>
+                                                    <td><label class="text-success">In Stock</label></td>
+                                                    <td class="action-icon">
+                                                        <a href="#!" class="m-r-15 text-muted" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"><i class="icofont icofont-edit"></i></a>
+                                                        <a href="#!" class="text-muted" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"><i class="icofont icofont-ui-delete"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="pro-list-img">
+                                                        <img src="assets/images/e-commerce/product-list/pro-l2.png" class="img-fluid" alt="tbl">
+                                                    </td>
+                                                    <td class="pro-name"><h6> Kurta Women </h6>
+                                                        <span>Lorem ipsum dolor sit consec te imperdiet iaculis ipsum..</span>
+                                                    </td>
+                                                    <td>$755</td>
+                                                    <td><label class="text-warning">Low Stock</label></td>
+                                                    <td class="action-icon">
+                                                        <a href="#!" class="m-r-15 text-muted" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"><i class="icofont icofont-edit"></i></a>
+                                                        <a href="#!" class="text-muted" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"><i class="icofont icofont-ui-delete"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="pro-list-img">
+                                                        <img src="assets/images/e-commerce/product-list/pro-l3.png" class="img-fluid" alt="tbl">
+                                                    </td>
+                                                    <td class="pro-name"><h6> T Shirts For Women </h6>
+                                                        <span>Lorem ipsum dolor sit consec te imperdiet iaculis ipsum..</span>
+                                                    </td>
+                                                    <td>$989</td>
+                                                    <td><label class="text-success">In Stock</label></td>
+                                                    <td class="action-icon">
+                                                        <a href="#!" class="m-r-15 text-muted" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"><i class="icofont icofont-edit"></i></a>
+                                                        <a href="#!" class="text-muted" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"><i class="icofont icofont-ui-delete"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="pro-list-img">
+                                                        <img src="assets/images/e-commerce/product-list/pro-l4.png" class="img-fluid" alt="tbl">
+                                                    </td>
+                                                    <td class="pro-name"><h6> Black Frock For Women </h6>
+                                                        <span>Interchargebla lens Digital Camera with APS-C-X Trans CMOS Sens</span>
+                                                    </td>
+                                                    <td>$1150</td>
+                                                    <td><label class="text-success">In Stock</label></td>
+                                                    <td class="action-icon">
+                                                        <a href="#!" class="m-r-15 text-muted" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"><i class="icofont icofont-edit"></i></a>
+                                                        <a href="#!" class="text-muted" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"><i class="icofont icofont-ui-delete"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="pro-list-img">
+                                                        <img src="assets/images/e-commerce/product-list/pro-l5.png" class="img-fluid" alt="tbl">
+                                                    </td>
+                                                    <td class="pro-name"><h6> T Shirts For Women </h6>
+                                                        <span>Lorem ipsum dolor sit consec te imperdiet iaculis ipsum..</span>
+                                                    </td>
+                                                    <td>$2006</td>
+                                                    <td><label class="text-danger">Out Of Stock</label></td>
+                                                    <td class="action-icon">
+                                                        <a href="#!" class="m-r-15 text-muted" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"><i class="icofont icofont-edit"></i></a>
+                                                        <a href="#!" class="text-muted" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"><i class="icofont icofont-ui-delete"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="pro-list-img">
+                                                        <img src="assets/images/e-commerce/product-list/pro-l7.png" class="img-fluid" alt="tbl">
+                                                    </td>
+                                                    <td class="pro-name"><h6> Digital Print Top </h6>
+                                                        <span>sum dolor sit consec te imperdiet iaculis ipsum..</span>
+                                                    </td>
+                                                    <td>$1199</td>
+                                                    <td><label class="text-success">In Stock</label></td>
+                                                    <td class="action-icon">
+                                                        <a href="#!" class="m-r-15 text-muted" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"><i class="icofont icofont-edit"></i></a>
+                                                        <a href="#!" class="text-muted" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"><i class="icofont icofont-ui-delete"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="pro-list-img">
+                                                        <img src="assets/images/e-commerce/product-list/pro-l8.png" class="img-fluid" alt="tbl">
+                                                    </td>
+                                                    <td class="pro-name"><h6> One Piece Dress</h6>
+                                                        <span class="text-muted f-12">Lorem ipsum dolor sit consec te imperdiet iaculis ipsum..</span>
+                                                    </td>
+                                                    <td>$589</td>
+                                                    <td><label class="text-warning">Low Stock</label></td>
+                                                    <td class="action-icon">
+                                                        <a href="#!" class="m-r-15 text-muted" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"><i class="icofont icofont-edit"></i></a>
+                                                        <a href="#!" class="text-muted" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"><i class="icofont icofont-ui-delete"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="pro-list-img">
+                                                        <img src="assets/images/e-commerce/product-list/pro-l9.png" class="img-fluid" alt="tbl">
+                                                    </td>
+                                                    <td class="pro-name"><h6> kurat style Dress </h6>
+                                                        <span>sum dolor sit consec te imperdiet iaculis ipsum..</span>
+                                                    </td>
+                                                    <td>$1255</td>
+                                                    <td><label class="text-danger">Out Of Stock</label></td>
+                                                    <td class="action-icon">
+                                                        <a href="#!" class="m-r-15 text-muted" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"><i class="icofont icofont-edit"></i></a>
+                                                        <a href="#!" class="text-muted" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"><i class="icofont icofont-ui-delete"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="pro-list-img">
+                                                        <img src="assets/images/e-commerce/product-list/pro-l8.png" class="img-fluid" alt="tbl">
+                                                    </td>
+                                                    <td class="pro-name"><h6> T Shirts For Women </h6>
+                                                        <span>Interchargebla lens Digital Camera with APS-C-X Trans CMOS Sens</span>
+                                                    </td>
+                                                    <td>$499</td>
+                                                    <td><label class="text-success">In Stock</label></td>
+                                                    <td class="action-icon">
+                                                        <a href="#!" class="m-r-15 text-muted" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"><i class="icofont icofont-edit"></i></a>
+                                                        <a href="#!" class="text-muted" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"><i class="icofont icofont-ui-delete"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="pro-list-img">
+                                                        <img src="assets/images/e-commerce/product-list/pro-l7.png" class="img-fluid" alt="tbl">
+                                                    </td>
+                                                    <td class="pro-name"><h6> T Shirts For Women </h6>
+                                                        <span>Interchargebla lens Digital Camera with APS-C-X Trans CMOS Sens</span>
+                                                    </td>
+                                                    <td>$259</td>
+                                                    <td><label class="text-success">In Stock</label></td>
+                                                    <td class="action-icon">
+                                                        <a href="#!" class="m-r-15 text-muted" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"><i class="icofont icofont-edit"></i></a>
+                                                        <a href="#!" class="text-muted" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"><i class="icofont icofont-ui-delete"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="pro-list-img">
+                                                        <img src="assets/images/e-commerce/product-list/pro-l6.png" class="img-fluid" alt="tbl">
+                                                    </td>
+                                                    <td class="pro-name"><h6> T Shirts For Women </h6>
+                                                        <span>Interchargebla lens Digital Camera with APS-C-X Trans CMOS Sens</span>
+                                                    </td>
+                                                    <td>$456</td>
+                                                    <td><label class="text-success">In Stock</label></td>
+                                                    <td class="action-icon">
+                                                        <a href="#!" class="m-r-15 text-muted" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"><i class="icofont icofont-edit"></i></a>
+                                                        <a href="#!" class="text-muted" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"><i class="icofont icofont-ui-delete"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="pro-list-img">
+                                                        <img src="assets/images/e-commerce/product-list/pro-l5.png" class="img-fluid" alt="tbl">
+                                                    </td>
+                                                    <td class="pro-name"><h6> T Shirts For Women </h6>
+                                                        <span>Interchargebla lens Digital Camera with APS-C-X Trans CMOS Sens</span>
+                                                    </td>
+                                                    <td>$456</td>
+                                                    <td><label class="text-success">In Stock</label></td>
+                                                    <td class="action-icon">
+                                                        <a href="#!" class="m-r-15 text-muted" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"><i class="icofont icofont-edit"></i></a>
+                                                        <a href="#!" class="text-muted" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"><i class="icofont icofont-ui-delete"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="pro-list-img">
+                                                        <img src="assets/images/e-commerce/product-list/pro-l4.png" class="img-fluid" alt="tbl">
+                                                    </td>
+                                                    <td class="pro-name"><h6> T Shirts For Women </h6>
+                                                        <span>Interchargebla lens Digital Camera with APS-C-X Trans CMOS Sens</span>
+                                                    </td>
+                                                    <td>$456</td>
+                                                    <td><label class="text-success">In Stock</label></td>
+                                                    <td class="action-icon">
+                                                        <a href="#!" class="m-r-15 text-muted" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"><i class="icofont icofont-edit"></i></a>
+                                                        <a href="#!" class="text-muted" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"><i class="icofont icofont-ui-delete"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="pro-list-img">
+                                                        <img src="assets/images/e-commerce/product-list/pro-l2.png" class="img-fluid" alt="tbl">
+                                                    </td>
+                                                    <td class="pro-name"><h6> T Shirts For Women </h6>
+                                                        <span>Interchargebla lens Digital Camera with APS-C-X Trans CMOS Sens</span>
+                                                    </td>
+                                                    <td>$456</td>
+                                                    <td><label class="text-success">In Stock</label></td>
+                                                    <td class="action-icon">
+                                                        <a href="#!" class="m-r-15 text-muted" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"><i class="icofont icofont-edit"></i></a>
+                                                        <a href="#!" class="text-muted" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"><i class="icofont icofont-ui-delete"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="pro-list-img">
+                                                        <img src="assets/images/e-commerce/product-list/pro-l1.png" class="img-fluid" alt="tbl">
+                                                    </td>
+                                                    <td class="pro-name"><h6> T Shirts For Women </h6>
+                                                        <span>Interchargebla lens Digital Camera with APS-C-X Trans CMOS Sens</span>
+                                                    </td>
+                                                    <td>$456</td>
+                                                    <td><label class="text-success">In Stock</label></td>
+                                                    <td class="action-icon">
+                                                        <a href="#!" class="m-r-15 text-muted" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"><i class="icofont icofont-edit"></i></a>
+                                                        <a href="#!" class="text-muted" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"><i class="icofont icofont-ui-delete"></i></a>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Container-fluid ends -->
+    </div>
+</div>
+</div>
+

@@ -1,0 +1,175 @@
+<div class="sidebar-mini fixed" >
+    
+    <div class="wrapper" >
+    
+        <div ng-include="'shared/header.html'"></div>
+ <div ng-include="'shared/sidebar.html'" data-ng-controller="menuController" data-ng-init="setMenu()"></div> 
+
+        <div class="content-wrapper">
+            <!-- Container-fluid starts -->
+            <div class="container-fluid">
+                <!-- Main content starts -->
+                <!-- Header starts -->
+                <div class="row">
+                    <div class="col-sm-12 p-0">
+                        <div class="main-header">
+                            <h4>Accordion</h4>
+                            <ol class="breadcrumb breadcrumb-title breadcrumb-arrow">
+                                <li class="breadcrumb-item">
+                                    <a href="index.html">
+                                        <i class="icofont icofont-home"></i>
+                                    </a>
+                                </li>
+                                <li class="breadcrumb-item">
+                                    <a href="">UI Element</a>
+                                </li>
+                                <li class="breadcrumb-item"><a href="">Accordion</a>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <!-- Header ends -->
+                <!-- Row start -->
+                <div class="row">
+                    <!-- Multiple Open Accordion start -->
+                    <div class="col-lg-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-header-text">MULTIPLE OPEN ACCORDION</h5>
+                            </div>
+                            <div class="card-block accordion-block">
+                                <div data-uib-accordion data-close-others="oneAtATime">
+                                    <div data-uib-accordion-group class="panel-default" data-heading="Lorem Message 1" data-is-open="status.multiple1Open">
+                                        <p>
+                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                                        </p>
+                                    </div>
+                                    <div data-uib-accordion-group class="panel-default" data-heading="Lorem Message 2" data-is-open="status.multiple1close">
+                                        <p>
+                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                                        </p>
+                                    </div>
+                                    <div data-uib-accordion-group class="panel-default" data-heading="Lorem Message 3" data-is-open="status.multiple2close">
+                                        <p>
+                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Multiple Open Accordion ends -->
+                    <!-- Single Open Accordion start -->
+                    <div class="col-lg-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-header-text">Single Open Accordion</h5>
+                            </div>
+                            <div class="card-block accordion-block">
+                                <div data-uib-accordion>
+                                    <div data-uib-accordion-group class="panel-default" data-is-open="status.single1Open">
+                                        <div data-uib-accordion-heading>
+                                            Lorem Message 1
+                                        </div>
+                                        <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                                    </div>
+                                    <div data-uib-accordion-group class="panel-default" data-is-open="status.single1close">
+                                        <div data-uib-accordion-heading>
+                                            Lorem Message 1
+                                        </div>
+                                        <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                                    </div>
+                                    <div data-uib-accordion-group class="panel-default" data-is-open="status.single2close">
+                                        <div data-uib-accordion-heading>
+                                            Lorem Message 1
+                                        </div>
+                                        <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Single Open Accordion ends -->
+                </div>
+                <!-- Row end -->
+                <!-- row start -->
+                <div class="row">
+                    <!-- Scale Open Accordion start -->
+                    <div class="col-lg-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-header-text">SCALE ACCORDION</h5>
+                            </div>
+                            <div class="card-block accordion-block">
+                                <div data-uib-accordion class="accordion-popout">
+                                    <div data-uib-accordion-group class="panel-default panel-popout" data-is-open="status.scale1Open">
+                                        <div data-uib-accordion-heading>
+                                            Lorem Message 1
+                                        </div>
+                                        <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                                    </div>
+                                    <div data-uib-accordion-group class="panel-default panel-popout" data-is-open="status.scale1close">
+                                        <div data-uib-accordion-heading>
+                                            Lorem Message 1
+                                        </div>
+                                        <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                                    </div>
+                                    <div data-uib-accordion-group class="panel-default panel-popout" data-is-open="status.scale2close">
+                                        <div data-uib-accordion-heading>
+                                            Lorem Message 1
+                                        </div>
+                                        <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Scale Open Accordion ends -->
+                    <!-- Color Open Accordion start -->
+                    <!--   <div class="col-lg-6">
+  <div class="card">
+    <div class="card-header">
+      <h5 class="card-header-text">COLOR ACCORDION</h5>
+    </div>
+    <div class="card-block accordion-block">
+
+      <div data-uib-accordion class="accordion-color">
+        <div data-uib-accordion-group class="panel-default panel-danger" data-is-open="status.color1Open">
+          <div data-uib-accordion-heading >
+
+            Lorem Message 1
+            
+          </div>
+          <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        </div>
+        <div data-uib-accordion-group class="panel-default panel-info" data-is-open="status.color1close">
+          <div data-uib-accordion-heading>
+
+            Lorem Message 1
+           
+          </div>
+          <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        </div>
+        <div data-uib-accordion-group class="panel-default panel-warning" data-is-open="status.color2close">
+          <div data-uib-accordion-heading>
+
+            Lorem Message 1
+           
+          </div>
+          <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        </div>                           
+      </div>
+
+    </div>
+  </div>
+</div> -->
+                    <!-- Color Open Accordion ends -->
+                </div>
+                <!-- Row end -->
+                <!-- Main content ends -->
+            </div>
+            <!-- Container-fluid ends -->
+        </div>
+    </div>
+</div>

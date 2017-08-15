@@ -1,0 +1,90 @@
+
+
+  <div  class="sidebar-mini fixed" >
+   
+    <div class="wrapper" >
+   
+ <div ng-include="'shared/header.html'"></div>
+ <div ng-include="'shared/sidebar.html'" data-ng-controller="menuController" data-ng-init="setMenu()"></div> 
+
+    <div class="content-wrapper">
+        <!-- Container-fluid starts -->
+        <div class="container-fluid">
+            <!-- Main content starts -->
+            <div>
+                <!-- Header Starts -->
+                <div class="row">
+                    <div class="col-sm-12 p-0">
+                        <div class="main-header">
+                            <h4>Ck-Editor</h4>
+                            <ol class="breadcrumb breadcrumb-title breadcrumb-arrow">
+                                <li class="breadcrumb-item">
+                                    <a href="index.html">
+                                        <i class="icofont icofont-home"></i>
+                                    </a>
+                                </li>
+                                <li class="breadcrumb-item">
+                                    <a href="#!">   Apps </a>
+                                </li>
+                                <li class="breadcrumb-item"><a href="">Ck-Editor</a>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <!-- Header end -->
+
+
+                <!-- Row start -->
+                <div class="row">
+                    <!-- Article Editor start -->
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-header-text">Article Editor</h5>
+                            </div>
+                            <div class="card-block">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <textarea ckeditor="editorOptions" ng-model="modelName" id="editor1">
+                                           
+                                        </textarea>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Article Editor end -->
+
+                    <!-- Document Editor start  -->
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-header-text">Document Editor</h5>
+                            </div>
+                            <div class="card-block">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <textarea ckeditor="editorOptions" ng-model="modelName1" id="editor2">
+                                           
+                                        </textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Document Editor end -->
+
+                  
+
+                </div>
+                <!-- Row end -->
+                <!-- Switches end -->
+            </div>
+        </div>
+        <!-- Container-fluid ends -->
+    </div>
+</div>
+</div>
+

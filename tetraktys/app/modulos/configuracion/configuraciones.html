@@ -1,0 +1,264 @@
+<!-- Row start -->
+<div class="row  animated fadeIn">
+    <div class="col-sm-12">
+        <!-- Basic Table starts -->
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-header-text" </h5>
+                <!-- <p>Basic example classes</p> -->                
+                <button type="button" class="btn btn-primary pull-right" data-toggle="modal" 
+                  data-target="#modal-crear" data-angular-ripple data-ng-click="getCrear()">
+                    <i class="icofont icofont-plus-circle"></i><span class="m-l-10">Agregar</span>
+                </button>
+            </div>
+            <div class="card-block">
+                <div class="form-group row">
+                    <div class="col-md-6 block-center filtro">
+                        <div class="input-group">
+                          <!-- para otros filtros -->
+                          <!--   <span class="input-group-btn">
+                                <button type="submit" class="btn"  id="btn-filtro" data-ng-click="show = !show" data-ng-init="show=false">
+                                    <span class="fa fa-caret-down"></span>
+                                </button>
+                            </span> -->
+                            <input id="buscar" type="text" class="form-control" placeholder="Nombre" data-ng-model="filtro.Nombre" ng-keydown="$event.keyCode === 13 ? getIndex(filtro):false">
+                            <span class="input-group-btn">
+                                <button type="submit" class="btn btn-primary addon-btn waves-effect waves-light" data-ng-click="getIndex(filtro)">
+                                    Buscar
+                                </button>
+                            </span>
+                        </div>
+                        <div id="area-filtro"  class="animated flipInX z-depth-bottom-4" data-ng-show="show">
+                            <div class="form-group col-md-12">
+                                <h5>Filtrar:</h5>
+                                <hr>
+                                <label for="">Estado</label>
+                                <!-- <select class="form-control form-control-sm" id="" multiple="multiple">
+                                    <option value="{{ estado.StId }}" data-ng-repeat="estado in estados">{{ estado.StNameState }}</option>
+                                </select> -->
+                                <div
+                                    isteven-multi-select
+                                    input-model="estados"
+                                    output-model="filtro.RolIdEstado"
+                                    button-label="StNameState"
+                                    item-label="StNameState"
+                                    tick-property=""
+                                    max-labels="1"
+                                    max-height="100px"
+                                    traslation=localLang
+                                >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12 table-responsive">
+                        <dir-pagination-controls class="pull-right" template-url="js/dirPagination.tpl.html" on-page-change="cambiarPagina(newPageNumber)" >
+                    </dir-pagination-controls>
+                        <table class="table table-bordered table-condensed">
+                            <thead>
+                            <tr>
+                                <th rowspan='2' >Id</th>
+                                <th colspan='3' class="text-center" >Padre</th>
+                                <th colspan='3' class="text-center" >Hijo</th>
+                                 <th rowspan='2' >Acciones</th>
+                            </tr>
+                            <tr>                                
+                                <th>Nombre</th>
+                                <th>Controlador</th>
+                                <th>Cv. Primaria</th>
+                                <th>Nombre</th>
+                                <th>Controlador</th>
+                                <th>Cv. Foranea</th>                                
+                            </tr>
+                            </thead>
+                            <tbody data-ng-init="Indice = {id: 0}">
+                                <tr dir-paginate="objeto in configuraciones | itemsPerPage: 10"  current-page="pagination.current"  >
+                                    <td>{{ objeto.Id }} </td>
+                                    <td>{{ objeto.Nombre}}</td>
+                                    <td>{{ objeto.Controlador}}</td>
+                                    <td>{{ objeto.Primaria}}</td>                                    
+                                    <td>{{ objeto.hNombre}}</td>
+                                    <td>{{ objeto.hControlador}}</td>
+                                    <td>{{ objeto.Foranea}}</td>
+                                    
+                                    
+                                    <td>
+                                        <div class="dropdown-primary dropdown">
+                                          <button class="btn btn-sm btn-inverse-primary dropdown-toggle" type="button" id="dropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-angular-ripple="">
+                                               <span class=" angular-ripple animate"></span> Accion
+                                           </button> 
+                                           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown1" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+                                               <a class="dropdown-item" data-toggle="modal" data-target="#modal-editar"  data-angular-ripple data-ng-click="getEditar(objeto)" >
+                                                   <i class="icofont icofont-ui-edit"></i> Editar
+                                               </a>
+                                               <a class="dropdown-item" data-toggle="modal" data-ng-click="delEliminar(objeto)">
+                                                   <i class="icofont icofont-company"></i> Eliminar
+                                               </a>
+                                             
+                                           </div> 
+                                       </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                      <dir-pagination-controls class="pull-right" template-url="js/dirPagination.tpl.html" on-page-change="cambiarPagina(newPageNumber)" >
+                    </dir-pagination-controls>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Basic Table ends -->   
+    </div>
+</div>
+<!-- Modal permisos -->
+
+<!-- Modal editar -->
+<div class="modal fade modal-flex" id="modal-editar" tabindex="-1" role="dialog">
+    <div class="modal-dialog  " role="document">
+        <div class="modal-content">
+       <!-- start col-lg-9 -->
+       <div class="modal-header">
+          <h4 class="modal-title"> 
+            Editar 
+            <small class="text-info">
+             
+            </small>
+          </h4>
+       </div>
+        <div class="modal-body">
+          <form name="formularioEditar" novalidate="" >
+            <div class="card-block">
+                  <div class="form-group row">
+                        <div class="col-md-2 txt-success "><label class="form-control-label" >Padre</label></div>
+                          <div class="col-md-10">
+                            <ui-select ng-model="objeto.IdPadre" on-select='getAttrs(objeto.IdPadre,"P")' title="seleccione un modelo">
+                              <ui-select-match placeholder="Seleccionar modelo">{{$select.selected.value}}</ui-select-match>
+                                <ui-select-choices class="size-3"  repeat="value.key as (key , value)  in objetos">
+                                  {{value.value}}
+                              </ui-select-choices>
+                            </ui-select>
+                          </div>
+                      </div>
+                      
+                  <div class="form-group row">
+                        <div class="col-md-2 txt-success "><label class="form-control-label" >Hijo</label></div>
+                          <div class="col-md-10">
+                            <ui-select ng-model="objeto.IdHijo" on-select='getAttrs(objeto.IdPadre,"H")' title="seleccione un modelo">
+                              <ui-select-match placeholder="Seleccione un modelo" >{{$select.selected.value}}</ui-select-match>
+                                <ui-select-choices class="size-3"  repeat="value.key as (key , value) in objetos">
+                                  {{value.value }}
+                              </ui-select-choices>
+                            </ui-select>
+                          </div>
+                      </div>
+                        
+                  <div class="form-group row">
+                        <div class="col-md-2 txt-success "><label class="form-control-label" >Clave Primaria</label></div>
+                          <div class="col-md-10">
+                            <ui-select ng-model="objeto.Primaria" theme='bootstrap'>
+                              <ui-select-match placeholder="Seleccione la clave primaria">{{$select.selected}}</ui-select-match>
+                                <ui-select-choices class="size-3"  repeat="col in primarias">
+                                  {{col}}
+                              </ui-select-choices>
+                            </ui-select>
+                          </div>
+                  </div>
+                      
+                 <div class="form-group row">
+                        <div class="col-md-2 txt-success "><label class="form-control-label" >Clave Primaria</label></div>
+                          <div class="col-md-10">
+                            <ui-select ng-model="objeto.Foranea" theme='bootstrap'>
+                              <ui-select-match placeholder="Seleccione la clave foranea">{{$select.selected}}</ui-select-match>
+                                <ui-select-choices class="size-3"  repeat="col in foraneas">
+                                  {{col}}
+                              </ui-select-choices>
+                            </ui-select>
+                          </div>
+                  </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default angular-dark" data-dismiss="modal" data-angular-ripple>Cerrar</button>
+            <button type="button" data-ng-click="putEditar(objeto,Indice);" class="btn btn-primary" data-ng-disabled="!formularioEditar.$valid" data-angular-ripple>Editar</button>
+        </div>
+      </div>
+    </div>
+</div>
+<!-- Modal Crear -->
+<div class="modal fade modal-flex" id="modal-crear" tabindex="-1" role="dialog">
+    <div class="modal-dialog " role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title"> Nueva Configuracion </h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    <form name="formularioAll" novalidate=""  >
+
+                     
+                      <div class="form-group row">
+                        <div class="col-md-2 txt-success "><label class="form-control-label" >Padre</label></div>
+                          <div class="col-md-10">
+                            <ui-select ng-model="objeto.IdPadre" on-select='getAttrs(objeto.IdPadre,"P")' title="seleccione un objeto">
+                              <ui-select-match placeholder="Seleccionar objeto">{{$select.selected.value.Nombre}}</ui-select-match>
+                                <ui-select-choices class="size-3"  repeat="modelo.value.Id as (key, modelo) in objetos">
+                                  {{modelo.value.Nombre}}
+                              </ui-select-choices>
+                            </ui-select>
+                          </div>
+                      </div>
+                      <div class="form-group row">
+                        <div class="col-md-2 txt-success"><label class="form-control-label" >Hijo</label></div>
+                          <div class="col-md-10">
+                            <ui-select ng-model="objeto.IdHijo" on-select='getAttrs(objeto.IdHijo,"H")' title="seleccione un modelo">
+                              <ui-select-match placeholder="Seleccione Objeto" >{{$select.selected.value.Nombre}}</ui-select-match>
+                                <ui-select-choices class="size-3"  repeat="controlador.value.Id as (key, controlador) in objetos">
+                                  {{controlador.value.Nombre}}
+                              </ui-select-choices>
+                            </ui-select>
+                          </div>
+                      </div> 
+                       <!-- <pre> -->
+                          <!-- {{primarias | json}} -->
+                       <!-- </pre>      -->
+                      <div class="form-group row">
+                        <div class="col-md-2 txt-success "><label class="form-control-label" >Cl. Primaria</label></div>
+                          <div class="col-md-10">
+                            <ui-select ng-model="objeto.Primaria" theme='bootstrap'>
+                              <ui-select-match placeholder="Seleccione notificacion">{{$select.selected}}</ui-select-match>
+                                <ui-select-choices class="size-3"  repeat="cols in primarias">
+                                  {{cols}}
+                              </ui-select-choices>
+                            </ui-select>
+                          </div>
+                      </div>
+                        
+                      <div class="form-group row">
+                        <div class="col-md-2 txt-success "><label class="form-control-label" >Cl. Foranea</label></div>
+                          <div class="col-md-10">
+                            <ui-select ng-model="objeto.Foranea" theme='bootstrap'>
+                              <ui-select-match placeholder="Seleccione notificacion">{{$select.selected}}</ui-select-match>
+                                <ui-select-choices class="size-3"  repeat="cols in foraneas">
+                                  {{cols}}
+                              </ui-select-choices>
+                            </ui-select>
+                          </div>
+                      </div>
+                       
+                    </form>
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default angular-dark" data-dismiss="modal" data-angular-ripple>Cerrar</button>
+                <button type="button" data-ng-click="postCrear(objeto)" class="btn btn-primary" data-ng-disabled="!formularioAll.$valid" data-angular-ripple>Guardar</button>
+            </div>
+        </div>
+    </div>
+</div>

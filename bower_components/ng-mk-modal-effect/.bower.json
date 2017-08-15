@@ -1,0 +1,39 @@
+{
+  "name": "ng-mk-modal-effect",
+  "version": "1.4.8",
+  "description": "Custom effect modals.",
+  "keywords": [
+    "angularjs",
+    "modal"
+  ],
+  "authors": [
+    "mak"
+  ],
+  "license": "MIT",
+  "main": [
+    "dist/mkModal.css",
+    "dist/mkModal.js"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.2.18",
+    "jquery": "~2.1.1"
+  },
+  "homepage": "https://github.com/malikid/ng-mk-modal-effect",
+  "_release": "1.4.8",
+  "_resolution": {
+    "type": "version",
+    "tag": "1.4.8",
+    "commit": "63452d7679c776a4d1d024da5e53275b340b06fc"
+  },
+  "_source": "https://github.com/malikid/ng-mk-modal-effect.git",
+  "_target": "^1.4.8",
+  "_originalSource": "ng-mk-modal-effect",
+  "_direct": true
+}

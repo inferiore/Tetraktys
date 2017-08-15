@@ -1,0 +1,44 @@
+{
+  "name": "angular-bar-rating",
+  "authors": [
+    "ByGiro <girotomaselli@gmail.com>"
+  ],
+  "contributors": [],
+  "main": [
+    "dist/angular-bar-rating.js"
+  ],
+  "description": "Angular directive for jQuery Bar Rating plugin",
+  "keywords": [
+    "AngularJs",
+    "ByGiro",
+    "rating",
+    "jQuery-Bar-Rating"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": ">=1.2.x",
+    "jquery-bar-rating": "^1.2.1"
+  },
+  "devDependencies": {
+    "chai": "~1.9.1",
+    "mocha": "~1.21.4"
+  },
+  "homepage": "https://github.com/bygiro/angular-bar-rating",
+  "_release": "ee71e4b882",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "ee71e4b882a6505e31bb3873701e2f5d1f08b735"
+  },
+  "_source": "https://github.com/bygiro/angular-bar-rating.git",
+  "_target": "*",
+  "_originalSource": "angular-bar-rating",
+  "_direct": true
+}

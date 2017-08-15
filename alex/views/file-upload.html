@@ -1,0 +1,45 @@
+
+
+  <div  class="sidebar-mini fixed" >
+   
+    <div class="wrapper" >
+      <div ng-include="'shared/header.html'"></div>
+ <div ng-include="'shared/sidebar.html'" data-ng-controller="menuController" data-ng-init="setMenu()"></div>
+    <div class="content-wrapper">
+        <!-- Container-fluid starts -->
+        <div class="container-fluid">
+            <!-- Header starts -->
+            <div class="row">
+                <div class="main-header">
+                    <h4>File Upload</h4>
+                    <ol class="breadcrumb breadcrumb-title breadcrumb-arrow">
+                        <li class="breadcrumb-item"><a href="index.html"><i class="icofont icofont-home"></i></a>
+                        </li>
+                        <li class="breadcrumb-item"><a href="">Forms</a>
+                        </li>
+                        <li class="breadcrumb-item"><a href="file-upload.html">File Upload</a>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <!-- Header end -->
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card">
+                    <div class="card-block">
+                       <div id="dropzone" class="dropzone" options="dzOptions" callbacks="dzCallbacks" ng-dropzone></div>
+                        <div class="text-center">
+                            <button type="button" class="btn btn-primary waves-effect waves-light p-l-50 p-r-50" data-angular-ripple>Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Row end -->
+    </div>
+        <!-- Container-fluid ends -->
+    </div>
+</div>
+</div>
+

@@ -1,0 +1,144 @@
+
+
+  <div  class="sidebar-mini fixed" >
+   
+    <div class="wrapper" >
+   
+<div ng-include="'shared/header.html'"></div>
+ <div ng-include="'shared/sidebar.html'" data-ng-controller="menuController" data-ng-init="setMenu()"></div> 
+ 
+    <div class="content-wrapper">
+        <!-- Container-fluid starts -->
+       <div class="container-fluid">
+    <!-- Header Starts -->
+    <div class="row">
+        <div class="col-sm-12 p-0">
+            <div class="main-header">
+                <h4>C3 Chart</h4>
+                <ol class="breadcrumb breadcrumb-title breadcrumb-arrow">
+                    <li class="breadcrumb-item">
+                        <a href="index.html">
+                            <i class="icofont icofont-home"></i>
+                        </a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a href="#!"> Charts </a>
+                    </li>
+                    <li class="breadcrumb-item"><a href="chart-c3Chart.html">C3 Chart</a>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+    <!-- Header end -->
+
+    <!-- Row Starts -->
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-header-text">
+                        Rotated Axis
+                    </h5>
+                </div>
+                <div class="card-block">
+                    <c3chart bindto-id="chart" >   
+                        <chart-column column-id="line1"
+                          column-name="Line 1"
+                          column-color="#2196F3"
+                          column-values="2,10,4,15,25"
+                          column-type="line"/>         
+                        
+                    </c3chart>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-header-text">
+                        chart bar stacked
+                    </h5>
+                </div>
+                <div class="card-block">
+                     <c3chart bindto-id="chart1" >
+                    <chart-column column-id="x"
+                                  column-values="0,1,2,3,4,5"/>
+                    <chart-column column-id="bar1"
+                                  column-name="Bar 1"
+                                  column-color="#ff5252"
+                                  column-values="-30, 200, 200, 400, -150, 250"
+                                  column-type="bar"/>
+                    <chart-column column-id="bar2"
+                                  column-name="Bar 2"
+                                  column-color="#4CAF50"
+                                  column-values="130, 100, -100, 200, -150, 50"
+                                  column-type="bar"/>
+                    <chart-column column-id="bar3"
+                                  column-name="Bar 3"
+                                  column-color="#40c4ff"
+                                  column-values="-230, 200, 200, -300, 250, 250"
+                                  column-type="bar"/>
+                    <chart-bar ratio="0.6"/>                   
+                   
+                    <chart-group group-values="bar1,bar2"/>
+                </c3chart>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-header-text">
+                        Gauge chart
+                    </h5>
+                </div>
+                <div class="card-block">
+                   <c3chart bindto-id="chart2">
+                    <chart-column column-id="data 1"
+                                column-values="20"
+                                column-color="#2196F3"
+                                column-type="donut"/>
+                    <chart-column column-id="data 2"
+                                column-values="80"
+                                column-color="#4CAF50"
+                                column-type="donut"/>
+                   
+                    <chart-donut title="Iris Petal Width" width="60"/>
+                  </c3chart>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-header-text">
+                        Pie Chart
+                    </h5>
+                </div>
+                <div class="card-block">
+                    <c3chart bindto-id="chart3">
+                      <chart-column column-id="data 1"
+                                  column-values="70"
+                                  column-color="#2196F3"
+                                  column-type="pie"/>
+                      <chart-column column-id="data 2"
+                                  column-values="35"
+                                  column-color="#f57c00"
+                                  column-type="pie"/>
+                      <chart-column column-id="data 3"
+                                  column-values="60"
+                                  column-color="#4CAF50"
+                                  column-type="pie"/>
+                      <chart-pie expand="true"/>
+                    </c3chart>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        <!-- Container-fluid ends -->
+     </div>
+</div>
+</div>
+

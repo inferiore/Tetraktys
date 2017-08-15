@@ -1,0 +1,91 @@
+<div class="sidebar-mini fixed" >
+    
+    <div class="wrapper" >
+ <div ng-include="'shared/header.html'"></div>
+ <div ng-include="'shared/sidebar.html'" data-ng-controller="menuController" data-ng-init="setMenu()"></div>
+
+    <div class="content-wrapper">
+        <!-- Container-fluid starts -->
+       <div class="container-fluid">
+
+            <!-- Header Starts -->
+            <div class="row">
+                <div class="col-sm-12 p-0">
+                    <div class="main-header">
+                        <h4> Forms Wizard</h4>
+                        <ol class="breadcrumb breadcrumb-title breadcrumb-arrow">
+                            <li class="breadcrumb-item"><a href=""><i class="icofont icofont-home"></i></a>
+                            </li>
+                            <li class="breadcrumb-item"><a href="">Forms</a>
+                            </li>
+                            <li class="breadcrumb-item"><a href="forms-wizard.html">Forms Wizard</a>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <!-- Header end -->
+
+            <!-- Row start -->
+            <!--Form wizard with Validation Start-->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header"><h5 class="card-header-text">Form wizard with Validation</h5></div>
+                        <div class="card-block">
+                          <multi-step-container steps="stepsValidation" class="simple-prev-next">
+                            <header class="text-center">
+                                <button ng-disabled="$isFirst()" class="btn f-left btn-primary waves-effect waves-light" ng-click="$previousStep()">
+                                    <span class="fa fa-chevron-left"></span>
+                                    Previous
+                                </button>
+
+                                <strong ng-bind-template="{{$getActiveIndex()}}. {{$getActiveStep().title}}"></strong>
+
+                                <button ng-disabled="$isLast() || ($getActiveStep().hasForm && !$getActiveStep().valid)" class="btn btn-primary waves-effect waves-light f-right" ng-click="$nextStep()">
+                                    Next
+                                    <span class="fa fa-chevron-right"></span>
+                                </button>
+                            </header>
+
+                            <main step-container></main>
+                        </multi-step-container>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Form wizard with Validation End-->
+            <!--Simple Form wizard Start-->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header"><h5 class="card-header-text">Simple Form Wizard</h5></div>
+                        <div class="card-block">
+                             <multi-step-container steps="steps" class="simple-prev-next">
+                                <header class="text-center">
+                                    <button ng-disabled="$isFirst()" class="btn f-left btn-primary waves-effect waves-light" ng-click="$previousStep()" data-angular-ripple>
+                                        <span class="fa fa-chevron-left"></span>
+                                        Previous
+                                    </button>
+
+                                    <strong ng-bind-template="{{$getActiveIndex()}}. {{$getActiveStep().title}}"></strong>
+
+                                    <button ng-disabled="$isLast()" class="btn btn-primary waves-effect waves-light f-right" ng-click="$nextStep()" data-angular-ripple>
+                                        Next
+                                        <span class="fa fa-chevron-right"></span>
+                                    </button>
+                                </header>
+
+                                <main step-container></main>
+                            </multi-step-container>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Simple Form wizard Ends-->
+    </div>
+        <!-- Container-fluid ends -->
+     </div>
+</div>
+</div>
+

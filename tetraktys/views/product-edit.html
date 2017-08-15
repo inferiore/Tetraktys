@@ -1,0 +1,464 @@
+<div  class="sidebar-mini fixed" >
+   
+    <div class="wrapper" >
+   
+  <div ng-include="'shared/header.html'"></div>
+ <div ng-include="'shared/sidebar.html'" data-ng-controller="menuController" data-ng-init="setMenu()"></div> 
+  
+    <div class="content-wrapper">
+        <!-- Container-fluid starts -->
+        <div class="container-fluid">
+            <!-- Main content starts -->
+            <div>
+                <!-- Row Starts -->
+                <div class="row">
+                    <div class="col-sm-12 p-0">
+                        <div class="main-header">
+                            <h4>Product Edit</h4>
+                            <ol class="breadcrumb breadcrumb-title breadcrumb-arrow">
+                                <li class="breadcrumb-item"><a href="index.html"><i class="icofont icofont-home"></i></a>
+                                </li>
+                                <li class="breadcrumb-item"><a href="#!">E-Commerce</a>
+                                </li>
+                                <li class="breadcrumb-item"><a href="product-edit.html">Product Edit</a>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <!-- Row end -->
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card">
+                            <div class="card-header"><h5 class="card-header-text">Product Edit</h5></div>
+                            <div class="card-block">
+                                <div class="row">
+                                    <div class="product-edit">
+                                         <uib-tabset active="active" class="md-tabs tab-timeline">
+                            <uib-tab index="0" >
+                             <uib-tab-heading>
+                              <div class="f-26">
+                                <i class="icofont icofont-edit"></i>
+                              </div>
+                               Product Edit 
+                             <div class="slide1"></div>                                
+                              </uib-tab-heading>
+                              <div class="modal-body">
+                                 <form class="md-float-material card-block">
+                                                    <div class="row">
+                                                        <div class="col-sm-6">
+                                                            <div class="md-group-add-on">
+                                                            <span class="md-add-on">
+                                                             <i class="icofont icofont-ui-user"></i>
+                                                            </span>
+                                                                <div class="md-input-wrapper">
+                                                                    <input type="text" class="md-form-control">
+                                                                    <label>First Name</label>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                            <div class="md-group-add-on">
+                                                            <span class="md-add-on">
+                                                             <i class="icofont icofont-man-in-glasses"></i>
+                                                            </span>
+                                                                <div class="md-input-wrapper">
+                                                                    <input type="text" class="md-form-control">
+                                                                    <label>Last Name</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-sm-6">
+                                                            <div class="md-group-add-on">
+                                                            <span class="md-add-on">
+                                                             <i class="icofont icofont-ui-note"></i>
+                                                            </span>
+                                                                <div class="md-input-wrapper">
+                                                                    <input type="text" class="md-form-control">
+                                                                    <label>Tax</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                            <div class="md-group-add-on">
+                                                            <span class="md-add-on">
+                                                             <i class="icofont icofont-cur-dollar"></i>
+                                                            </span>
+                                                                <div class="md-input-wrapper">
+                                                                    <input type="text" class="md-form-control">
+                                                                    <label>Price</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-sm-6">
+                                                            <div class="md-group-add-on">
+                                                            <span class="md-add-on">
+                                                             <i class="icofont icofont-numbered"></i>
+                                                            </span>
+                                                                <div class="md-input-wrapper">
+                                                                    <input type="text" class="md-form-control">
+                                                                    <label>Quantity</label>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                            <div class="md-group-add-on">
+                                                            <span class="md-add-on">
+                                                             <i class="icofont icofont-align-left"></i>
+                                                            </span>
+                                                                <div class="md-input-wrapper">
+                                                                    <input type="text" class="md-form-control">
+                                                                    <label>Categories</label>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-sm-6">
+                                                            <div class="md-group-add-on">
+                                                                         <span class="md-add-on">
+                                                                             <i class="icofont icofont-copy-alt"></i>
+                                                                         </span>
+                                                                <div class="md-input-wrapper">
+                                                                    <textarea class="md-form-control" cols="2" rows="2"></textarea>
+                                                                    <label>Product Description</label>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                            <div class="md-group-add-on">
+                                                            <span class="md-add-on">
+                                                               <i class="icofont icofont-chart-bar-graph"></i>
+                                                            </span>
+                                                                <div class="md-input-wrapper">
+                                                                    <select class="md-form-control" id="Select">
+                                                                        <option>Status Select</option>
+                                                                        <option>2</option>
+                                                                        <option>3</option>
+                                                                        <option>4</option>
+                                                                        <option>5</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="text-center">
+                                                            <button type="button" class="btn btn-primary waves-effect waves-light m-r-10">Save
+                                                            </button>
+                                                            <button type="button" class="btn btn-warning waves-effect waves-light">Discard
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </form>     
+                              </div>                                    
+                            </uib-tab>
+                            <uib-tab index="1" >
+                            <uib-tab-heading>
+                               <div class="f-26">
+                                <i class="icofont icofont-document-search"></i>
+                                    </div>
+                                SEO Metadata
+                                 <div class="slide1"></div>
+                              </uib-tab-heading>
+                              <div class="modal-body">
+                                <form class="md-float-material card-block">
+                                                    <div class="row">
+                                                        <div class="col-sm-6">
+                                                            <div class="md-group-add-on">
+                                                            <span class="md-add-on">
+                                                             <i class="icofont icofont-all-caps"></i>
+                                                            </span>
+                                                                <div class="md-input-wrapper">
+                                                                    <input type="text" class="md-form-control">
+                                                                    <label>Title</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                            <div class="md-group-add-on">
+                                                            <span class="md-add-on">
+                                                             <i class="icofont icofont-underline"></i>
+                                                            </span>
+                                                                <div class="md-input-wrapper">
+                                                                    <input type="text" class="md-form-control">
+                                                                    <label>Lable Name</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-sm-6">
+                                                            <div class="md-group-add-on">
+                                                           <span class="md-add-on">
+                                                             <i class="icofont icofont-ui-keyboard"></i>
+                                                           </span>
+                                                                <div class="md-input-wrapper">
+                                                                    <input type="text" class="md-form-control">
+                                                                    <label>Keyword</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                            <div class="md-group-add-on">
+                                                                         <span class="md-add-on">
+                                                                             <i class="icofont icofont-copy-alt"></i>
+                                                                         </span>
+                                                                <div class="md-input-wrapper">
+                                                                    <textarea class="md-form-control" cols="2" rows="2"></textarea>
+                                                                    <label>Description</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="text-center">
+                                                            <button type="button" class="btn btn-primary waves-effect waves-light m-r-10">Save
+                                                            </button>
+                                                            <button type="button" class="btn btn-warning waves-effect waves-light">Discard
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                </form>
+                              </div>
+                            </uib-tab>
+                            <uib-tab index="2" >
+                                <uib-tab-heading>
+                                     <div class="f-26">
+                                        <i class="icofont icofont-ui-image"></i>
+                                     </div>
+                                     Pictures    
+                                 <div class="slide1"></div>
+                                </uib-tab-heading>
+                                <div class="modal-body">
+                                       <div class="md-float-material card-block">
+                                                    <div class="row p-t-10 p-b-10">
+                                                        <div class="col-lg-3 col-md-6 col-sm-12">
+                                                            <a href="">
+                                                                <img src="assets/images/e-commerce/product-edit/product-edit1.jpg" class="img-fluid width-100" alt="img-edit">
+                                                            </a>
+                                                        </div>
+                                                        <div class="col-lg-9 col-md-6 col-sm-12">
+                                                            <div class="row">
+                                                                <div class="col-sm-12">
+                                                                    <div class="md-group-add-on">
+                                                           <span class="md-add-on">
+                                                             <i class="icofont icofont-all-caps"></i>
+                                                           </span>
+                                                                        <div class="md-input-wrapper">
+                                                                            <input type="text" class="md-form-control">
+                                                                            <label>Lable Name</label>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="col-xs-6 edit-left">
+                                                                        <div class="form-radio">
+                                                                            <form>
+                                                                                <div class="radio radiofill">
+                                                                                    <label>
+                                                                                        <input type="radio" name="radio"><i class="helper"></i>Largest Image
+                                                                                    </label>
+                                                                                </div>
+                                                                                <div class="radio radiofill">
+                                                                                    <label>
+                                                                                        <input type="radio" name="radio"><i class="helper"></i>Medium Image
+                                                                                    </label>
+                                                                                </div>
+                                                                                <div class="radio radiofill">
+                                                                                    <label>
+                                                                                        <input type="radio" name="radio"><i class="helper"></i>Small Image
+                                                                                    </label>
+                                                                                </div>
+                                                                            </form>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-xs-6 edit-right text-right">
+                                                                        <button type="button" class="btn btn-danger waves-effect waves-light">Remove
+                                                                            <i class="icofont icofont-close-circled f-16 m-l-5"></i>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <hr>
+                                                    <div class="row p-t-10 p-b-10">
+                                                        <div class="col-lg-3 col-md-6 col-sm-12">
+                                                            <a href="">
+                                                                <img src="assets/images/e-commerce/product-edit/product-edit2.jpg" class="img-fluid width-100" alt="img-edit">
+                                                            </a>
+                                                        </div>
+                                                        <div class="col-lg-9 col-md-6 col-sm-12">
+                                                            <div class="row">
+                                                                <div class="col-sm-12">
+                                                                    <div class="md-group-add-on">
+                                                           <span class="md-add-on">
+                                                             <i class="icofont icofont-all-caps"></i>
+                                                           </span>
+                                                                        <div class="md-input-wrapper">
+                                                                            <input type="text" class="md-form-control">
+                                                                            <label>Lable Name</label>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="col-xs-6 edit-left">
+                                                                        <div class="form-radio">
+                                                                            <form>
+                                                                                <div class="radio radiofill">
+                                                                                    <label>
+                                                                                        <input type="radio" name="radio"><i class="helper"></i>Largest Image
+                                                                                    </label>
+                                                                                </div>
+                                                                                <div class="radio radiofill">
+                                                                                    <label>
+                                                                                        <input type="radio" name="radio"><i class="helper"></i>Medium Image
+                                                                                    </label>
+                                                                                </div>
+                                                                                <div class="radio radiofill">
+                                                                                    <label>
+                                                                                        <input type="radio" name="radio"><i class="helper"></i>Small Image
+                                                                                    </label>
+                                                                                </div>
+                                                                            </form>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-xs-6 edit-right text-right">
+                                                                        <button type="button" class="btn btn-danger waves-effect waves-light">Remove
+                                                                            <i class="icofont icofont-close-circled f-16 m-l-5"></i>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <hr>
+                                                    <div class="row p-t-10">
+                                                        <div class="col-lg-3 col-md-6 col-sm-12">
+                                                            <a href="">
+                                                                <img src="assets/images/e-commerce/product-edit/product-edit3.jpg" class="img-fluid width-100" alt="img-edit">
+                                                            </a>
+                                                        </div>
+                                                        <div class="col-lg-9 col-md-6 col-sm-12">
+                                                            <div class="row">
+                                                                <div class="col-sm-12">
+                                                                    <div class="md-group-add-on">
+                                                           <span class="md-add-on">
+                                                             <i class="icofont icofont-all-caps"></i>
+                                                           </span>
+                                                                        <div class="md-input-wrapper">
+                                                                            <input type="text" class="md-form-control">
+                                                                            <label>Lable Name</label>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="col-xs-6 edit-left">
+                                                                        <div class="form-radio">
+                                                                            <form>
+                                                                                <div class="radio radiofill">
+                                                                                    <label>
+                                                                                        <input type="radio" name="radio"><i class="helper"></i>Largest Image
+                                                                                    </label>
+                                                                                </div>
+                                                                                <div class="radio radiofill">
+                                                                                    <label>
+                                                                                        <input type="radio" name="radio"><i class="helper"></i>Medium Image
+                                                                                    </label>
+                                                                                </div>
+                                                                                <div class="radio radiofill">
+                                                                                    <label>
+                                                                                        <input type="radio" name="radio"><i class="helper"></i>Small Image
+                                                                                    </label>
+                                                                                </div>
+                                                                            </form>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-xs-6 edit-right text-right">
+                                                                        <button type="button" class="btn btn-danger waves-effect waves-light">Remove
+                                                                            <i class="icofont icofont-close-circled f-16 m-l-5"></i>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <hr>
+                                                </div>
+                                    </div>
+                            </uib-tab>                        
+                            <uib-tab index="3">
+                                <uib-tab-heading>
+                                    <div class="f-26">
+                                       <i class="icofont icofont-ui-image"></i>
+                                    </div>
+                                    Pictures
+                                 <div class="slide1"></div>
+                                </uib-tab-heading>
+                                <div class="modal-body">
+                                   <div class="container">
+                                                    <div class="row card-block">
+                                                        <div class="text-muted f-w-400">
+                                                            No reviews yet.
+                                                        </div>
+                                                        <div class="m-t-25">
+                                                            <div class="txt-primary f-18 f-w-600">Your Rating</div>
+                                                            <div ng-model="a" data-bar-rating-options="ratingOptions" data-bar-rating-settings="ratingSettings7" data-ng-bar-rating id="firstStart" data-current-rating="1"></div>
+                                                        </div>
+                                                        <div class="md-group-add-on">
+                                                           <span class="md-add-on">
+                                                             <i class="icofont icofont-ui-user"></i>
+                                                           </span>
+                                                            <div class="md-input-wrapper">
+                                                                <input type="text" class="md-form-control">
+                                                                <label>User Name</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="md-group-add-on">
+                                                           <span class="md-add-on">
+                                                             <i class="icofont icofont-man-in-glasses"></i>
+                                                           </span>
+                                                            <div class="md-input-wrapper">
+                                                                <input type="text" class="md-form-control">
+                                                                <label>Last Name</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="md-group-add-on">
+                                                           <span class="md-add-on">
+                                                             <i class="icofont icofont-email"></i>
+                                                           </span>
+                                                            <div class="md-input-wrapper">
+                                                                <input type="email" class="md-form-control">
+                                                                <label>Email</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <button type="submit" class="btn btn-primary waves-effect waves-light">Submit
+                                                            </button>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                </div>
+                            </uib-tab>
+                           </uib-tabset>                                     
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Container-fluid ends -->
+    </div>
+</div>
+</div>

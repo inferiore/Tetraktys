@@ -1,0 +1,145 @@
+
+
+  <div  class="sidebar-mini fixed" >
+   
+    <div class="wrapper" >
+   
+ <div ng-include="'shared/header.html'"></div>
+ <div ng-include="'shared/sidebar.html'" data-ng-controller="menuController" data-ng-init="setMenu()"></div>
+
+    <div class="content-wrapper">
+        <!-- Container-fluid starts -->
+       <div class="container-fluid">
+            <!-- Main content starts -->
+            <div >
+                <!-- Header Starts -->
+                <div class="row">
+                    <div class="col-sm-12 p-0">
+                        <div class="main-header">
+                            <h4>Inbox</h4>
+                            <ol class="breadcrumb breadcrumb-title breadcrumb-arrow">
+                                <li class="breadcrumb-item"><a href="index.html"><i class="icofont icofont-home"></i></a>
+                                </li>
+                                <li class="breadcrumb-item"><a href="#!">Apps</a>
+                                </li>
+                                <li class="breadcrumb-item"><a href="read-mail.html">Read Mail</a>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <!-- Header end -->
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card">
+                            <div class="card-block">
+                                <div class="col-xl-2 col-lg-12">
+                                    <a href="compose.html" class="btn btn-inverse-danger waves-effect waves-light btn-block">Compose
+                                    </a>
+                                    <div class="list-group compose-list-group">
+                                        <a href="inbox.html" class="list-group-item active">
+                                            <i class="icofont icofont-download-alt"></i> Inbox <b class="m-l-5">(7)</b>
+                                        </a>
+
+                                        <a href="" class="list-group-item list-group-item-action">
+                                            <i class="icofont icofont-star"></i> Starred
+                                        </a>
+                                        <a href="" class="list-group-item list-group-item-action">
+                                            <i class="icofont icofont-file-text"></i> Draft
+                                        </a>
+                                        <a href="" class="list-group-item list-group-item-action">
+                                            <i class="icofont icofont-paper-plane"></i> Send Mail</a>
+                                        <a href="" class="list-group-item list-group-item-action">
+                                            <i class="icofont icofont-ui-delete"></i> Trash
+                                            <b class="m-l-5">(290)</b>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-xl-10 col-lg-12">
+                                    <div class="email-icon">
+                                        <div class="btn-group " role="group">
+                                            <button type="button" class="btn btn-primary btn-sm " data-angular-ripple ><i class="icofont icofont-inbox"></i>
+                                            </button>
+                                            <button type="button" class="btn btn-primary btn-sm " data-angular-ripple ><i class="icofont icofont-exclamation-circle"></i>
+                                            </button>
+                                            <button type="button" class="btn btn-primary btn-sm " data-angular-ripple><i class="icofont icofont-ui-delete"></i>
+                                            </button>
+                                        </div>
+                                        <div class="dropdown-primary dropdown m-r-10">
+                                            <button class="btn btn-primary dropdown-shadow dropdown-toggle  text-capitalize" type="button" id="dropdown2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" data-angular-ripple><i class="icofont icofont-ui-folder" ></i>
+                                            </button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdown1" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+                                                <a class="dropdown-item waves-light waves-effect" href="">Action</a>
+                                                <a class="dropdown-item waves-light waves-effect" href="">Another action</a>
+                                                <a class="dropdown-item waves-light waves-effect" href="">Something else here</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="dropdown-primary dropdown">
+                                            <button class="btn btn-primary dropdown-shadow dropdown-toggle  text-capitalize" type="button" id="dropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" data-angular-ripple>More
+                                            </button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdown1" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+                                                <a class="dropdown-item waves-light waves-effect" href="">Action</a>
+                                                <a class="dropdown-item waves-light waves-effect" href="">Another action</a>
+                                                <a class="dropdown-item waves-light waves-effect" href="">Something else here</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="card email-card">
+                                            <div class="card-header">
+                                                <h5 class="card-header-text text-capitalize d-inline-block">Here you have new opportunity...</h5>
+                                                <h6 class="f-right">08:23 AM</h6>
+                                            </div>
+                                            <div class="card-block">
+                                                <div class="media m-b-20">
+                                                    <div class="media-left photo-table">
+                                                        <a href="">
+                                                            <img class="media-object img-circle" src="assets/images/avatar-3.png" alt="E-mail User">
+                                                        </a>
+                                                    </div>
+                                                    <div class="media-body photo-contant">
+
+                                                            <a href=""><h6 class="user-name txt-primary">John Doe</h6></a>
+                                                            <a class="user-mail txt-muted" href=""><h6>From:johndoe1543@gmail.com</h6></a>
+
+                                                        <div>
+                                                            <h6 class="email-welcome-txt">Hello Dear...</h6>
+                                                            <p class="email-content">
+                                                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar,
+                                                            </p>
+                                                        </div>
+
+                                                        <div class="m-t-15">
+                                                          <i class="icofont icofont-clip f-20 m-r-10"></i>Attachments <b>(3)</b>
+                                                              <div class="row mail-img">
+                                                                <div class="col-sm-4 col-md-2 col-xs-12">
+                                                                 <a href=""><img class="card-img-top img-fluid img-thumbnail" src="assets/images/n1.jpg" alt="Card image cap"></a>
+                                                                </div>
+                                                                <div class="col-sm-4 col-md-2 col-xs-12">
+                                                                  <a href=""><img class="card-img-top img-fluid img-thumbnail" src="assets/images/n2.jpg" alt="Card image cap"></a>
+                                                                </div>
+                                                                <div class="col-sm-4 col-md-2 col-xs-12">
+                                                                  <a href=""><img class="card-img-top img-fluid img-thumbnail" src="assets/images/n2.jpg" alt="Card image cap"></a>
+                                                                </div>
+                                                              </div>
+                                                                <textarea class="form-control m-t-30 col-xs-12 email-textarea" id="exampleTextarea" placeholder="Reply Your Thoughts" rows="4"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Container-fluid ends -->
+     </div>
+</div>
+</div>

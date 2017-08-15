@@ -1,0 +1,9 @@
+.form-group {
+	min-height: 50px
+}
+
+.br-theme-bars-reversed .br-widget a {
+	line-height: 22px;
+	text-align: center;
+	text-decoration: none;
+}

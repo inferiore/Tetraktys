@@ -1,0 +1,78 @@
+<div  class="sidebar-mini fixed" >
+   
+    <div class="wrapper" >
+   
+ <div ng-include="'shared/header.html'"></div>
+ <div ng-include="'shared/sidebar.html'" data-ng-controller="menuController" data-ng-init="setMenu()"></div> 
+    
+    <div class="content-wrapper">
+        <!-- Container-fluid starts -->
+        <div class="container-fluid">
+            <!-- Header Starts -->
+            <div class="row">
+                <div class="main-header">
+                    <h4>Float Chart</h4>
+                    <ol class="breadcrumb breadcrumb-title breadcrumb-arrow">
+                        <li class="breadcrumb-item">
+                            <a href="index.html">
+                                <i class="icofont icofont-home"></i>
+                            </a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a href="#!"> Charts </a>
+                        </li>
+                        <li class="breadcrumb-item"><a href="chart-float.html">Float Chart</a>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <!-- Header end -->
+
+        <!-- Row Starts -->
+        <div class="row">
+            <!-- Categories chart start -->
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-header-text">Categories chart </h5>
+                    </div>
+                    <div class="card-block">
+                       <flot dataset="categoriesDataset" options="categoriesOptions" height="300px"></flot>
+                    </div>
+                </div>
+            </div>
+            <!-- Categories chart end -->
+
+
+            <!-- Pie chart(Without legend) start -->
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-header-text">Pie chart(Without legend) </h5>
+                    </div>
+                    <div class="card-block">
+                        <flot dataset="pieDataset" options="pieOptions" height="300px"></flot>
+                    </div>
+                </div>
+            </div>
+            <!-- Pie chart(Without legend) end -->
+
+            <!-- Donut Hole start -->
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-header-text">Donut Hole</h5>
+                    </div>
+                    <div class="card-block">
+                        <flot dataset="donutDataset" options="donutOptions" height="360px" clss="abc"></flot>
+                    </div>
+                </div>
+            </div>
+            <!-- Donut Hole end -->
+        </div>
+    </div>
+        <!-- Container-fluid ends -->
+     </div>
+</div>
+</div>
+

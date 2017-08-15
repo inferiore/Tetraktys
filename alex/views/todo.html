@@ -1,0 +1,299 @@
+<div  class="sidebar-mini fixed" >
+   
+    <div class="wrapper" >
+   
+  <div ng-include="'shared/header.html'"></div>
+ <div ng-include="'shared/sidebar.html'" data-ng-controller="menuController" data-ng-init="setMenu()"></div>
+
+    <div class="content-wrapper">
+        <!-- Container-fluid starts -->
+       <div class="container-fluid">
+		<!-- Main content starts -->
+		<div>
+			<!-- Row Starts -->
+			<div class="row">
+				<div class="col-sm-12 p-0">
+					<div class="main-header">
+						<h4>To Do</h4>
+						<ol class="breadcrumb breadcrumb-title breadcrumb-arrow">
+							<li class="breadcrumb-item"><a href="index.html"><i class="icofont icofont-home"></i></a>
+							</li>
+							<li class="breadcrumb-item"><a href="#!">Pages</a>
+							</li>
+							<li class="breadcrumb-item"><a href="todo.html">To Do</a>
+							</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+			<!-- Row end -->
+
+			<!-- Row start -->
+			<div class="row">
+				<div class="col-xl-6">
+					<div class="card">
+						<div class="card-header	">
+							<h5 class="card-header-text">
+								To Do List
+							</h5>
+						</div>
+						<div class="card-block">
+							<div class="row m-b-20">
+								<div class="col-xl-8 col-xs-12">
+									<div class="md-group-add-on">
+                                    <span class="md-add-on">
+									<i class="icofont icofont-listine-dots"></i>
+									</span>
+										<div class="md-input-wrapper">
+											<input type="text" class="md-form-control" name="task-insert" />
+											<label>Insert your list items here</label>
+										</div>
+									</div>
+								</div>
+								<div class="col-xl-4 col-xs-12 text-right">
+									<button id="create-task" class="btn btn-primary btn-add-task" type="button" ng-click="createTask()" data-angular-ripple>Create List</button>
+								</div>
+							</div>
+							<section id="task-container">
+								<ul id="task-list">
+									<li><p>Lorem Ipsum Dolor Sit Amet</p></li>
+									<li><p>Lorem Ipsum Dolor Sit Amet</p></li>
+									<li><p>Lorem Ipsum Dolor Sit Amet</p></li>
+									<li><p>Lorem Ipsum Dolor Sit Amet</p></li>
+									<li><p>Lorem Ipsum Dolor Sit Amet</p></li>
+									<li><p>Lorem Ipsum Dolor Sit Amet</p></li>
+								</ul>
+								<div class="m-t-15">
+									<button id="clear-all-tasks" class="btn btn-danger m-t-10" type="button" ng-click="clearAllTasks()" data-angular-ripple>Clear All Tasks</button>
+								</div>
+							</section>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-6">
+					<div class="card">
+						<div class="card-header">
+							<h5 class="card-header-text">
+								To Do List
+							</h5>
+							<label class="label label-md label-info f-right m-0">Today</label>
+						</div>
+						<div class="card-block">
+							<div class="row">
+								<div class="col-xl-8 col-xs-12">
+									<div class="md-group-add-on">
+                    <span class="md-add-on">
+									<i class="icofont icofont-contact-add"></i>
+									</span>
+										<div class="md-input-wrapper">
+											<input type="text" class="md-form-control add_task_todo" />
+											<label>Add Task</label>
+										</div>
+									</div>
+								</div>
+								<div class="col-xl-4 col-xs-12 text-right">
+									<button id="add-btn" class="btn btn-primary btn-add-task" type="button" data-angular-ripple ng-click="addBtn()"><i class="icofont icofont-plus"></i> Add Task</button>
+								</div>
+							</div>
+							<div class="new-task">
+								<div class="to-do-list" >
+									<div class="rkmd-checkbox checkbox-rotate">
+										<label class="input-checkbox checkbox-primary check-task" >
+											<input type="checkbox" id="checkbox1" >
+											<span class="checkbox"></span>
+										</label>
+										<label >Lorem ipsum dolor sit amet</label>
+									</div>
+									<div class="f-right">
+										<a href="" class="delete_todolist"><i class="icofont icofont-ui-delete" ></i></a>
+									</div>
+								</div>
+
+								<div class="to-do-list">
+									<div class="rkmd-checkbox checkbox-rotate">
+										<label class="input-checkbox checkbox-primary check-task ">
+											<input type="checkbox" id="checkbox2">
+											<span class="checkbox"></span>
+										</label>
+										<label>Lorem ipsum dolor sit amet</label>
+									</div>
+									<div class="f-right">
+										<a href="" class="delete_todolist"><i class="icofont icofont-ui-delete"></i></a>
+									</div>
+								</div>
+								<div class="to-do-list">
+									<div class="rkmd-checkbox checkbox-rotate">
+										<label class="input-checkbox checkbox-primary check-task">
+											<input type="checkbox" id="checkbox3">
+											<span class="checkbox"></span>
+										</label>
+										<label >Lorem ipsum dolor sit amet</label>
+									</div>
+									<div class="f-right">
+										<a href="" class="delete_todolist"><i class="icofont icofont-ui-delete"></i></a>
+									</div>
+								</div>
+								<div class="to-do-list">
+									<div class="rkmd-checkbox checkbox-rotate">
+										<label class="input-checkbox checkbox-primary check-task">
+											<input type="checkbox" id="checkbox4">
+											<span class="checkbox"></span>
+										</label>
+										<label >Lorem ipsum dolor sit amet</label>
+									</div>
+									<div class="f-right">
+										<a href="" class="delete_todolist"><i class="icofont icofont-ui-delete"></i></a>
+									</div>
+								</div>
+								<div class="to-do-list">
+									<div class="rkmd-checkbox checkbox-rotate">
+										<label class="input-checkbox checkbox-primary check-task">
+											<input type="checkbox" id="checkbox5">
+											<span class="checkbox"></span>
+										</label>
+										<label > Lorem ipsum dolor sit amet</label>
+									</div>
+									<div class="f-right">
+										<a href="" class="delete_todolist"><i class="icofont icofont-ui-delete"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="card">
+						<div class="card-header	">
+							<h5 class="card-header-text">
+								To Do List
+							</h5>
+						</div>
+						<div class="card-block">
+							<section class="task-panel tasks-widget">
+								<div class="panel-body">
+									<div class="task-content">
+										<div class="to-do-label">
+											<div class="rkmd-checkbox checkbox-rotate">
+												<label class="input-checkbox checkbox-primary">
+													<input type="checkbox" id="checkbox1">
+													<span class="checkbox"></span>
+												</label>
+												<label class="task-title">
+													<span class="task-title-sp">Dashgum - Admin Panel Theme</span>
+													<span class="badge bg-theme">Done</span>
+													<div class="f-right hidden-phone">
+														<button class="btn btn-danger btn-xs delete_todo"><i class="icofont icofont-ui-delete"></i></button>
+													</div>
+												</label>
+											</div>
+										</div>
+										<div class="to-do-label">
+											<div class="rkmd-checkbox checkbox-rotate">
+												<label class="input-checkbox checkbox-primary">
+													<input type="checkbox" id="checkbox1">
+													<span class="checkbox"></span>
+												</label>
+												<label class="task-title">
+													<span class="task-title-sp">Extensive collection of plugins</span>
+													<span class="badge bg-warning">Cool</span>
+													<div class="f-right hidden-phone">
+														<button class="btn btn-danger btn-xs delete_todo"><i class="icofont icofont-ui-delete"></i></button>
+													</div>
+												</label>
+											</div>
+										</div>
+										<div class="to-do-label">
+											<div class="rkmd-checkbox checkbox-rotate">
+												<label class="input-checkbox checkbox-primary">
+													<input type="checkbox" id="checkbox1">
+													<span class="checkbox"></span>
+												</label>
+												<label class="task-title">
+													<span class="task-title-sp">Free updates always, no extra fees.</span>
+													<span class="badge bg-success">2 Days</span>
+													<div class="f-right hidden-phone">
+														<button class="btn btn-danger btn-xs delete_todo"><i class="icofont icofont-ui-delete"></i></button>
+													</div>
+												</label>
+											</div>
+										</div>
+										<div class="to-do-label">
+											<div class="rkmd-checkbox checkbox-rotate">
+												<label class="input-checkbox checkbox-primary">
+													<input type="checkbox" id="checkbox1">
+													<span class="checkbox"></span>
+												</label>
+												<label class="task-title">
+													<span class="task-title-sp">More features coming soon</span>
+													<span class="badge bg-info">Tomorrow</span>
+													<div class="f-right hidden-phone">
+														<button class="btn btn-danger btn-xs delete_todo"><i class="icofont icofont-ui-delete"></i></button>
+													</div>
+												</label>
+											</div>
+										</div>
+										<div class="to-do-label">
+											<div class="rkmd-checkbox checkbox-rotate">
+												<label class="input-checkbox checkbox-primary">
+													<input type="checkbox" id="checkbox1">
+													<span class="checkbox"></span>
+												</label>
+												<label class="task-title">
+													<span class="task-title-sp">Hey, seriously, you should buy this Dashboard</span>
+													<span class="badge bg-important">Now</span>
+													<div class="f-right hidden-phone">
+														<button class="btn btn-danger btn-xs delete_todo"><i class="icofont icofont-ui-delete"></i></button>
+													</div>
+												</label>
+											</div>
+										</div>
+									</div>
+									<div class="m-t-10">
+										<a class="btn btn-primary btn-add-task" href="" data-toggle="modal" data-target="#flipFlop" data-angular-ripple><i class="icofont icofont-plus"></i> Add New Tasks</a>
+									</div>
+								</div>
+							</section>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<!-- Container-fluid ends -->
+	</div>
+<!-- The modal -->
+<div class="modal fade" id="flipFlop" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">×</span>
+				</button>
+				<h4 class="modal-title" id="modalLabel">Add new todo</h4>
+			</div>
+			<div class="modal-body">
+				<!--<input class="form-control save_task_todo" placeholder="Add todo">-->
+				<div class="md-group-add-on">
+                                    <span class="md-add-on">
+									<i class="icofont icofont-file-alt"></i>
+									</span>
+					<div class="md-input-wrapper">
+						<input type="text" class="md-form-control save_task_todo" />
+						<label>Add todo</label>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="save_btn btn btn-primary"  data-angular-ripple ng-click="saveBtn()">Save</button>
+				<button type="button" class="btn btn-default close_btn" data-dismiss="modal" data-angular-ripple ng-click="closeBtn()">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
+        <!-- Container-fluid ends -->
+     </div>
+</div>
+</div>
+

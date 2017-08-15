@@ -1,0 +1,88 @@
+<div  class="sidebar-mini fixed" >
+   
+    <div class="wrapper" >
+   
+ <div ng-include="'shared/header.html'"></div>
+ <div ng-include="'shared/sidebar.html'" data-ng-controller="menuController" data-ng-init="setMenu()"></div>
+
+    <div class="content-wrapper">
+        <!-- Container-fluid starts -->
+        <div class="container-fluid">
+            <!-- Header Starts -->
+            <div class="row">
+                <div class="col-sm-12 p-0">
+                    <div class="main-header">
+                        <h4>Rickshaw Chart</h4>
+                        <ol class="breadcrumb breadcrumb-title breadcrumb-arrow">
+                            <li class="breadcrumb-item"><a href="index.html"><i class="icofont icofont-home"></i></a>
+                            </li>
+                            <li class="breadcrumb-item"><a href="">Charts & Maps</a>
+                            </li>
+                            <li class="breadcrumb-item"><a href="rickshaw-chart.html">Rickshaw Chart</a>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <!-- Header end -->
+
+            <!-- Row Starts -->
+            <div class="row">
+                <!-- Stacked Bars start -->
+                <div class="col-xl-3 col-lg-6 col-sm-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-header-text">Stacked Bars</h5>
+                        </div>
+                        <div class="card-block">
+                            <rickshaw rickshaw-options="options"  rickshaw-series="series"></rickshaw>
+                        </div>
+                    </div>
+                </div>
+                <!-- Stacked Bars end -->
+
+                <!-- Multiple Bars start -->
+                <div class="col-xl-3 col-lg-6 col-sm-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-header-text">Multiple Bars</h5>
+                        </div>
+                        <div class="card-block">
+                            <rickshaw rickshaw-options="baroptions"  rickshaw-series="barseries"></rickshaw>
+                        </div>
+                    </div>
+                </div>
+                <!-- Multiple Bars end -->
+
+                <!-- Area chart start -->
+                <div class="col-xl-3 col-lg-6 col-sm-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-header-text">Area chart</h5>
+                        </div>
+                        <div class="card-block">
+                            <rickshaw rickshaw-options="areaoptions"  rickshaw-series="areaseries"></rickshaw>
+                        </div>
+                    </div>
+                </div>
+                <!-- Area chart end -->
+
+                <!-- Multiple Area start  -->
+                <div class="col-xl-3 col-lg-6 col-sm-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-header-text">Multiple Area</h5>
+                        </div>
+                        <div class="card-block">
+                            <rickshaw rickshaw-options="multipleoptions"  rickshaw-series="multipleseries"></rickshaw>
+                        </div>
+                    </div>
+                </div>
+                <!-- Multiple Area end  -->
+            </div>
+        </div>
+        <!-- Container-fluid ends -->
+    </div>
+</div>
+</div>
+

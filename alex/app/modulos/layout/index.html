@@ -1,0 +1,38 @@
+ <div class="sidebar-mini fixed" >
+    
+    <div class="wrapper" >
+          <div ng-include="'app/modulos/layout/header.html'"  ></div>
+          <div ng-include="'app/modulos/layout/sidebar.html'" data-ng-controller="menuCtrl" data-ng-init="setMenu()"></div> 
+     
+        
+   <div class="content-wrapper">
+      <!-- Container-fluid starts -->
+
+   <div class="container-fluid">
+      <div class="row">
+          <div class="col-sm-12 p-0">
+            <div class="main-header" >
+              <!-- <h4>Usuarios</h4> -->
+              <ol breadcrumbs class="breadcrumb breadcrumb-arrow breadcrumb-round">
+                <li class="breadcrumb-item">
+                  <a ui-sref="app.default">
+                    <i class="icofont icofont-home"></i>
+                  </a>
+                </li>
+                <li ng-repeat="breadcrumb in breadcrumbs" class="breadcrumb-item">
+                  <a ui-sref="{{breadcrumb.stateName}}">{{breadcrumb.text}}</a>
+                </li>
+              </ol>
+            </div>
+            <!-- end of main-header -->
+          </div>
+          <!-- end of col-sm-12 -->
+      </div>
+      <main data-ui-view ></main>
+  </div>
+
+    </div>
+    <!-- Container-fluid ends -->
+    </div>
+
+</div>

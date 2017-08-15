@@ -1,0 +1,79 @@
+<html ng-app="demoApp">
+<head>
+
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+	<link href="../bower_components/jquery-bar-rating/dist/themes/bars-1to10.css" rel="stylesheet" type="text/css"/>
+	<link href="../bower_components/jquery-bar-rating/dist/themes/bars-horizontal.css" rel="stylesheet" type="text/css"/>
+	<link href="../bower_components/jquery-bar-rating/dist/themes/bars-movie.css" rel="stylesheet" type="text/css"/>
+	<link href="../bower_components/jquery-bar-rating/dist/themes/bars-pill.css" rel="stylesheet" type="text/css"/>
+	<link href="../bower_components/jquery-bar-rating/dist/themes/bars-reversed.css" rel="stylesheet" type="text/css"/>
+	<link href="../bower_components/jquery-bar-rating/dist/themes/bars-square.css" rel="stylesheet" type="text/css"/>
+	<link href="../bower_components/jquery-bar-rating/dist/themes/bootstrap-stars.css" rel="stylesheet" type="text/css"/>
+	<link href="../bower_components/jquery-bar-rating/dist/themes/css-stars.css" rel="stylesheet" type="text/css"/>
+	<link href="../bower_components/jquery-bar-rating/dist/themes/fontawesome-stars.css" rel="stylesheet" type="text/css"/>
+	<link href="../bower_components/jquery-bar-rating/dist/themes/fontawesome-stars-o.css" rel="stylesheet" type="text/css"/>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	
+	<script src="../bower_components/angular/angular.js"></script>
+	<script src="../bower_components/jquery-bar-rating/jquery.barrating.js"></script>
+	<script src="../dist/angular-bar-rating.js"></script>
+	<script src="demo.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="demo.css" />
+  
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+
+</head>
+<body ng-controller="demoCtrl">
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<h1>Angular directive: Angular Bar Rating</h1>
+			<p>Angular directive for jQuery Bar Rating plugin</p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6">
+			<div class="form-group">
+				<div ng-model="model['onetoten']" data-bar-rating-options="ratingOptions" data-bar-rating-settings="ratingSettings1" data-ng-bar-rating></div>
+			</div>
+			<div class="form-group">
+				<div ng-model="model['horizontal']" data-bar-rating-options="ratingOptions2" data-bar-rating-settings="ratingSettings2" data-ng-bar-rating></div>		
+			</div>
+			<div class="form-group">
+				<div ng-model="model['movie']" data-bar-rating-options="ratingOptions" data-bar-rating-settings="ratingSettings3" data-ng-bar-rating></div>		
+			</div>
+			<div class="form-group">
+				<div ng-model="model['pill']" data-bar-rating-options="ratingOptionsNumbers" data-bar-rating-settings="ratingSettings4" data-ng-bar-rating></div>		
+			</div>
+			<div class="form-group">
+				<div ng-model="model['reversed']" data-bar-rating-options="ratingOptionsLetters" data-bar-rating-settings="ratingSettings5" data-ng-bar-rating></div>		
+			</div>
+			<div class="form-group">
+				<div ng-model="model['square']" data-bar-rating-options="ratingOptionsNumbers" data-bar-rating-settings="ratingSettings6" data-ng-bar-rating></div>		
+			</div>
+			<div class="form-group">
+				<div ng-model="model['bootstrap_stars']" data-bar-rating-options="ratingOptions" data-bar-rating-settings="ratingSettings7" data-ng-bar-rating></div>		
+			</div>
+			<div class="form-group">
+				<div ng-model="model['css_stars']" data-bar-rating-options="ratingOptions" data-bar-rating-settings="ratingSettings8" data-ng-bar-rating></div>		
+			</div>
+			<div class="form-group">
+				<div ng-model="model['fontawesome_stars']" data-bar-rating-options="ratingOptions" data-bar-rating-settings="ratingSettings9" data-ng-bar-rating></div>		
+			</div>
+			<div class="form-group">
+				<div ng-model="model['fontawesome_stars_o']" data-bar-rating-options="ratingOptions" data-bar-rating-settings="ratingSettings10" data-ng-bar-rating></div>		
+			</div>
+		</div>
+		<div class="col-md-6">
+			<pre>Model: {{model | json}}</pre>
+		</div>
+	</div>
+</div>
+</body>
+
+</html>

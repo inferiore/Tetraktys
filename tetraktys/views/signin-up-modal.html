@@ -1,0 +1,223 @@
+<div class="sidebar-mini fixed">
+    <div class="wrapper">
+        <div ng-include="'shared/header.html'"></div>
+        <div ng-include="'shared/sidebar.html'" data-ng-controller="menuController" data-ng-init="setMenu()"></div>
+        <div class="content-wrapper">
+            <section class="model">
+                <!-- Container-fluid starts -->
+                <div class="container-fluid">
+                    <!-- Row Starts -->
+                    <div class="row">
+                        <div class="col-sm-12 p-0">
+                            <div class="main-header">
+                                <h4>Pages</h4>
+                                <ol class="breadcrumb breadcrumb-title breadcrumb-arrow">
+                                    <li class="breadcrumb-item"><a href="index.html"><i class="icofont icofont-home"></i></a>
+                                    </li>
+                                    <li class="breadcrumb-item"><a href="#!">Authentication</a>
+                                    </li>
+                                    <li class="breadcrumb-item"><a href="signin-up-modal.html">Sign-up Model</a>
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Row end -->
+                    <div class="card">
+                        <div class="card-block text-center">
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#sign-in-up" data-angular-ripple>Signin and Signup here</button>
+                        </div>
+                    </div>
+                    <div class="login-up">
+                        <!--modal-->
+                        <div class="modal fade modal-flex" id="sign-in-up" tabindex="-1" role="dialog">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" data-angular-ripple>
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <div class="sign-in-up">
+                                        <div class="sign-in-up-left"><i class="icofont icofont-users f-64" aria-hidden="true"></i></div>
+                                        <div class="sign-in-up-right">
+                                            <uib-tabset active="active" class="md-tabs tab-timeline">
+                                                <uib-tab index="0">
+                                                    <uib-tab-heading>
+                                                        <div class="slide_signUp"></div>
+                                                        Home
+                                                    </uib-tab-heading>
+                                                    <div class="modal-body">
+                                                        <div>
+                                                            <div class="md-input-wrapper">
+                                                                <input type="email" class="md-form-control md-static" />
+                                                                <label>Email</label>
+                                                            </div>
+                                                            <div class="md-input-wrapper">
+                                                                <input type="password" class="md-form-control md-static" />
+                                                                <label>Password</label>
+                                                            </div>
+                                                            <div class="md-float-group b-none m-b-20">
+                                                                <div class="rkmd-checkbox checkbox-rotate checkbox-ripple">
+                                                                    <label class="input-checkbox checkbox-primary">
+                                                                        <input type="checkbox" id="checkbox1">
+                                                                        <span class="checkbox"></span>
+                                                                    </label>
+                                                                    <label for="checkbox" class="captions">
+                                                                        Remember Me
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="text-center m-b-20">
+                                                                <button type="button" class="btn btn-primary waves-effect" data-angular-ripple>Sign up</button>
+                                                            </div>
+                                                            <div class="text-center">
+                                                                <p>Don’t have an account yet?
+                                                                    <a data-ui-sref="pages.authentication.register1">
+                                                                Sign up Now</a>
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </uib-tab>
+                                                <uib-tab index="1">
+                                                    <uib-tab-heading>
+                                                        <div class="slide_signUp"></div>
+                                                        Profile
+                                                    </uib-tab-heading>
+                                                    <div class="modal-body">
+                                                        <div>
+                                                            <div class="md-input-wrapper">
+                                                                <input type="email" class="md-form-control md-static" />
+                                                                <label>Email</label>
+                                                            </div>
+                                                            <div class="md-input-wrapper">
+                                                                <input type="password" class="md-form-control md-static" />
+                                                                <label>Password</label>
+                                                            </div>
+                                                            <div class="md-input-wrapper">
+                                                                <input type="password" class="md-form-control md-static" />
+                                                                <label>Password</label>
+                                                            </div>
+                                                            <div class="md-float-group b-none m-b-20">
+                                                                <div class="rkmd-checkbox checkbox-rotate checkbox-ripple">
+                                                                    <label class="input-checkbox checkbox-primary">
+                                                                        <input type="checkbox" id="checkbox">
+                                                                        <span class="checkbox"></span>
+                                                                    </label>
+                                                                    <label for="checkbox" class="captions">
+                                                                        Remember Me
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="text-center m-b-20">
+                                                                <button type="button" class="btn btn-primary waves-effect" data-angular-ripple>Sign up</button>
+                                                            </div>
+                                                            <div class="text-center">
+                                                                <p>Don’t have an account yet?
+                                                                    <a data-ui-sref="pages.authentication.register1">
+                                                                Sign up Now</a>
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </uib-tab>
+                                            </uib-tabset>
+                                            <!-- <div class="">
+                                            <ul class="nav nav-tabs md-tabs" role="tablist">
+                                                <li class="nav-item">
+                                                    <a class="nav-link active" data-toggle="tab" href="#home3" role="tab">Home</a>
+                                                    <div class="slide"></div>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" data-toggle="tab" href="#profile3" role="tab">Profile</a>
+                                                    <div class="slide"></div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        Tab panes
+                                        <div class="tab-content">
+                                            <div class="tab-pane active" id="home3" role="tabpanel">
+                                                <div>
+                                                    <div class="md-input-wrapper">
+                                                        <input type="email" class="md-form-control md-static" />
+                                                        <label>Email</label>
+                                                    </div>
+                                                    <div class="md-input-wrapper">
+                                                        <input type="password" class="md-form-control md-static" />
+                                                        <label>Password</label>
+                                                    </div>
+                                        
+                                                    <div class="md-float-group b-none m-b-20">
+                                        
+                                        
+                                                        <div class="rkmd-checkbox checkbox-rotate checkbox-ripple">
+                                                            <label class="input-checkbox checkbox-primary">
+                                                                <input type="checkbox" id="checkbox1">
+                                                                <span class="checkbox"></span>
+                                                            </label>
+                                                            <label for="checkbox" class="captions">
+                                                                Remember Me
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="text-center m-b-20">
+                                                        <button type="button" class="btn btn-primary waves-effect" data-angular-ripple>Sign up</button>
+                                                    </div>
+                                                    <div class="text-center">
+                                                        <p>Don’t have an account yet?
+                                                            <a data-ui-sref="pages.authentication.register1">
+                                                                Sign up Now</a>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane" id="profile3" role="tabpanel">
+                                                <div>
+                                                    <div class="md-input-wrapper">
+                                                        <input type="email" class="md-form-control md-static" />
+                                                        <label>Email</label>
+                                                    </div>
+                                                    <div class="md-input-wrapper">
+                                                        <input type="password" class="md-form-control md-static" />
+                                                        <label>Password</label>
+                                                    </div>
+                                                    <div class="md-input-wrapper">
+                                                        <input type="password" class="md-form-control md-static" />
+                                                        <label>Password</label>
+                                                    </div>
+                                                    <div class="md-float-group b-none m-b-20">
+                                                        <div class="rkmd-checkbox checkbox-rotate checkbox-ripple">
+                                                            <label class="input-checkbox checkbox-primary">
+                                                                <input type="checkbox" id="checkbox">
+                                                                <span class="checkbox"></span>
+                                                            </label>
+                                                            <label for="checkbox" class="captions">
+                                                                Remember Me
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="text-center m-b-20">
+                                                        <button type="button" class="btn btn-primary waves-effect" data-angular-ripple>Sign up</button>
+                                                    </div>
+                                                    <div class="text-center">
+                                                        <p>Don’t have an account yet?
+                                                            <a data-ui-sref="pages.authentication.register1">
+                                                                Sign up Now</a>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end of modal fade -->
+                        </div>
+                        <!-- end of bd-example -->
+                    </div>
+                    <!-- end of container fluid -->
+                </div>
+            </section>
+        </div>
+    </div>
+</div>

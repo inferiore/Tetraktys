@@ -1,0 +1,116 @@
+<div  class="sidebar-mini fixed" >
+   
+    <div class="wrapper" >
+   
+  <div ng-include="'shared/header.html'"></div>
+ <div ng-include="'shared/sidebar.html'" data-ng-controller="menuController" data-ng-init="setMenu()"></div> 
+
+    <div class="content-wrapper">
+        <!-- Container-fluid starts -->
+        <div class="container-fluid">
+        <!-- Header Starts -->
+        <div class="row">
+            <div class="col-sm-12 p-0">
+                <div class="main-header">
+                    <h4>Morris Chart</h4>
+                    <ol class="breadcrumb breadcrumb-title breadcrumb-arrow">
+                        <li class="breadcrumb-item"><a href="index.html"><i class="icofont icofont-home"></i></a>
+                        </li>
+                        <li class="breadcrumb-item"><a href="#!">Charts & Maps</a>
+                        </li>
+                        <li class="breadcrumb-item"><a href="morris-chart.html">Morris Chart</a>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <!-- Header end -->
+
+        <!-- Row Starts -->
+        <div class="row">
+            <!-- Line Chart start -->
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-header-text">Line Chart</h5>
+                    </div>
+                    <div class="card-block">
+                      <!--  <div line-chart="" line-data="lineData" line-colors="linecolor" line-xkey="lineXKey" line-ykeys="lineYKey" line-labels="linelabel"> -->
+                      <div
+line-chart
+line-data='[
+    { y: "2006", a: 100, b: 90 },
+    { y: "2007", a: 75,  b: 65 },
+    { y: "2008", a: 50,  b: 40 },
+    { y: "2009", a: 75,  b: 65 },
+    { y: "2010", a: 50,  b: 40 },
+    { y: "2011", a: 75,  b: 65 },
+    { y: "2012", a: 100, b: 90 }
+]'
+line-xkey='y'
+line-ykeys='["a", "b"]'
+line-labels='["Serie A", "Serie B"]'
+line-colors='["#2196F3", "#ff5252"]'>
+</div>
+</div>
+                    </div>
+                </div>
+          
+            <!-- Line Chart end -->
+
+            <!-- Area Chart start -->
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-header-text">Area Chart</h5>
+                    </div>
+                    <div class="card-block">
+                       <div
+area-chart
+area-data='[
+    { y: "2006", a: 100, b: 90 },
+    { y: "2007", a: 75,  b: 65 },
+    { y: "2008", a: 50,  b: 40 },
+    { y: "2009", a: 75,  b: 65 },
+    { y: "2010", a: 50,  b: 40 },
+    { y: "2011", a: 75,  b: 65 },
+    { y: "2012", a: 100, b: 90 }
+  ]'
+area-xkey='y'
+area-ykeys='["a", "b"]'
+area-labels='["Serie A", "Serie B"]'
+line-colors='["#40c4ff", "#f57c00"]'>
+</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Area Chart end -->
+  </div>
+            <!-- Donut chart start -->
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-header-text">Donut chart</h5>
+                    </div>
+                    <div class="card-block">
+                        <div
+donut-chart
+donut-data='[
+    {label: "Download Sales", value: 2},
+    {label: "In-Store Sales",value: 50},
+    {label: "Mail-Order Sales", value: 20}
+]'
+donut-colors='["#40c4ff","#ff5252","#4CAF50"]'
+donut-formatter='"currency"'>
+</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Donut chart end -->
+        </div>
+    </div>
+        <!-- Container-fluid ends -->
+     </div>
+</div>
+</div>
+

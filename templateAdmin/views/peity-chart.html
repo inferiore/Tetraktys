@@ -1,0 +1,157 @@
+<div  class="sidebar-mini fixed" >
+   
+    <div class="wrapper" >
+   
+ <div ng-include="'shared/header.html'"></div>
+ <div ng-include="'shared/sidebar.html'" data-ng-controller="menuController" data-ng-init="setMenu()"></div> 
+
+    <div class="content-wrapper">
+        <!-- Container-fluid starts -->
+        <div class="container-fluid">
+        <!-- Header Starts -->
+        <div class="row">
+            <div class="col-sm-12 p-0">
+                <div class="main-header">
+                    <h4>Peity Chart</h4>
+                    <ol class="breadcrumb breadcrumb-title breadcrumb-arrow">
+                        <li class="breadcrumb-item"><a href="index.html"><i class="icofont icofont-home"></i></a>
+                        </li>
+                        <li class="breadcrumb-item"><a href="#!">Charts & Maps</a>
+                        </li>
+                        <li class="breadcrumb-item"><a href="peity-chart.html">Peity Chart</a>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <!-- Header end -->
+
+        <!-- Row Starts -->
+        <div class="row">
+            <!-- Updating chart start -->
+            <div class="col-xl-3 col-lg-3 col-sm-6 peity-chart">
+                <div class="card card-wodth-fix">
+                    <div class="card-header">
+                        <h5 class="card-header-text">Updating chart</h5>
+                    </div>
+                    <div class="card-block chart-custom">
+                        <peity-line-chart data="LineChart0.data" options="LineChart0.options"></peity-line-chart>
+                    </div>
+                </div>
+            </div>
+            <!-- Updating chart end -->
+
+            <!-- Line Chart-1 start -->
+            <div class="col-xl-3 col-lg-3 col-sm-6 peity-chart">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-header-text">Line Chart 1</h5>
+                    </div>
+                    <div class="card-block chart-custom">
+                        <peity-line-chart data="LineChart1.data" options="LineChart1.options"></peity-line-chart>
+                    </div>
+                </div>
+            </div>
+            <!-- Line Chart-1 end -->
+
+            <!-- Line Chart-2 start -->
+            <div class="col-xl-3 col-lg-3 col-sm-6 peity-chart">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-header-text">Line Chart 2</h5>
+                    </div>
+                    <div class="card-block chart-custom">
+                        <peity-line-chart data="LineChart2.data" options="LineChart2.options"></peity-line-chart>
+                    </div>
+                </div>
+            </div>
+            <!-- Line Chart-2 end -->
+
+            <!-- Line Chart-3 start -->
+            <div class="col-xl-3 col-lg-3 col-sm-6 peity-chart">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-header-text">Line Chart 3</h5>
+                    </div>
+                    <div class="card-block chart-custom">
+                        <peity-line-chart data="LineChart3.data" options="LineChart3.options"></peity-line-chart>
+                    </div>
+                </div>
+            </div>
+            <!-- Line Chart-3 end -->
+        </div>
+        <div class="row">
+            <!-- Bar Charts 1 start -->
+            <div class="col-xl-4 col-lg-3 peity-chart">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-header-text">Bar Charts 1</h5>
+                    </div>
+                    <div class="card-block">
+                    <bar-chart data="BarChart1.data" options="BarChart1.options" ></bar-chart>
+                    </div>
+                </div>
+            </div>
+            <!-- Bar Charts 1 end -->
+
+            <!-- Bar Charts 2 start -->
+            <div class="col-xl-4 col-lg-3 peity-chart">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-header-text">Bar Charts 2</h5>
+                    </div>
+                    <div class="card-block">
+                         <bar-chart data="BarChart2.data" options="BarChart2.options" ></bar-chart>
+                    </div>
+                </div>
+            </div>
+            <!-- Bar Charts 2 end -->
+
+            <div class="col-xl-4 col-lg-3">
+                <!-- Custom chart 1 start -->
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-header-text">Custom Chart 1</h5>
+                    </div>
+                    <div class="card-block">
+                        <p class="data-attributes">
+                        <pie-chart data="PieChart8.data" options="PieChart8.options"></pie-chart>
+                        <pie-chart data="PieChart9.data" options="PieChart9.options"></pie-chart>
+                        <pie-chart data="PieChart10.data" options="PieChart10.options"></pie-chart>
+                        <pie-chart data="PieChart11.data" options="PieChart11.options"></pie-chart>
+                        <pie-chart data="PieChart12.data" options="PieChart12.options"></pie-chart>
+                        <pie-chart data="PieChart13.data" options="PieChart13.options"></pie-chart>
+                        <pie-chart data="PieChart14.data" options="PieChart14.options"></pie-chart>
+                         
+                        </p>
+                    </div>
+                </div>
+                <!-- Custom chart 1 end -->
+            </div>
+            <div class="col-xl-4 col-lg-3">
+                <!-- Custom chart 2 start -->
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-header-text">Custom Chart 2</h5>
+                    </div>
+                    <div class="card-block">
+                    <pie-chart data="PieChart1.data" options="PieChart1.options"></pie-chart>
+                    <pie-chart data="PieChart2.data" options="PieChart2.options"></pie-chart>
+                    <pie-chart data="PieChart3.data" options="PieChart3.options"></pie-chart>
+                    <pie-chart data="PieChart4.data" options="PieChart4.options"></pie-chart>
+                    <pie-chart data="PieChart5.data"  options="PieChart5.options"></pie-chart>
+                    <pie-chart data="PieChart6.data" options="PieChart6.options"></pie-chart>
+                    <pie-chart data="PieChart7.data" options="PieChart7.options"></pie-chart>
+                                          
+                    </div>
+                </div>
+                <!-- Custom chart 2 end -->
+            </div>
+        </div>
+
+    </div>
+        <!-- Container-fluid ends -->
+     </div>
+</div>
+</div>
+

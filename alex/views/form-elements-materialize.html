@@ -1,0 +1,386 @@
+  <div  class="sidebar-mini fixed" >
+   
+    <div class="wrapper" >
+   
+ <div ng-include="'shared/header.html'"></div>
+ <div ng-include="'shared/sidebar.html'" data-ng-controller="menuController" data-ng-init="setMenu()"></div> 
+
+    <div class="content-wrapper">
+        <!-- Container-fluid starts -->
+        <div class="container-fluid">
+
+            <!-- Header start -->
+            <div class="row">
+                <div class="main-header">
+                    <h4>Material Form Elements</h4>
+                    <ol class="breadcrumb breadcrumb-title breadcrumb-arrow">
+                        <li class="breadcrumb-item"><a href="index.html"><i class="icofont icofont-home"></i></a>
+                        </li>
+                        <li class="breadcrumb-item"><a href="">Forms</a>
+                        </li>
+                        <li class="breadcrumb-item"><a href="general-elements-materialize.html">Material Form Elements</a>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <!-- Header end -->
+
+            <div class="row">
+                <!-- Form Control starts -->
+                <div class="col-xl-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-header-text">Static Labels</h5>
+                           
+                        </div>
+                      
+
+                        <div class="card-block">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="md-input-wrapper">
+                                        <input type="text" class="md-form-control md-static" />
+                                        <label>First-Name</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="md-input-wrapper">
+                                        <input type="text" class="md-form-control md-static" />
+                                        <label>Last-Name</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="md-input-wrapper">
+                                <input type="password" class="md-form-control md-static" />
+                                <label>Password</label>
+                            </div>
+                            <div class="md-input-wrapper">
+                                <input type="email" class="md-form-control md-static" />
+                                <label>Email</label>
+                            </div>
+                            <div class="md-input-wrapper md-disable">
+                                <input type="password" class="md-form-control md-static" disabled="disabled" />
+                                <label>Disabled</label>
+                            </div>
+                            <div class="md-input-wrapper">
+                                <input type="text" class="md-form-control md-static" value="Read-only label" readonly/>
+                                <label>Read-only</label>
+                            </div>
+                            <div class="md-input-wrapper">
+                                <input type="text" class="md-form-control md-static" value="Prefill Value" />
+                                <label>Prefill-value</label>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="md-group-add-on">
+                                        <span class="md-add-on"><i class="icofont icofont-cur-dollar"></i></span>
+                                        <div class="md-input-wrapper">
+                                            <input type="text" class="md-form-control md-static" />
+                                            <label>Add-on</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="md-group-add-on">
+                                            <span class="md-add-on">
+                                                <i class="icofont icofont-ui-rate-blank"></i>
+                                            </span>
+                                        <div class="md-input-wrapper">
+                                            <input type="text" class="md-form-control md-static" />
+                                            <label>Add-on-icon</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="md-group-add-on">
+                                    <span class="md-add-on-file">
+                                        <button class="btn btn-success waves-effect waves-light">File</button>
+                                    </span>
+                                <div class="md-input-file">
+                                    <input type="file" class="" />
+                                    <input type="text" class="md-form-control md-form-file">
+                                    <label class="md-label-file">Upload File</label>
+                                </div>
+                            </div>
+                            <div class="md-input-wrapper">
+                                <textarea class="md-form-control md-static" cols="2" rows="4"></textarea>
+                                <label>Textarea </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-header-text">Floating Labels</h5>
+                           
+                        </div>
+                       
+
+                        <div class="card-block">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="md-input-wrapper">
+                                        <input type="text" class="md-form-control" />
+                                        <label>First-Name</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="md-input-wrapper">
+                                        <input type="text" class="md-form-control" />
+                                        <label>Last-Name</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="md-input-wrapper">
+                                <input type="password" class="md-form-control" />
+                                <label>Password</label>
+                            </div>
+                            <div class="md-input-wrapper">
+                                <input type="email" class="md-form-control" />
+                                <label>Email</label>
+                            </div>
+                            <div class="md-input-wrapper md-disable">
+                                <input type="text" class="md-form-control" disabled="disabled" />
+                                <label>Disabled</label>
+                            </div>
+                            <div class="md-input-wrapper">
+                                <input type="text" class="md-form-control md-valid" value="Read-only label" readonly />
+                                <label>Read-only</label>
+                            </div>
+                            <div class="md-input-wrapper">
+                                <input type="text" class="md-form-control md-valid" value="Prefilled Value" />
+                                <label>Pre-fill</label>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="md-group-add-on">
+                                        <span class="md-add-on"><i class="icofont icofont-cur-dollar"></i></span>
+                                        <div class="md-input-wrapper">
+                                            <input type="text" class="md-form-control" />
+                                            <label>Add-on</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="md-group-add-on">
+                                            <span class="md-add-on">
+                                                <i class="icofont icofont-ui-rate-blank"></i>
+                                            </span>
+                                        <div class="md-input-wrapper">
+                                            <input type="text" class="md-form-control" />
+                                            <label>Add-on-icon</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="md-group-add-on">
+                                    <span class="md-add-on-file">
+                                        <button class="btn btn-success waves-effect waves-light">File</button>
+                                    </span>
+                                <div class="md-input-file">
+                                    <input type="file" class="" />
+                                    <input type="text" class="md-form-control md-form-file">
+                                    <label class="md-label-file">Upload File</label>
+                                </div>
+                            </div>
+                            <div class="md-input-wrapper">
+                                <textarea class="md-form-control" cols="2" rows="4"></textarea>
+                                <label>Textarea</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-header-text">Placeholder Labels</h5>
+                           
+                        </div>
+                      
+
+                        <div class="card-block">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="md-input-wrapper">
+                                        <input type="text" class="md-form-control" placeholder="First-Name" />
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="md-input-wrapper">
+                                        <input type="text" class="md-form-control" placeholder="Last-Name" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="md-input-wrapper">
+                                <input type="password" class="md-form-control" placeholder="Password" />
+                            </div>
+                            <div class="md-input-wrapper">
+                                <input type="email" class="md-form-control" placeholder="Email" />
+                            </div>
+                            <div class="md-input-wrapper md-disable">
+                                <input type="text" class="md-form-control" disabled="disabled" placeholder="Disabled" />
+                            </div>
+                            <div class="md-input-wrapper">
+                                <input type="text" class="md-form-control" placeholder="Read-only Text" readonly />
+                            </div>
+                            <div class="md-input-wrapper">
+                                <input type="text" class="md-form-control" value="Pre-fill value" />
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="md-group-add-on">
+                                        <span class="md-add-on"><i class="icofont icofont-cur-dollar"></i></span>
+                                        <div class="md-input-wrapper">
+                                            <input type="text" class="md-form-control" placeholder="Add-on" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="md-group-add-on">
+                                            <span class="md-add-on">
+                                                <i class="icofont icofont-ui-rate-blank"></i>
+                                            </span>
+                                        <div class="md-input-wrapper">
+                                            <input type="text" class="md-form-control" placeholder="Add-on-icon" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="md-group-add-on">
+                                    <span class="md-add-on-file">
+                                        <button class="btn btn-success waves-effect waves-light">File</button>
+                                    </span>
+                                <div class="md-input-file">
+                                    <input type="file" class="" />
+                                    <input type="text" class="md-form-control md-form-file">
+                                    <label class="md-label-file">Upload File</label>
+                                </div>
+                            </div>
+                            <div class="md-input-wrapper">
+                                <textarea class="md-form-control" cols="2" rows="3" placeholder="Type your keywords"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- Form Control starts -->
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-header-text">Form States</h5>
+                           
+                        </div>
+                        
+
+                        <div class="card-block">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="md-input-wrapper md-input-primary">
+                                        <input type="text" class="md-form-control" />
+                                        <label>Primary Label</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="md-input-wrapper md-input-success">
+                                        <input type="text" class="md-form-control" />
+                                        <label>Success Label</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="md-input-wrapper md-input-warning">
+                                        <input type="text" class="md-form-control" />
+                                        <label>Warning Label</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="md-input-wrapper md-input-danger">
+                                        <input type="text" class="md-form-control" />
+                                        <label>Danger Label</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="md-input-wrapper md-input-info">
+                                        <input type="text" class="md-form-control" />
+                                        <label>Info Label</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- Form Control ends -->
+            </div>
+            <div class="row">
+                <!-- Form Control starts -->
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-header-text">Form Select</h5>
+                        </div>
+                        <div class="card-block">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="sub-title">Select
+                                       
+                                    </div>
+                                    
+
+                                    <div class="md-input-wrapper">
+                                        <select class="md-form-control">
+                                            <option>Select</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                        </select>
+                                    </div>                                 
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="sub-title">Multi-Select
+                                        
+                                    </div>
+                                   
+
+                                    <div class="md-input-wrapper">
+                                        <select class="md-form-control multiple-select" multiple>
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <!--  <h6 class="sub-title">Disable Select</h6> -->
+                                    <div class="sub-title">Disable Select
+                                       
+                                    </div>
+                                
+                                    <div class="md-input-wrapper">
+                                        <select class="md-form-control md-disable" disabled>
+                                            <option>Select</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Container-fluid ends -->
+    </div>
+</div>
+</div>

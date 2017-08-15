@@ -1,0 +1,94 @@
+
+
+  <div  class="sidebar-mini fixed" >
+   
+    <div class="wrapper">
+   
+ <div ng-include="'shared/header.html'"></div>
+ <div ng-include="'shared/sidebar.html'" data-ng-controller="menuController" data-ng-init="setMenu()"></div>
+    
+    <div class="content-wrapper">
+        <!-- Container-fluid starts -->
+        <div class="container-fluid">
+            <!-- Header Starts -->
+            <div class="row">
+                <div class="col-sm-12 p-0">
+                    <div class="main-header">
+                        <h4>Charts</h4>
+                        <ol class="breadcrumb breadcrumb-title breadcrumb-arrow">
+                            <li class="breadcrumb-item"><a href="index.html"><i class="icofont icofont-home"></i></a>
+                            </li>
+                            <li class="breadcrumb-item"><a href="#!">Charts & Maps</a>
+                            </li>
+                            <li class="breadcrumb-item"><a href="chart-jqueryKnob.html">Charts</a>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <!-- Header end -->
+
+        <!-- Row Starts -->
+        <div class="row">
+            <!-- OVERLOADED 'DRAW' METHOD start -->
+            <div class="col-xl-3 col-lg-3 col-sm-6 peity-chart">
+                <div class="card card-wodth-fix">
+                    <div class="card-header">
+                        <h5 class="card-header-text">Overloaded 'draw' method</h5>
+                    </div>
+                    <div class="card-block chart-custom text-center" >                       
+                      <ui-knob value="value" options="options"></ui-knob>
+                    </div>
+                </div>
+            </div>
+            <!-- OVERLOADED 'DRAW' METHOD end -->
+
+            <!-- ANGLE OFFSET AND ARC start -->
+            <div class="col-xl-3 col-lg-3 col-sm-6 peity-chart">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-header-text">ANGLE OFFSET AND ARC</h5>
+                    </div>
+                    <div class="card-block chart-custom text-center">                    
+                        <ui-knob value="anglevalue" options="angleoptions"></ui-knob>
+                    </div>
+                </div>
+            </div>
+            <!-- ANGLE OFFSET AND ARC end -->
+
+            <!-- 'CURSOR' MODE start -->
+            <!-- <div class="col-xl-3 col-lg-3 col-sm-6 peity-chart">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-header-text ">'CURSOR' MODE</h5>
+                    </div>
+                    <div class="card-block chart-custom text-center">
+                        <input type="text" class="dial" value="10" data-width="150" data-height="150"
+                               data-cursor="true"
+                               data-thickness=".3"
+                               data-fgColor="#ff5252">
+                    </div>
+                </div>
+            </div> -->
+            <!-- 'CURSOR' MODE end -->
+
+            <!-- DISABLE DISPLAY INPUT start -->
+            <div class="col-xl-3 col-lg-3 col-sm-6 peity-chart">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-header-text">DISABLE DISPLAY INPUT</h5>
+                    </div>
+                    <div class="card-block chart-custom text-center" >
+                               <ui-knob value="disablevalue" options="disableoptions"></ui-knob>
+
+                    </div>
+                </div>
+            </div>
+            <!-- DISABLE DISPLAY INPUT end -->
+        </div>
+    </div>
+        <!-- Container-fluid ends -->
+     </div>
+</div>
+</div>
+

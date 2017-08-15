@@ -1,0 +1,222 @@
+<div class="sidebar-mini fixed" >
+    
+    <div class="wrapper" >
+    <div ng-include="'shared/header.html'"></div>
+ <div ng-include="'shared/sidebar.html'" data-ng-controller="menuController" data-ng-init="setMenu()"></div> 
+
+    <div class="content-wrapper">
+        <!-- Container-fluid starts -->
+       <div class="container-fluid">
+        <!-- Main content starts -->
+        <div >
+            <!-- Row Starts -->
+            <div class="row">
+                <div class="col-sm-12 p-0">
+                    <div class="main-header">
+                        <h4>Form Validation</h4>
+                        <ol class="breadcrumb breadcrumb-title breadcrumb-arrow">
+                            <li class="breadcrumb-item"><a href="index.html"><i class="icofont icofont-home"></i></a>
+                            </li>
+                            <li class="breadcrumb-item"><a href="">Forms</a>
+                            </li>
+                            <li class="breadcrumb-item"><a href="forms-validation.html">Form Validation</a>
+                            </li>
+                            </ol>
+                    </div>
+                </div>
+            </div>
+            <!-- Row end -->
+            <!-- Row start -->
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header"><h5 class="card-header-text">Basic Form Validation</h5></div>
+                        <div class="card-block">
+                            <form id="main" class="form-horizontal" name="form" novalidate>
+                              <div ng-class="{true: 'error'}[submitted && form.email.$invalid]">
+                                  <div class="md-group-add-on p-relative">
+                                   <span class="md-add-on">
+                                      <i class="icofont icofont-ui-user"></i>
+                                   </span>
+                                      <div class="md-input-wrapper">
+                                          <input type="text" class="md-form-control"  name="fname" id="username" ng-model="fname" required>
+                                          <label for="fname">Full Name</label>
+                                         <span style="color:red"  class="messages" ng-show="submitted && form.fname.$error.required">Username can't be blank</span>
+                                      </div>
+                                  </div>
+                                  <div class="md-group-add-on p-relative">
+                                   <span class="md-add-on">
+                                      <i class="icofont icofont-email"></i>
+                                   </span>
+                                      <div class="md-input-wrapper">
+                                          <input type="email" class="md-form-control"  name="email" id="email" ng-model="email" required>
+                                          <label for="email">Email address</label>
+                                          <span style="color:red"  class="messages" ng-show="submitted && form.email.$error.required">Email can't be blank</span>
+                                          <span style="color:red"  class="messages" ng-show="form.email.$error.email">Invalid email address.</span>
+                                      </div>
+                                  </div>
+                                  <div class="md-group-add-on p-relative">
+                                   <span class="md-add-on">
+                                      <i class="icofont icofont-ui-password"></i>
+                                   </span>
+                                      <div class="md-input-wrapper">
+                                          <input type="password" class="md-form-control"  name="psw" id="password" ng-model="psw" required>
+                                          <label for="password">Enter Password</label>
+                                          <span style="color:red"  class="messages" ng-show="submitted && form.psw.$error.required">Password can't be blank</span>
+                                      </div>
+                                  </div>
+                                  <div class="md-group-add-on p-relative">
+                                   <span class="md-add-on">
+                                      <i class="icofont icofont-key"></i>
+                                   </span>
+                                      <div class="md-input-wrapper">
+                                          <input type="password" class="md-form-control"  name="cpsw" id="confirm-password" ng-model="cpsw" required>
+                                          <label for="confirm-password">Enter Confirm password</label>
+                                          <span style="color:red"  class="messages" ng-show="submitted && form.cpsw.$error.required">confirm-password can't be blank</span>
+                                      </div>
+                                  </div>
+                                  <div class="md-group-add-on p-relative">
+                                      <div class="md-input-wrapper">
+                                          <div id="gender" class="radio radiofill form-radio m-0">
+                                              <label class="d-inline-block m-r-10">
+                                                  <input type="radio"  name="gender" value="male"  ng-model="gender" required><i class="helper"></i>Male
+                                              </label>
+                                              <label class="d-inline-block m-r-10">
+                                                  <input type="radio" value="female" name="gender"  ng-model="gender" required>Female<i class="helper"></i>
+                                              </label>
+                                              <label class="d-inline-block">
+                                                  <input type="radio" name="gender" value="other"  ng-model="gender" required>Other<i class="helper"></i>
+                                              </label>
+                                              <span style="color:red"  class="messages" ng-show="submitted && form.gender.$error.required">Gender can't be blank</span>
+                                          </div>
+                                      </div>
+                                  </div>
+
+                                  <div class="md-input-wrapper">
+                                      <button type="submit" class="btn btn-primary waves-effect waves-light" ng-click="submitted=true" data-angular-ripple>Submit
+                                      </button>
+                                  </div>
+                              </div>
+                            </form>
+                        </div>
+                    </div>
+                   
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header"><h5 class="card-header-text">Number Validator</h5></div>
+                        <div class="card-block">
+                            <form id="number_form" class="form-horizontal" name="Noform" novalidate>
+                            <div ng-class="{true: 'error'}[Nosubmitted && Noform.email.$invalid]">
+                                <div class="md-group-add-on p-relative">
+                                 <span class="md-add-on">
+                                    <i class="icofont icofont-ui-keyboard"></i>
+                                 </span>
+                                    <div class="md-input-wrapper">
+                                        <input type="text" class="md-form-control"  name="integer" id="integer" ng-model="integer" ng-pattern="/^[0-9]{1,7}$/"required>
+                                        <label for="integer">Only integer</label>
+                                        <span style="color:red"  class="messages" ng-show="Nosubmitted && Noform.integer.$error.required">integer can't be blank</span>
+                                        <span style="color:red"  class="messages" ng-show="Noform.integer.$error.pattern">Number must be an integer</span>
+                                    </div>
+                                </div>
+                                <div class="md-group-add-on p-relative">
+                                 <span class="md-add-on">
+                                    <i class="icofont icofont-ui-keyboard"></i>
+                                 </span>
+                                    <div class="md-input-wrapper">
+                                        <input type="text" class="md-form-control"  name="numeric" id="numeric" ng-model="numeric" ng-pattern="/^(0|[1-9][0-9]*)$/" required>
+                                        <label for="numeric">Only numeric</label>
+                                        <span style="color:red"  class="messages" ng-show="Nosubmitted && Noform.numeric.$error.required">Numeric can't be blank</span>
+                                        <span style="color:red"  class="messages" ng-show="Noform.numeric.$error.pattern">Number must be an Numeric</span>
+                                    </div>
+                                </div>
+                              
+
+                                <div class="md-input-wrapper">
+                                    <button type="submit" class="btn btn-primary waves-effect waves-light" ng-click="Nosubmitted=true" data-angular-ripple>Submit
+                                    </button>
+                                </div>
+                            </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header"><h5 class="card-header-text">Checkbox &amp; Radio Button validator</h5></div>
+                        <div class="card-block">
+                            <form id="checkdrop" class="form-horizontal" name="checkForm" novalidate>
+                            <div ng-class="{true: 'error'}[Checksubmitted && checkForm.email.$invalid]">
+                             <div class="md-group-add-on p-relative">
+
+                                <div class="md-input-wrapper p-relative">
+
+                                    <div class="form-radio m-0">
+
+                                        <div class="radio radiofill radio-inline">
+                                            <label>
+                                                <input type="radio" name="member" value="free" data-bv-field="member" ng-model="member" required><i class="helper"></i>Free
+                                            </label>
+                                        </div>
+                                        <div class="radio radiofill radio-inline">
+                                            <label>
+                                                <input type="radio" name="member" value="personal" data-bv-field="member" ng-model="member" required><i class="helper"></i>Personal
+                                            </label>
+                                        </div>
+                                        <div class="radio radiofill radio-inline">
+                                            <label>
+                                                <input type="radio" name="member" value="business" data-bv-field="member" ng-model="member" required><i class="helper"></i>Business
+                                            </label>
+                                        </div>
+                                    </div>
+                                     <span style="color:red"  class="messages" ng-show="Checksubmitted && checkForm.member.$error.required">Member can't be blank</span>
+                                </div>
+                                </div>
+                                 <div class="md-group-add-on p-relative">
+
+                                <div class="md-input-wrapper p-relative">
+                                    <div class=" checkbox-primary">
+                                        <div class="rkmd-checkbox checkbox-rotate">
+                                            <label class="input-checkbox checkbox-primary">
+                                                <input type="checkbox" id="checkbox" name="Language" value="net" ng-model="Language" required>
+                                                <span class="checkbox"></span>
+                                            </label>
+                                            <div class="captions">.Net</div>
+                                        </div>
+
+                                        <div class="rkmd-checkbox checkbox-rotate">
+                                            <label class="input-checkbox checkbox-primary">
+                                                <input type="checkbox" id="checkbox2" name="Language" value="java" ng-model="Language" required>
+                                                <span class="checkbox"></span>
+                                            </label>
+                                            <div class="captions">Java</div>
+                                        </div>
+
+                                        <div class="rkmd-checkbox checkbox-rotate">
+                                            <label class="input-checkbox checkbox-primary">
+                                                <input type="checkbox" id="checkbox1" name="Language" value="c" ng-model="Language" required>
+                                                <span class="checkbox"></span>
+                                            </label>
+                                            <div class="captions">C/C++</div>
+                                        </div>
+
+                                    </div>
+                                    <span style="color:red"  class="messages" ng-show="Checksubmitted && checkForm.Language.$error.required">Member can't be blank</span>
+                                </div>
+                                </div>
+                                <div class="md-input-wrapper">
+                                    <button type="submit" class="btn btn-primary waves-effect waves-light" ng-click="Checksubmitted=true" data-angular-ripple>Submit
+                                    </button>
+
+                                </div>
+                            </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <!-- Container-fluid ends -->
+     </div>
+</div>
+</div>
+

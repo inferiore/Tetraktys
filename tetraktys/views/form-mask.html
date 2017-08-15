@@ -1,0 +1,186 @@
+<div class="sidebar-mini fixed" >
+    
+    <div class="wrapper" >
+       <div ng-include="'shared/header.html'"></div>
+ <div ng-include="'shared/sidebar.html'" data-ng-controller="menuController" data-ng-init="setMenu()"></div> 
+
+    <div class="content-wrapper">
+        <!-- Container-fluid starts -->
+       <div class="container-fluid">
+    <!-- Header start -->
+    <div class="row">
+        <div class="col-sm-12 p-0">
+            <div class="main-header">
+                <h4>Form Masking</h4>
+                <ol class="breadcrumb breadcrumb-title breadcrumb-arrow">
+                    <li class="breadcrumb-item"><a href="index.html"><i class="icofont icofont-home"></i></a>
+                    </li>
+                    <li class="breadcrumb-item"><a href="">Forms</a>
+                    </li>
+                    <li class="breadcrumb-item"><a href="form-mask.html">Form Masking</a>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+    <!-- Header end -->
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-header-text">Date</h5>
+                </div>
+                <div class="card-block">
+                    <div class="md-group-add-on">
+                            <span class="md-add-on">
+                   <i class="icofont icofont-ui-calendar"></i>
+                </span>
+                        <div class="md-input-wrapper">                           
+                           <input type="text" name="field" class="md-form-control date md-static" ng-model="birthDate" ui-date-mask>
+                            <label>Insert Date</label>
+                        </div>
+                    </div>
+                    
+
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-header-text">Phone no.</h5>
+                </div>
+                <div class="card-block">
+                    <div class="md-group-add-on">
+                            <span class="md-add-on">
+                 <i class="icofont icofont-mobile-phone"></i>
+               </span>
+                        <div class="md-input-wrapper">
+                            <input type="text" ng-model="phoneNumber" class="md-form-control mob_no md-static" ui-us-phone-number>
+                            <label>US Mobile No</label>
+                        </div>
+                    </div>
+                    <div class="md-group-add-on">
+                            <span class="md-add-on">
+                <i class="icofont icofont-telephone"></i>
+              </span>
+                        <div class="md-input-wrapper">
+                            <input type="text" ng-model="phoneNumber2" class="md-form-control mob_no md-static" ui-br-phone-number>
+                            <label>Telephone</label>
+                        </div>
+                    </div>
+                  
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-header-text">Numbers</h5>
+                </div>
+                <div class="card-block">
+                    <div class="md-group-add-on">
+                            <span class="md-add-on">
+                <i class="icofont icofont-listing-number"></i>
+              </span>
+                        <div class="md-input-wrapper">
+                            <input type="text" class="md-form-control autonumber md-static" ng-model="number" ui-number-mask="4">
+                            <label>Default</label>
+                        </div>
+                    </div>
+                    <div class="md-group-add-on">
+                            <span class="md-add-on">
+                <i class="icofont icofont-listing-number"></i>
+              </span>
+                        <div class="md-input-wrapper">
+                            <input type="text" class="md-form-control autonumber md-static" ng-model="percentage" ui-percentage-mask="4">
+                            <label>Auto Numeric (%)</label>
+                        </div>
+                    </div>
+                    <div class="md-group-add-on">
+                            <span class="md-add-on">
+                <i class="icofont icofont-listing-number"></i>
+              </span>
+                        <div class="md-input-wrapper">
+                            <input type="text" class="md-form-control autonumber md-static" ng-model="negNum" ui-negative-number>
+                            <label>Negative Numbers</label>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-header-text">Time</h5>
+                </div>
+                <div class="card-block">
+                    <div class="md-group-add-on">
+                            <span class="md-add-on">
+                <i class="icofont icofont-hour-glass"></i>
+              </span>
+                        <div class="md-input-wrapper">
+                         <input type="text" class="md-form-control hour md-static" name="field" ng-model="time1" ui-time-mask="HH-MM-SS">
+                            <label>Hour</label>
+                        </div>
+                    </div>
+                    
+
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-header-text">Currency</h5>
+                </div>
+                <div class="card-block">
+                    <div class="md-group-add-on">
+                            <span class="md-add-on">
+                <i class="icofont icofont-cur-dollar"></i>
+              </span>
+                        <div class="md-input-wrapper">
+                           <input type="text" class="md-form-control autonumber md-static" ng-model="money" ui-money-mask>
+                            <label>Dollar ($)</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           <!--  <div class="card">
+               <div class="card-header">
+                   <h5 class="card-header-text">Network</h5>
+               </div>
+               <div class="card-block">
+                   <div class="md-group-add-on">
+                           <span class="md-add-on">
+               <i class="icofont icofont-location-pin"></i>
+             </span>
+                       <div class="md-input-wrapper">
+                           <input type="text" class="md-form-control ip md-static" data-mask="999.999.999.999" />
+                           <label>IP Address</label>
+                       </div>
+                   </div>
+                   <div class="md-group-add-on">
+                           <span class="md-add-on">
+               <i class="icofont icofont-brand-tribenet"></i>
+             </span>
+                       <div class="md-input-wrapper">
+                           <input type="text" class="md-form-control ipv4 md-static" data-mask="999.999.999.9999" />
+                           <label>IPV4</label>
+                       </div>
+                   </div>
+                   <div class="md-group-add-on">
+                           <span class="md-add-on">
+               <i class="icofont icofont-connection"></i>
+             </span>
+                       <div class="md-input-wrapper">
+                           <input type="text" class="md-form-control ipv6 md-static" data-mask="9999:9999:9999:9:999:9999:9999:9999" />
+                           <label>IPV6</label>
+                       </div>
+                   </div>
+               </div>
+           </div> -->
+        </div>
+    </div>
+</div>
+        <!-- Container-fluid ends -->
+     </div>
+</div>
+</div>
+

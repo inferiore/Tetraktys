@@ -1,0 +1,117 @@
+
+
+  <div  class="sidebar-mini fixed" >
+   
+    <div class="wrapper">
+   
+ <div ng-include="'shared/header.html'"></div>
+ <div ng-include="'shared/sidebar.html'" data-ng-controller="menuController" data-ng-init="setMenu()"></div>
+
+    <div class="content-wrapper">
+        <!-- Container-fluid starts -->
+       <div class="container-fluid">
+        <!-- Header Starts -->
+        <div class="row">
+            <div class="col-sm-12 p-0">
+                <div class="main-header">
+                    <h4>NVD Chart</h4>
+                    <ol class="breadcrumb breadcrumb-title breadcrumb-arrow">
+                        <li class="breadcrumb-item"><a href="index.html"><i class="icofont icofont-home"></i></a>
+                        </li>
+                        <li class="breadcrumb-item"><a href="#!">Charts & Maps</a>
+                        </li>
+                        <li class="breadcrumb-item"><a href="nvd3-chart.html">NVD Chart</a>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <!-- Header end -->
+
+
+        <!-- Row Starts -->
+        <div class="row">
+            <!-- Line Chart start -->
+            <div class="col-lg-6 col-xl-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-header-text">Line Chart</h5>
+                    </div>
+                    <div class="card-block">
+                        <nvd3 options="lineoptions" data="linedata" class="with-3d-shadow with-transitions"></nvd3>
+                    </div>
+                </div>
+            </div>
+            <!-- Line Chart end -->
+
+            <!-- Discrete Bar Chart start  -->
+            <div class="col-lg-6 col-xl-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-header-text">Discrete Bar Chart</h5>
+                    </div>
+                    <div class="card-block">
+                        <nvd3 options="baroptions" data="bardata"></nvd3>
+                    </div>
+                </div>
+            </div>
+            <!-- Discrete Bar Chart end  -->
+
+            <!-- Scatter chart start -->
+            <div class="col-lg-6 col-xl-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-header-text">Scatter chart</h5>
+                    </div>
+                    <div class="card-block">
+                         <nvd3 options="scatteroptions" data="scatterdata"></nvd3>
+                    </div>
+                </div>
+            </div>
+            <!-- Scatter chart end -->
+
+            <!-- Stacked/Grouped Multi-Bar Chart start -->
+            <div class="col-lg-6 col-xl-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-header-text">Stacked/Grouped Multi-Bar Chart</h5>
+                    </div>
+                    <div class="card-block">
+                        <nvd3 options="groupedoptions" data="groupeddata"></nvd3>
+                    </div>
+                </div>
+            </div>
+            <!-- Stacked/Grouped Multi-Bar Chart end -->
+
+            <!-- Regular Pie chart start -->
+            <div class="col-lg-6 col-xl-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-header-text">Regular Pie chart</h5>
+                    </div>
+                    <div class="card-block">
+                        <nvd3 options="pieoptions" data="piedata"></nvd3>
+                    </div>
+                </div>
+            </div>
+            <!-- Regular Pie chart end -->
+
+            <!-- Donut Chart start -->
+            <div class="col-lg-6 col-xl-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-header-text">Donut Chart</h5>
+                    </div>
+                    <div class="card-block">
+                        <nvd3 options="donutoptions" data="donutdata"></nvd3>
+                    </div>
+                </div>
+            </div>
+            <!-- Donut Chart end -->
+        </div>
+    </div>
+        <!-- Container-fluid ends -->
+     </div>
+</div>
+</div>
+
